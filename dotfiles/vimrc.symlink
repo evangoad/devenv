@@ -1,0 +1,218 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Evan Goad's vimrc
+" Lots of stolen things from @mikeastock and @bobcats
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible
+filetype off
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
+call vundle#rc()
+
+Plugin 'gmarik/Vundle.vim'
+
+" Utility
+Plugin 'tomtom/tcomment_vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-endwise'
+Plugin 'kana/vim-textobj-user'
+Plugin 'pbrisbin/vim-mkdir'
+
+" Colors :)
+Plugin 'flazz/vim-colorschemes'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'sjl/badwolf'
+Plugin 'tomasr/molokai'
+
+" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" Ruby / Rails
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rbenv'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'jgdavey/tslime.vim'
+
+" Javascript
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'walm/jshint.vim'
+Plugin 'jQuery'
+
+" Haskell
+Plugin 'dag/vim2hs'
+
+" Clojure
+Plugin 'guns/vim-clojure-static'
+
+" Go
+Plugin 'fatih/vim-go'
+
+" Rust
+Plugin 'wting/rust.vim'
+
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
+
+" AIRLINE
+Plugin 'bling/vim-airline'
+Plugin 'repeat.vim'
+Plugin 'file-line'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
+au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
+filetype plugin indent on
+set autoindent
+set backspace=indent,eol,start
+set background=dark
+set encoding=utf-8
+set expandtab
+set foldenable
+set foldlevel=100
+set foldmethod=marker
+set foldopen=block,hor,mark,percent,quickfix,tag
+set formatoptions-=or
+set hidden
+set history=10000
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set matchtime=5
+set nobackup
+set noerrorbells
+set noswapfile
+set novisualbell
+set nowrap
+set nu
+set ruler
+set shiftwidth=2
+set showcmd
+set showmatch
+set smartcase
+set smarttab
+set softtabstop=2
+set tabstop=2
+set textwidth=0
+set wildmenu
+set wildmode=longest,list
+syntax on
+
+:let mapleader = " "
+
+map <c-p> :FZF<CR>
+
+" ctags stuff i don't understand
+map <A-[> :tab split<CR>:exec("tag ".expand(<cword>))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand(<cword>))<CR>
+" Start Interactive EasyAlign in visual mode
+vmap <ENTER> <Plug>(EasyAlign)
+" Start Interactive EasyAlign with a Vim movement
+" nmap <leader>a <Plug>(EasyAlign)
+
+let g:bufferline_echo = 0
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast vim closing
+nnoremap <leader>qq :q<cr>
+
+" Switch back to previous file
+nnoremap <leader><leader> <c-^>
+
+" Window navigation
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+imap <c-c> <esc>
+
+" Clear the search buffer when hitting return
+function! MapCR()
+  nnoremap <cr> :nohlsearch<cr>
+endfunction
+call MapCR()
+
+" Contextual tab key
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+"" Plugin Settings
+
+" Vroom settings
+let g:vroom_detect_spec_helper = 1
+let g:vroom_use_spring = 1
+let g:vroom_use_binstubs = 0
+let g:vroom_cucumber_path = 'cucumber'
+let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>r :call RunNearestSpec()<CR>
+
+if !has('python')
+  echo 'In order to use pymatcher plugin, you need +python compiled vim'
+else
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
+
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gc :CtrlP app/controllers<cr>
+map <leader>gm :CtrlP app/models<cr>
+map <leader>gh :CtrlP app/helpers<cr>
+map <leader>ga :CtrlP app/assets<cr>
+map <leader>gs :CtrlP app/services<cr>
+map <leader>gt :CtrlP spec2/<cr>
+map <leader>gx :CtrlP spec/<cr>
+map <leader>gl :CtrlP lib<cr>
+map <leader>gp :CtrlP config<cr>
+map <leader>f5 :CtrlPClearCache<cr>:CtrlP<cr>
+
+let g:CtrlMaxFiles=40000
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Airline settings
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+nmap <leader>h :bprev<CR>
+nmap <leader>l :bnext<CR>
+nmap <leader>b :b
+
+" Fast buffer closing
+nmap <leader>q :bp\|bd #<CR>
+
+" Tslime
+nmap <leader>tr <Plug>SetTmuxVars
+
+colorscheme hybrid
+

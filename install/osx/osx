@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# osx, runs package manager script, unixlike, and forces zsh
+
+eval $HOME/.devenv/install/osx/brew
+run_unixlike
+force_zsh
+
+exit 0

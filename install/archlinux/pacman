@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# pacman installs package list 
+
+sudo -E pacman -Sy --noconfirm --needed zsh vim tmux docker postgresql go rust ghc cabal-install happy alex haddock
+
+exit 0

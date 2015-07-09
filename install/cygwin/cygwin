@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# cygwin, runs package manager scripts, unixlike 
+
+eval $HOME/.devenv/install/cygwin/apt-cyg
+eval $HOME/.devenv/install/cygwin/choco
+run_unixlike
+
+exit 0

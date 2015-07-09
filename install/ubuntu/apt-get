@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# apt-get installs package list 
+
+sudo apt-get install -y vim zsh tmux 
+
+exit 0

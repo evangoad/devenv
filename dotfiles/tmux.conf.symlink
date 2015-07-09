@@ -1,0 +1,25 @@
+set -g default-terminal "screen-256color"
+
+unbind r
+unbind ^A
+unbind x
+
+bind r source-file ~/.tmux.conf
+bind ^A select-pane -t :.+
+bind x kill-window
+bind h previous-window
+bind l next-window
+
+setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+
+# Sane scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+set-option -g status-bg colour233
+set-option -g status-fg colour243
+set-option -g status-attr dim
+set-option -g status-utf8 on
+set-option -g status-justify centre
+set-option -g window-status-current-fg brightred
+set-option -g window-status-current-attr dim
+set-option -g history-limit 10000

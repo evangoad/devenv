@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# ubuntu, runs package manager script, unixlike, and forces zsh
+
+eval $DEVIE_PATH/install/ubuntu/apt-get
+eval $DEVIE_PATH/install/unixlike
+eval $DEVIE_PATH/script/force_zsh
+
+exit 0

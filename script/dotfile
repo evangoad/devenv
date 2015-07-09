@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# dotfile, ran by devie, used to call link or extract function 
+
+function output_usage() {
+  echo "usage: devie dotfile <command>"
+  echo " "
+  echo "commands:"
+  echo "  link     take all files in 'dotfiles' folder and creates symlinks in your $HOME folder"
+  echo "  extract  coming soon..."
+}
+
+function run_link() {
+  eval $DEVIE_PATH/script/dotfile-link
+}
+
+function run_extract() {
+  echo "coming soon..."
+}
+
+case "$1" in
+  link)    run_link;;
+  extract) run_extract;;
+  *)       output_usage;;
+esac
+
+exit 0

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# yaourt installs package list 
+
+yaourt -S --noconfirm --needed docker-compose rbenv ruby
+
+exit 0
