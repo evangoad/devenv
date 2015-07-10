@@ -2,8 +2,8 @@
 #
 # cygwin, runs package manager scripts, unixlike 
 
-eval $HOME/.devenv/install/cygwin/apt-cyg
-eval $HOME/.devenv/install/cygwin/choco
-run_unixlike
+eval $DEVIE_PATH/install/cygwin/apt-cyg
+eval $DEVIE_PATH/install/cygwin/choco
+eval $DEVIE_PATH/install/unixlike
 
 exit 0
