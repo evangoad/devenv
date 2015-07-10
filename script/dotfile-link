@@ -3,7 +3,7 @@
 # dotfiles symlinks all contents of /dotfiles to $HOME folder.
 
 cd "$(dirname "$0")"
-DOTFILES_ROOT="$HOME/.devenv/dotfiles"
+DOTFILES_ROOT="$DEVIE_PATH/dotfiles"
 echo $DOTFILES_ROOT
 set -e
 
