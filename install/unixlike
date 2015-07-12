@@ -22,4 +22,13 @@ else
   printf 'y\ny' | ~/.fzf/install 
 fi
 
+if [ -d "$HOME/.exercism" ]; then
+  echo "exercism already installed."
+else
+  curl -o $HOME/exercism_install https://raw.githubusercontent.com/exercism/cli-www/master/public/install 
+  chmod 705 $HOME/exercism_install
+  eval $HOME/exercism_install $HOME/.exercism
+  rm $HOME/exercism_install
+fi
+
 exit 0
