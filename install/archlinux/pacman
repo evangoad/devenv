@@ -2,6 +2,6 @@
 #
 # pacman installs package list 
 
-sudo -E pacman -Sy --noconfirm --needed zsh vim tmux docker postgresql go rust ghc cabal-install happy alex haddock
+sudo -E pacman -Syu --noconfirm --needed zsh vim tmux docker go rust ghc cabal-install happy alex haddock pigz zlib irssi
 
 exit 0

@@ -2,6 +2,6 @@
 #
 # yaourt installs package list 
 
-yaourt -S --noconfirm --needed docker-compose rbenv ruby
+yaourt -S --noconfirm --needed docker-compose 
 
 exit 0
