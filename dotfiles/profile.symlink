@@ -26,7 +26,7 @@ else
 fi
 
 # exercism
-export PATH="HOME/.exercism:$PATH"
+export PATH="$HOME/.exercism:$PATH"
 
 # rubygems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
