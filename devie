@@ -13,6 +13,7 @@ echo " "
 echo "commands:"
 echo "  -l, link        symlinks dotfiles to $HOME"
 echo "  -a, archlinux   runs 'pacman' and 'yaourt' scripts."
+echo "  -b, babun       runs 'pact' scripts."
 echo "  -c, cygwin      runs 'apt-cyg' and 'choco' scripts."
 echo "  -o, osx         runs 'brew' and 'brew-cask' scripts."
 echo "  -u, ubuntu      runs 'apt-get' scripts."
@@ -20,12 +21,14 @@ echo "  -g, gitenv      create .gitenv in $HOME, git credentials for writing com
 echo "  -r, reload      detect shell, (sh, bash, or zsh) and reload correct dotfile."
 }
 
-while getopts "lacougrh" opt; do
+while getopts "labcougrh" opt; do
   case $opt in
     l)
       yes O | eval $DEVIE_PATH/script/dotfile-link;;
     a)
       eval $DEVIE_PATH/install/archlinux/archlinux;;
+    b)
+      eval $DEVIE_PATH/install/babun/pact;;
     c)
       eval $DEVIE_PATH/install/cygwin/cygwin;;
     o)

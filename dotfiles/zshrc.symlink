@@ -12,4 +12,46 @@ function git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-source $HOME/.profile
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# devie
+export DEVIE_PATH="$HOME/.devie"
+export PATH="$PATH:$DEVIE_PATH"
+
+# gitenv 
+if [ -f $HOME/.gitenv ]; then
+  source $HOME/.gitenv
+else
+  echo "WARNING: not logged in, please run 'set-gitenv' script"
+fi
+
+# exercism
+export PATH="$HOME/.exercism:$PATH"
+
+# rubygems
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# go
+export GOPATH="$HOME/go"
+export PATH="$HOME/go/bin:$PATH"
+
+# tmuxinator
+export EDITOR="vim"
+
+# heroku
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# cabal
+export PATH="$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH"
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ssh-agent
+source $DEVIE_PATH/dotfiles/ssh-agent
+
+# alias
+source $DEVIE_PATH/dotfiles/aliases

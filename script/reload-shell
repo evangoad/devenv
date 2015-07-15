@@ -2,8 +2,6 @@
 #
 # reload-shell, autodetect running shell and source appropriate dotfile 
 
-if [ -n "$ZSH_VERSION" ]; then
-  source $HOME/.zshrc 
-else
-  source $HOME/.profile
-fi
+source $HOME/.zshrc 
+
+exit 0

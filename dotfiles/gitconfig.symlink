@@ -1,30 +1,32 @@
 [color]
-    ui = true
+  ui = true
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
 [alias]
-    co  = commit
-    ch  = checkout
-    chm = checkout master
-    t   = status
-    tt  = status
-    ttt = status
-    br  = branch
-    df  = diff
-    pl  = pull
-    ps  = push
-    ca  = commit --amend
-    can = commit --amend --no-edit
-    pp  = push origin HEAD
-    ll  = pull --rebase origin master
-    dfom = diff origin/master
-    fo  = fetch origin
-    dfc = diff --cached
-    sus = submodule update --recursive
+  co  = commit
+  ch  = checkout
+  chm = checkout master
+  t   = status
+  tt  = status
+  ttt = status
+  br  = branch
+  df  = diff
+  pl  = pull
+  ps  = push
+  ca  = commit --amend
+  can = commit --amend --no-edit
+  pp  = push origin HEAD
+  ll  = pull --rebase origin master
+  dfom = diff origin/master
+  fo  = fetch origin
+  dfc = diff --cached
+  sus = submodule update --recursive
 [core]
-    editor = vim
+  editor = vim
+	trustctime = false
+	excludesfile = ~/.gitignore
 [push]
-    default = simple
+  default = simple
