@@ -1,14 +1,18 @@
 set -g default-terminal "screen-256color"
 
+unbind C-b
 unbind r
 unbind ^A
 unbind x
 
+set -g prefix C-a
+
+bind C-a send-prefix
 bind r source-file ~/.tmux.conf
 bind ^A select-pane -t :.+
 bind x kill-window
-bind h previous-window
-bind l next-window
+bind a previous-window
+bind s next-window
 
 setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
 
