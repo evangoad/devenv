@@ -3,7 +3,7 @@
 # brew installs the brew package manager and package list.
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install zsh tmux vim elixir rust ghc cabal-install caskroom/cask/brew-cask  
+brew install zsh tmux vim the_silver_searcher npm elixir rust ghc cabal-install caskroom/cask/brew-cask  
 brew cask install iterm2 google-chrome vagrant slack screenhero karabiner seil alfred boot2docker docker-compose postgres
 
 exit 0
