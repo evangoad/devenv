@@ -76,3 +76,7 @@ Below are links to the install scripts responsible for installing `vim`, `zsh`, 
 ### ubuntu
 
 [apt-get](install/ubuntu/apt-get#L5)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/evangoad/devie/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
