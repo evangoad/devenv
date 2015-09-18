@@ -7,18 +7,7 @@ function output_version(){
 }
 
 function output_usage(){
-  output_version
-echo "usage: devie <commands>"
-echo " " 
-echo "commands:"
-echo "  -l, link        symlinks dotfiles to $HOME"
-echo "  -a, archlinux   runs 'pacman' and 'yaourt' scripts."
-echo "  -b, babun       runs 'pact' scripts."
-echo "  -c, cygwin      runs 'apt-cyg' and 'choco' scripts."
-echo "  -o, osx         runs 'brew' and 'brew-cask' scripts."
-echo "  -u, ubuntu      runs 'apt-get' scripts."
-echo "  -g, gitenv      create .gitenv in $HOME, git credentials for writing commits."
-echo "  -r, reload      detect shell, (sh, bash, or zsh) and reload correct dotfile."
+  cat text/usage.txt 
 }
 
 while getopts "labcougrh" opt; do
