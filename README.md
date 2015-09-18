@@ -1,5 +1,7 @@
 # `devie`
 
+[![Build Status](https://travis-ci.org/evangoad/devie.svg?branch=master)](https://travis-ci.org/evangoad/devie)
+
 A forkable command line companion that streamlines and simplifies the installation of your dot files and dev tools for [Unix-likes](https://en.wikipedia.org/wiki/Unix-like).  Get `vim`, `zsh`, and `tmux` installed and configured on your Unix-like in one command.
 
 `devie` is best used when it's [forked like dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/), allowing you to customize the scripts by editing the files directly in your own repository!
