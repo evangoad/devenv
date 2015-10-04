@@ -34,6 +34,11 @@ export PATH="$HOME/.exercism:$PATH"
 # rubygems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
+#rbenv
+if hash rbenv 2>/dev/null; then
+  eval "$(rbenv init -)"
+fi
+
 # go
 export GOPATH="$HOME/go"
 export PATH="$HOME/go/bin:$PATH"
