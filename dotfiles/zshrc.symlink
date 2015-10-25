@@ -57,6 +57,9 @@ export PATH="$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH"
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Postgres.app on OSX
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+
 # ssh-agent
 source $DEVIE_PATH/dotfiles/ssh-agent
 
