@@ -23,6 +23,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'kana/vim-textobj-user'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'Kazark/vim-SimpleSmoothScroll'
+Plugin 'rking/ag.vim'
 
 " Colors :)
 Plugin 'flazz/vim-colorschemes'
@@ -35,6 +36,9 @@ Plugin 'tomasr/molokai'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+
+" Mercurial
+Plugin 'ludovicchabant/vim-lawrencium'
 
 " Ruby / Rails
 Plugin 'tpope/vim-rails'

@@ -17,6 +17,17 @@ setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
 
 # Sane scrolling
 set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+set -s escape-time 50
+
+bind m \
+       setw -g mode-mouse on \;\
+       set -g mouse-select-window on \;\
+       display 'Mouse: ON'
+
+bind M \
+       setw -g mode-mouse off \;\
+       set -g mouse-select-window off \;\
+       display 'Mouse: OFF'
 
 set-option -g status-bg colour233
 set-option -g status-fg colour243
