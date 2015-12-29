@@ -80,6 +80,7 @@ Plugin 'file-line'
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
 au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile hg-editor*.txt setlocal textwidth=80
 filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
