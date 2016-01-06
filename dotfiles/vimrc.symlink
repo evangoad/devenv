@@ -22,6 +22,8 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'kana/vim-textobj-user'
 Plugin 'pbrisbin/vim-mkdir'
+Plugin 'Kazark/vim-SimpleSmoothScroll'
+Plugin 'rking/ag.vim'
 
 " Colors :)
 Plugin 'flazz/vim-colorschemes'
@@ -34,6 +36,9 @@ Plugin 'tomasr/molokai'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+
+" Mercurial
+Plugin 'ludovicchabant/vim-lawrencium'
 
 " Ruby / Rails
 Plugin 'tpope/vim-rails'
@@ -75,6 +80,7 @@ Plugin 'file-line'
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
 au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile hg-editor*.txt setlocal textwidth=80
 filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
@@ -93,6 +99,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 set matchtime=5
+set mouse=a
 set nobackup
 set noerrorbells
 set noswapfile
@@ -100,6 +107,7 @@ set novisualbell
 set nowrap
 set nu
 set ruler
+set scroll=15
 set shiftwidth=2
 set showcmd
 set showmatch
@@ -113,6 +121,9 @@ set wildmode=longest,list
 syntax on
 
 :let mapleader = " "
+
+map <ScrollWheelUp> <C-U>
+map <ScrollWheelDown> <C-D>
 
 map <c-p> :FZF<CR>
 
@@ -214,6 +225,9 @@ nmap <leader>q :bp\|bd #<CR>
 
 " Tslime
 nmap <leader>tr <Plug>SetTmuxVars
+
+" Clear Search Buffer
+nmap <silent> ,/ :nohlsearch<CR>
 
 colorscheme hybrid
 
