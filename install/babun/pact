@@ -3,7 +3,7 @@
 # pact installs package list 
 
 babun update
-pact install vim zsh tmux ruby ruby-nokogiri ruby-rails ruby-pg ruby-curses libpq-devel libxml2-devel libxslt-devel gcc-g++ patch sqlite3 postgresql curl wget
+pact install vim zsh tmux curl wget
 eval $DEVIE_PATH/install/unixlike
 eval $DEVIE_PATH/script/force_zsh
 

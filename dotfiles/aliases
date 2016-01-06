@@ -13,3 +13,5 @@ alias b="bundle"
 alias z!="source ~/.zshrc"
 alias v="vagrant"
 alias booya="vagrant up && vagrant ssh"
+alias ha="habitica"
+

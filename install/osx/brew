@@ -2,7 +2,12 @@
 #
 # brew installs the brew package manager and package list.
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install zsh tmux vim the_silver_searcher npm elixir rust ghc cabal-install 
-
+if type brew; then
+  echo "brew already installed"
+else
+  echo "installing brew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install zsh tmux vim the_silver_searcher 
+fi
 exit 0
+

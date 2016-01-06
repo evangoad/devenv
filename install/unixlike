@@ -6,8 +6,9 @@ if [ -d "$HOME/.vim/bundle" ]; then
   echo "vundle already installed."
 else
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  yes | vim +PluginInstall +qall now
 fi
+
+yes | vim +PluginInstall +qall now
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   echo "oh-my-zsh already installed."
