@@ -24,6 +24,9 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'Kazark/vim-SimpleSmoothScroll'
 Plugin 'rking/ag.vim'
+Bundle 'christoomey/vim-run-interactive'
+Bundle 'skalnik/vim-vroom'
+Plugin 'benmills/vimux'
 
 " Colors :)
 Plugin 'flazz/vim-colorschemes'
@@ -175,11 +178,11 @@ inoremap <s-tab> <c-n>
 
 " Vroom settings
 let g:vroom_detect_spec_helper = 1
-let g:vroom_use_spring = 1
 let g:vroom_use_binstubs = 0
 let g:vroom_cucumber_path = 'cucumber'
+let g:vroom_use_vimux = 1
 let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
-map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>t :VroomRunTestFile<CR>
 map <Leader>r :call RunNearestSpec()<CR>
 
 if !has('python')
