@@ -61,8 +61,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 # ssh-agent
-source $DEVIE_PATH/dotfiles/ssh-agent
-/usr/bin/keychain $HOME/.ssh/id_rsa
+keychain $HOME/.ssh/id_rsa
 
 # alias
 source $DEVIE_PATH/dotfiles/aliases
