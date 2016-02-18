@@ -9,6 +9,8 @@
     - zsh
     - tmux
     - tree 
+    - ag
+    - fzf
 
 - name: Cleanup Brew packages
   command: brew cleanup
