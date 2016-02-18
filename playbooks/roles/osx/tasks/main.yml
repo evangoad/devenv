@@ -1,0 +1,14 @@
+---
+- name: Update Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Install libraries with Homebrew
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - vim
+    - zsh
+    - tmux
+    - tree 
+
+- name: Cleanup Brew packages
+  command: brew cleanup
