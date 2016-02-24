@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+import os
+
+devie_root = Path(os.path.abspath(__file__)).parent.parent
+
+if os.uname() == "Linux":
+  print "Hello Linux"
+else:
+  print "Hellow OSX"
