@@ -1,14 +1,14 @@
 - name: Symlink dotfiles
   file: src=~/.devie/dotfiles/{{ item }}
-        dest=~/{{ item }}
+        dest=~/.{{ item }}
         state=link
         force=yes
   with_items:
-    - .vimrc
-    - .zshrc
-    - .tmux.conf
-    - .gitconfig
-    - .hgrc
+    - vimrc
+    - zshrc
+    - tmux.conf
+    - gitconfig
+    - hgrc
 
 - name: Clone Vundle
   git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
