@@ -1,0 +1,12 @@
+---
+- name: Make Boxes Directory
+  file: path={{ item }} state=directory mode=0755
+  with_items:
+  - ~/Boxes
+  - ~/Boxes/ubuntu
+
+- name: Copy Vagrant Files
+  copy: src={{ item }}_vagrantfile
+        dest=~/Boxes/{{ item }}/Vagrantfile
+  with_items: 
+    - ubuntu
