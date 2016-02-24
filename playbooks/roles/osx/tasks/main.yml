@@ -15,3 +15,13 @@
 - name: Cleanup Brew packages
   command: brew cleanup
 
+- name: Create Screenshot Directory
+  file: path=~/Pictures/Screenshots state=directory mode=0755
+
+- name: Write to screencapture defaults
+  raw: defaults write com.apple.screencapture location ~/Pictures/Screenshots
+
+# as suggested by http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
+- name: Kill SystemUIServer
+  raw: killall SystemUIServer;
+
