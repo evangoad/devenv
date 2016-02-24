@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
   roles:
-    - role: osx
-    - role: common
+    - { role: osx, tags: ['osx']}
+    - { role: common, tags: ['common']}
