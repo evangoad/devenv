@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#
-# reload-shell, autodetect running shell and source appropriate dotfile 
-
-source $HOME/.zshrc 
-
-exit 0

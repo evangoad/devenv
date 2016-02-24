@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-#
-# apt-cyg installs package list 
-
-apt-cyg install zsh tmux vim
-vim /etc/passwd -c ':%s/bash/zsh/ge | w | q'
-
-exit 0

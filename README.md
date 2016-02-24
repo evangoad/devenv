@@ -41,12 +41,6 @@ ubuntu
 devie -lulg
 ```
 
-cygwin
-
-```bash
-devie -lclg
-```
-
 osx
 
 ```bash
@@ -67,10 +61,6 @@ Below are links to the install scripts responsible for installing `vim`, `zsh`, 
 
 [pacman](install/archlinux/pacman#L5), [yaourt](install/archlinux/yaourt#L5)
 
-### cygwin
-
-[apt-cyg](install/cygwin/apt-cyg#L5), [choco](install/cygwin/choco#L11)
-
 ### osx
 
 [brew](install/osx/brew#L6-L7)
@@ -78,7 +68,4 @@ Below are links to the install scripts responsible for installing `vim`, `zsh`, 
 ### ubuntu
 
 [apt-get](install/ubuntu/apt-get#L5)
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/evangoad/devie/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
