@@ -1,8 +1,6 @@
 - name: Symlink dotfiles
-  file: src=~/.devie/dotfiles/{{ item }}
+  copy: src={{ item }}
         dest=~/.{{ item }}
-        state=link
-        force=yes
   with_items:
     - vimrc
     - zshrc
