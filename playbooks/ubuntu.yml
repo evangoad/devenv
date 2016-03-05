@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
   roles:
-    - role: ubuntu
-    - role: common
+    - { role: devie, tags: ['devie'] }
+    - { role: common, tags: ['common'] }
+    - { role: ubuntu, tags: ['ubuntu'] }

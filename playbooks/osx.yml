@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   roles:
-    - { role: osx, tags: ['osx'] }
+    - { role: devie, tags: ['devie'] }
     - { role: common, tags: ['common'] }
+    - { role: osx, tags: ['osx'] }
     - { role: vagrant, tags: ['vagrant'] }
