@@ -15,7 +15,7 @@ A forkable command line companion that streamlines and simplifies the installati
 It is recommended that you [fork this repo](https://help.github.com/articles/fork-a-repo/), then clone a copy to your Unix-like's `$HOME` directory:
 
 ```bash
-git clone git@github.com:evangoad/devie $HOME/.devie && export PATH="$HOME/.devie:$PATH" && export DEVIE_PATH="$HOME/.devie"
+curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash
 ```
 
 check that `devie` is installed:
