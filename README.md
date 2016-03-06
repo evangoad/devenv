@@ -14,6 +14,14 @@ A forkable command line companion that streamlines and simplifies the installati
 
 It is recommended that you [fork this repo](https://help.github.com/articles/fork-a-repo/), then clone a copy to your Unix-like's `$HOME` directory:
 
+If you are running a fresh OSX install:
+
+```bash
+xcode-select --intsall
+```
+
+Then run install script:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash
 ```
