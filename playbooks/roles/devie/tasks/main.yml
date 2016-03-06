@@ -1,3 +1,0 @@
-- git: repo=ssh://git@github.com/evangoad/devie.git
-       dest="{{ ansible_env.HOME }}/.devie"
-

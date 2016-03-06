@@ -3,14 +3,13 @@
 import os
 import subprocess
 
-# devie_root = Path(os.path.abspath(__file__)).parent.parent
-
 if os.uname() == "Linux":
-  print "Hello Linux"
-else:
-  print "Hellow OSX"
-  command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/osx.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
-  print command
+  print "dotfile detected LINUX! running command:"
+  command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
+  print str(command)
   subprocess.call(command)
-  # proc = subprocess.Popen('ls /.devie', stdout=subprocess.PIPE)
-  # tmp = proc.stdout.read()
+else:
+  print "dotfile detected OSX! running command:"
+  command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/osx.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
+  print str(command)
+  subprocess.call(command)
