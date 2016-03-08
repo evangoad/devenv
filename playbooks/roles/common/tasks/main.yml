@@ -12,16 +12,8 @@
   # become_method: sudo
   raw: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
-- name: Retrieve Exercism
-  get_url: url=https://raw.githubusercontent.com/exercism/cli-www/master/public/install 
-           dest=~/exercism_install
-           mode=0705
-
 - name: Install Exercism
-  command: ~/exercism_install ~/.exercism
-
-- name: Cleanup Exercism Installation
-  file: path=~/exercism_install state=absent
+  raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
 - name: Clone FZF
   git: repo=https://github.com/junegunn/fzf.git 
