@@ -1,5 +1,5 @@
 - name: get the username running the deploy
-  local_action: echo $TRAVIS_OS_NAME
+  local_action: command echo $TRAVIS_OS_NAME
   register: travis_on_the_host
 
 - name: Install Exercism
