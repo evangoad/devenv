@@ -10,8 +10,8 @@ else
 fi
 
 # Install pip helper
-if  type devie > /dev/null; then
-  echo "dotfile python script already installed."
+if type devie-dev > /dev/null; then
+  echo "devie-dev python script already installed."
 else
   pip install git+git://github.com/evangoad/devie
 fi
