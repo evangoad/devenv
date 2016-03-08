@@ -2,16 +2,10 @@
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
-- name: SUDO Install/update vim plugins
-  become: yes
-  become_method: sudo
-  when: ansible_env.USERNAME == "travis"
-  command: vim +PluginInstall! +qall
-
 - name: Install/update VIM plugins
   # become: yes
   # become_method: sudo
-  command: vim +PluginInstall! +qall
+  command: vim +BundleInstall +qall
 
 - name: Install oh-my-zsh
   # become: yes

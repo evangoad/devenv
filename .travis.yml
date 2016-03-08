@@ -4,7 +4,7 @@ os:
   - linux
   - osx
 install:
-  - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | sudo bash'
+  - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash'
 script:
   - 'sudo devenv'
 
