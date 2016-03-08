@@ -1,3 +1,7 @@
+- name: whoami
+  raw: printf `whoami`
+  register: username
+
 - name: Install Exercism
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
@@ -8,24 +12,19 @@
 - name: Install FZF
   raw: ~/.fzf/install   
 
-- name: whoami
-  raw: whoami
-  register: username
-
 - name: Clone Vundle
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
 - name: Install/update VIM plugins
   raw: vim +BundleInstall +qall
-  when: username  != "travis"
+  when: username != "travis"
 
 - name: Install/update VIM plugins TRAVIS STYLE
   become: yes
   become_method: sudo
   raw: vim +BundleInstall +qall
-  when: username  == "travis"
-  
+  when: username == "travis"
 
 - name: Install oh-my-zsh
   raw: echo "her we goooo" && curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
@@ -37,5 +36,4 @@
   become_method: sudo
   when: username == "travis"
 
-
-
+# - user: name={username} shell=/bin/zsh
