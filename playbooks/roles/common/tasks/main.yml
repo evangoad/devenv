@@ -19,11 +19,11 @@
   become: yes
   become_method: sudo
   become_user: '{{username_results.stdout_lines[0]}}'
-  command: vim +BundleInstall +qall
+  raw: vim +BundleInstall +qall
 
 - name: Install oh-my-zsh
   become: yes
   become_method: sudo
   become_user: '{{username_results.stdout_lines[0]}}'
-  command: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
 
