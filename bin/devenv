@@ -3,8 +3,13 @@
 import os
 import subprocess
 import git 
+import sys
 
-git.cmd.Git(os.path.expanduser("~/.devie")).pull();
+git.cmd.Git(os.path.expanduser("~/.devie")).pull()
+
+if sys.argv[1] == "-v":
+  print "denenv version 0.0.1"
+  sys.exit()
 
 if os.uname()[0] == "Linux":
   print "devenv detected LINUX! running command:"
