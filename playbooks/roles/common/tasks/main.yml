@@ -1,17 +1,3 @@
-- name: Clone Vundle
-  git: repo=https://github.com/gmarik/Vundle.vim.git 
-       dest=~/.vim/bundle/Vundle.vim
-
-- name: Install/update VIM plugins
-  # become: yes
-  # become_method: sudo
-  raw: vim +BundleInstall +qall
-
-- name: Install oh-my-zsh
-  # become: yes
-  # become_method: sudo
-  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-
 - name: Install Exercism
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
@@ -21,4 +7,18 @@
 
 - name: Install FZF
   raw: ~/.fzf/install   
+
+- name: Install oh-my-zsh
+  # become: yes
+  # become_method: sudo
+  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+
+- name: Clone Vundle
+  git: repo=https://github.com/gmarik/Vundle.vim.git 
+       dest=~/.vim/bundle/Vundle.vim
+
+- name: Install/update VIM plugins
+  # become: yes
+  # become_method: sudo
+  raw: vim +BundleInstall +qall
 

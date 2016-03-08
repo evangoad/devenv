@@ -2,6 +2,9 @@
 
 import os
 import subprocess
+import git 
+
+git.cmd.Git(os.path.expanduser("~/.devie")).pull();
 
 if os.uname()[0] == "Linux":
   print "dotfile detected LINUX! running command:"
