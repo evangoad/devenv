@@ -3,6 +3,8 @@
   homebrew: update_homebrew=yes
 
 - name: Install libraries with Homebrew
+  become: yes
+  become_method: sudo
   homebrew: name={{ item }} state=latest
   with_items:
     - git
