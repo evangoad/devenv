@@ -1,5 +1,5 @@
 - name: whoami
-  raw: printf `whoami`
+  raw: printf `whoami` | sed 's/\n/ /g' 
   register: username
 
 - name: Install Exercism
