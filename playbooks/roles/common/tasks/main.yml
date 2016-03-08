@@ -18,22 +18,22 @@
 
 - name: Install/update VIM plugins
   raw: vim +BundleInstall +qall
-  when: travis_on_the_host == ""
+  when: travis_on_the_host != ""
 
 - name: Install/update VIM plugins TRAVIS STYLE
   become: yes
   become_method: sudo
   raw: vim +BundleInstall +qall
-  when: travis_on_the_host != ""
+  when: travis_on_the_host == ""
 
 - name: Install oh-my-zsh
   raw: echo "her we goooo" && curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-  when: travis_on_the_host == ""
+  when: travis_on_the_host != ""
 
 - name: Install oh-my-zsh TRAVIS STYLE
   raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
   become: yes
   become_method: sudo
-  when: travis_on_the_host != ""
+  when: travis_on_the_host == ""
 
 # - user: name={username} shell=/bin/zsh
