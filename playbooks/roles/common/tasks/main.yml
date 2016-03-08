@@ -16,6 +16,8 @@
 #   command: vim +PluginInstall +qall
 
 - name: Install oh-my-zsh
+  become: yes
+  become_method: sudo
   raw: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 - name: Retrieve Exercism
