@@ -4,11 +4,13 @@ import os
 import subprocess
 
 if os.uname() == "Linux":
+  print os.uname()
   print "dotfile detected LINUX! running command:"
   command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
   print str(command)
   subprocess.call(command)
 else:
+  print os.uname()
   print "dotfile detected OSX! running command:"
   command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/osx.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
   print str(command)
