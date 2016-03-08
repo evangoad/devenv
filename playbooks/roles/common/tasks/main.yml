@@ -5,7 +5,7 @@
 - name: SUDO Install/update vim plugins
   become: yes
   become_method: sudo
-  when: {{ ansible_env.USER == "travis" }}
+  when: ansible_env.USER == "travis"
   command: vim +PluginInstall! +qall
 
 - name: Install/update VIM plugins
