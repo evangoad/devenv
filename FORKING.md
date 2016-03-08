@@ -7,7 +7,7 @@ If you are unfamiliar with forking, then [have a look at Github's "Fork a Repo" 
 Fork this repo by cilcking the "Fork" button in the upper right hand corner of
 this page in github.
 
-## Edit [README.md](README.md), and [FORKING.md](FORKING.md)
+## Edit [README.md](README.md) and [FORKING.md](FORKING.md)
 
 Look for every instance of `evangoad` in those two files and replace them with
 `your_github_username`.  Then the rest of the installation steps in the
