@@ -15,7 +15,7 @@
 - script: username
   register: whoami_result
 
-- debug: var=whoami_result verbosity=2
+- debug: var=whoami_result 
 
 - name: Install/update VIM plugins
   become: yes
