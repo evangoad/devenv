@@ -16,6 +16,7 @@ if [[ `uname` == 'Linux' ]]; then
 else
   brew update
   brew install python
+  pip install --upgrade pip
 fi
 
 # Install pip helper
