@@ -2,6 +2,6 @@
 - hosts: localhost
   roles:
     - { role: dotfiles, tags: ['dotfiles'] }
-    - { role: common, tags: ['common'] }
     - { role: osx, tags: ['osx'] }
+    - { role: common, tags: ['common'] }
     - { role: vagrant, tags: ['vagrant'] }
