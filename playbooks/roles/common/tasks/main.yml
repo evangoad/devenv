@@ -20,12 +20,12 @@
 - name: Install/update VIM plugins
   become: yes
   become_method: sudo
-  become_user: '{{whoami_result.stdout}}'
+  become_user: '{{whoami_result.stdout_lines[0]}}'
   raw: vim +BundleInstall +qall
 
 - name: Install oh-my-zsh
   become: yes
   become_method: sudo
-  become_user: '{{whoami_result.stdout}}'
+  become_user: '{{whoami_result.stdout_lines[0]}}'
   raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
 
