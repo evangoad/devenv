@@ -8,17 +8,34 @@
 - name: Install FZF
   raw: ~/.fzf/install   
 
-- name: Install oh-my-zsh
-  # become: yes
-  # become_method: sudo
-  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+- name: whoami
+  raw: whoami
+  register: username
 
 - name: Clone Vundle
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
 - name: Install/update VIM plugins
-  # become: yes
-  # become_method: sudo
   raw: vim +BundleInstall +qall
+  when: username  != "travis"
+
+- name: Install/update VIM plugins TRAVIS STYLE
+  become: yes
+  become_method: sudo
+  raw: vim +BundleInstall +qall
+  when: username  == "travis"
+  
+
+- name: Install oh-my-zsh
+  raw: echo "her we goooo" && curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+  when: username != "travis"
+
+- name: Install oh-my-zsh TRAVIS STYLE
+  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+  become: yes
+  become_method: sudo
+  when: username == "travis"
+
+
 
