@@ -10,7 +10,7 @@ os:
 #   system_site_packages: True
 
 install:
-  - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash'
+  - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | sudo bash'
 
 script:
   - 'devie-dev'
