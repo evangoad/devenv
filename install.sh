@@ -6,7 +6,7 @@
 if [ -d "$HOME/.devie" ]; then
   echo "dotfile github repo already cloned."
 else
-  git clone git@github.com:evangoad/devie ~/.devie
+  git clone https://github.com/evangoad/devie ~/.devie
 fi
 
 # Install pip helper
