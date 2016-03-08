@@ -1,20 +1,10 @@
 ---
 
-language: python
 sudo: required
 
 os:
   - linux
   - osx
-
-before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python  ; fi
-
-addons:
-  apt:
-    packages:
-      - python
 
 # virtualenv:
 #   system_site_packages: True
@@ -23,7 +13,6 @@ install:
   - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash'
 
 script:
-  - 'ls -la $HOME'
   - 'devie-dev'
   # - 'git clone --depth 1 https://github.com/nickjj/rolespec'
   # - 'cd rolespec; bin/rolespec -r https://github.com/evangoad/devie'
