@@ -34,7 +34,7 @@ environment.
 - Easy to customize by writing ansible code.  Every thing happens in
   [install.sh](install.sh/) and the [ansible playbooks](playbooks/).  Create new
   [roles](playbooks/roles) and use them in the [playbook](playbooks/ubuntu.yml)
-  [files](playbooks/oxs.yml).
+  [files](playbooks/osx.yml).
 - SOON: jekyll based github pages website to document the usage of your `devenv`
 
 # How can I use this?
