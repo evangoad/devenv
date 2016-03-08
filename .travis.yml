@@ -4,9 +4,10 @@ os:
   - linux
   - osx
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then   curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | sudo bash ; fi
 script:
   - 'devenv --version'
+  - 'devenv -h'
   - 'devenv'
 
