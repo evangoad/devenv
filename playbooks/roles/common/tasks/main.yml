@@ -1,7 +1,3 @@
-# - name: get the username running the deploy
-#   local_action: command echo `whoami`
-#   register: travis_on_the_host
-
 - name: Install Exercism
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
@@ -21,9 +17,9 @@
 #   when: travis_on_the_host != "travis"
 
 - name: Install/update VIM plugins TRAVIS STYLE
-  become: yes
-  become_method: sudo
-  raw: vim +BundleInstall +qall
+  # become: yes
+  # become_method: sudo
+  shell: vim +BundleInstall +qall
   # when: travis_on_the_host == "travis"
 
 # - name: Install oh-my-zsh
@@ -31,9 +27,8 @@
 #   when: travis_on_the_host != "travis"
 
 - name: Install oh-my-zsh TRAVIS STYLE
-  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-  become: yes
-  become_method: sudo
+  shell: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+  # become: yes
+  # become_method: sudo
   # when: travis_on_the_host == "travis"
 
-# - user: name={username} shell=/bin/zsh
