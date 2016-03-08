@@ -17,10 +17,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# devie
-export DEVIE_PATH="$HOME/.devie"
-export PATH="$PATH:$DEVIE_PATH"
-
 # gitenv 
 if [ -f $HOME/.gitenv ]; then
   source $HOME/.gitenv

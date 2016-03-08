@@ -12,23 +12,19 @@
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
-# - name: Install/update VIM plugins
-#   raw: vim +BundleInstall +qall
-#   when: travis_on_the_host != "travis"
+- raw: whoami
+  register: whoami_result
 
 - name: Install/update VIM plugins TRAVIS STYLE
-  # become: yes
-  # become_method: sudo
-  command: vim +BundleInstall +qall
-  # when: travis_on_the_host == "travis"
+  become: yes
+  become_method: sudo
+  become_user: '{{whoami_result.stdout}}'
+  raw: vim +BundleInstall +qall
 
-# - name: Install oh-my-zsh
-#   raw: echo "her we goooo" && curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-#   when: travis_on_the_host != "travis"
+- name: Install oh-my-zsh
+  become: yes
+  become_method: sudo
+  become_user: '{{whoami_result.stdout}}'
+  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
 
-- name: Install oh-my-zsh TRAVIS STYLE
-  command: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-  # become: yes
-  # become_method: sudo
-  # when: travis_on_the_host == "travis"
 
