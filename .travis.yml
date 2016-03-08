@@ -2,19 +2,24 @@
 
 language: python
 python: '2.7'
+sudo: required
 
 os:
   - linux
   - osx
+before_install:
+  - brew update
+  - brew install python
+  - sudo apt-get update
+  - sudo apt-get install python
 
 # virtualenv:
 #   system_site_packages: True
 
-before_install: True
-install: True
+install:
+  - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash'
 
 script:
-  - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | bash'
   - 'ls -la $HOME'
   - 'devie-dev'
   # - 'git clone --depth 1 https://github.com/nickjj/rolespec'
