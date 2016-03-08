@@ -13,6 +13,7 @@ install:
   - 'curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | sudo bash'
 
 script:
+  - 'uname'
   - 'devie-dev'
   # - 'git clone --depth 1 https://github.com/nickjj/rolespec'
   # - 'cd rolespec; bin/rolespec -r https://github.com/evangoad/devie'
