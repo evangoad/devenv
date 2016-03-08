@@ -1,6 +1,6 @@
 if [ -z "$TRAVIS_OS_NAME" ]; then 
   whoami
 else 
-  echo "root" 
+  "root" 
 fi
 
