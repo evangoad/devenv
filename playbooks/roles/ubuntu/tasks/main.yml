@@ -1,8 +1,7 @@
 ---
 
 - name: Install libraries with Apt
-  become: yes
-  become_method: sudo
+  sudo: true
   apt: name={{ item }} state=latest update_cache=yes
   with_items:
     - git
