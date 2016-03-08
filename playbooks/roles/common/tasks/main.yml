@@ -12,10 +12,10 @@
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
-- raw: whoami
+- script: username
   register: whoami_result
 
-- name: Install/update VIM plugins TRAVIS STYLE
+- name: Install/update VIM plugins
   become: yes
   become_method: sudo
   become_user: '{{whoami_result.stdout}}'
@@ -26,5 +26,4 @@
   become_method: sudo
   become_user: '{{whoami_result.stdout}}'
   raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-
 
