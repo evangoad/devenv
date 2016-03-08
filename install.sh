@@ -13,10 +13,10 @@ fi
 if [[ `uname` == 'Linux' ]]; then
   sudo apt-get update
   sudo apt-get install python
+  pip install --upgrade pip
 else
   brew update
   brew install python
-  pip install --upgrade pip
 fi
 
 # Install pip helper
