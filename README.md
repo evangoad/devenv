@@ -29,36 +29,13 @@ curl -fsSL https://raw.githubusercontent.com/evangoad/devie/master/install.sh | 
 check that `devie` is installed:
 
 ```bash
-devie -h
+devie -v
 ```
 
 # Usage
 
-
-## 1. run `devie` command
-
-archlinux 
-
 ```bash
-devie -lalg 
-```
-
-ubuntu
-
-```bash
-devie -lulg
-```
-
-osx
-
-```bash
-devie -lolg
-```
-
-## 2. start `zsh`
-
-```bash
-zsh
+devie-dev 
 ```
 
 # Packages included
