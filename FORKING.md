@@ -7,9 +7,14 @@ If you are unfamiliar with forking, then [have a look at Github's "Fork a Repo" 
 Fork this repo by clicking the "Fork" button in the upper right hand corner of
 this github page.
 
-## Edit [install.sh](install.sh), [README.md](README.md), and [FORKING.md](FORKING.md)
+## Edit files with github user info
 
-Look for every instance of `evangoad` in those two files and replace them with
+- [install.sh](install.sh)
+- [.travis.yml](.travis.yml)
+- [README.md](README.md)
+- [FORKING.md](FORKING.md)
+
+Look for every instance of `evangoad` in the files listed above and replace them with
 `your_github_username`.  Then the rest of the installation steps in the
 [README](README.md) should point to your copy of `denenv`.
 
