@@ -12,8 +12,8 @@
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
-- name: Install/update VIM plugins
-  command: vim +PluginInstall +qall
+# - name: Install/update VIM plugins
+#   command: vim +PluginInstall +qall
 
 - name: Install oh-my-zsh
   raw: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
