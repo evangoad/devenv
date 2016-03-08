@@ -5,12 +5,12 @@
 - name: Install/update VIM plugins
   # become: yes
   # become_method: sudo
-  command: vim +BundleInstall +qall > /dev/null
+  raw: vim +BundleInstall +qall
 
 - name: Install oh-my-zsh
   # become: yes
   # become_method: sudo
-  raw: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
 
 - name: Install Exercism
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
@@ -20,5 +20,5 @@
        dest=~/.fzf
 
 - name: Install FZF
-  command: ~/.fzf/install   
+  raw: ~/.fzf/install   
 
