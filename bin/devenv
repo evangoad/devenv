@@ -7,12 +7,12 @@ import git
 git.cmd.Git(os.path.expanduser("~/.devie")).pull();
 
 if os.uname()[0] == "Linux":
-  print "dotfile detected LINUX! running command:"
+  print "devenv detected LINUX! running command:"
   command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
   print str(command)
   subprocess.check_call(command)
 else:
-  print "dotfile detected OSX! running command:"
+  print "devenv detected OSX! running command:"
   command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/osx.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
   print str(command)
   subprocess.check_call(command)
