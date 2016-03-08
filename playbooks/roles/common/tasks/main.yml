@@ -5,7 +5,7 @@
 - name: Install/update VIM plugins
   # become: yes
   # become_method: sudo
-  command: vim +BundleInstall +qall
+  command: vim +BundleInstall +qall > /dev/null
 
 - name: Install oh-my-zsh
   # become: yes
