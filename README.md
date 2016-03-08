@@ -11,37 +11,32 @@ The only requirements are that you have git and curl installed in a terminal.
 `devenv` currently supports OSX and Ubuntu. See [Requirements](REQUIREMENTS.md)
 for more info.
 
-# How can I use this?
-
-This repository was intentionally designed to be [forked like
-dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
-Follow these two steps to have your own customizable copy of `devenv`
-
-## Fork this Repo
-
-Follow the [Forking documentation](FORKING.md)
-
-## Install the script
-
-Run the install script, pointing to your newly forked repo:
-
-```bash
-export YOUR_USERNAME=evangoad
-curl -fsSL https://raw.githubusercontent.com/$YOUR_USERNAME/devenv/master/install.sh | bash
-```
-
-ensure `devenv` is installed:
-
-```bash
-devenv -v
-```
-
 # Usage
 
 Symlink your dotfiles and install the programs required to run them:
 
 ```bash
 devenv
+```
+
+# How can I use this?
+
+This repository was intentionally designed to be [forked like
+dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+Follow these steps to have your own customizable copy of `devenv`
+
+- Follow the instructions in the [Forking documentation](FORKING.md)
+- Run the install script, pointing to your newly forked repo
+
+```bash
+export YOUR_USERNAME=evangoad
+curl -fsSL https://raw.githubusercontent.com/$YOUR_USERNAME/devenv/master/install.sh | bash
+```
+
+- ensure `devenv` is installed:
+
+```bash
+devenv -v
 ```
 
 # How it Works
