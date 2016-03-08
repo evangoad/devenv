@@ -10,5 +10,5 @@
     - zsh
     - tmux
     - tree
-    - silversearcher-ag
+    # - silversearcher-ag
 
