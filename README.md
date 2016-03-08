@@ -19,6 +19,20 @@ Symlink your dotfiles and install the programs required to run them:
 devenv
 ```
 
+# How it Works
+
+`devenv ` is a simple python script that runs OSX and Ubuntu specific ansible
+[playbooks](playbooks/). Move your existing dotfiles into the [dotfile role's
+directory](playbooks/roles/dotfiles/files) and run `devenv` to update your
+environment.
+
+# What you get out of the box
+
+- Travis-ci configuration to automate your tests for both OSX and Ubuntu
+- Single command install, single command update of your dev environment and
+  dotfiles
+- SOON: jekyll based github pages website to document the usage of your `devenv`
+
 # How can I use this?
 
 This repository was intentionally designed to be [forked like
@@ -39,16 +53,3 @@ curl -fsSL https://raw.githubusercontent.com/$YOUR_USERNAME/devenv/master/instal
 devenv --version
 ```
 
-# How it Works
-
-`devenv ` is a simple python script that runs OSX and Ubuntu specific ansible
-playbooks.  See the [playbooks](playbooks/) directory.  Move your existing
-dotfiles into the [dotfile role's directory](playbooks/roles/dotfiles/files)
-and run `devenv` to update your environment.
-
-# What you get out of the box
-
-- Travis-ci configuration to automate your tests for both OSX and Ubuntu
-- Single command install, single command update of your dev environment and
-  dotfiles
-- SOON: jekyll based github pages website to document the usage of your `devenv`
