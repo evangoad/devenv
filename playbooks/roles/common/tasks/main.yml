@@ -13,6 +13,8 @@
        dest=~/.vim/bundle/Vundle.vim
 
 - name: Install/update VIM plugins
+  become: yes
+  become_mehtod: sudo
   command: vim +PluginInstall +qall
 
 - name: Install oh-my-zsh
