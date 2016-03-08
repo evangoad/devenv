@@ -36,7 +36,7 @@ curl -fsSL https://raw.githubusercontent.com/$YOUR_USERNAME/devenv/master/instal
 - ensure `devenv` is installed:
 
 ```bash
-devenv -v
+devenv --version
 ```
 
 # How it Works
