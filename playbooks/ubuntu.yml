@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
   roles:
-    - { role: devie, tags: ['devie'] }
+    - { role: dotfiles, tags: ['dotfiles'] }
     - { role: common, tags: ['common'] }
     - { role: ubuntu, tags: ['ubuntu'] }

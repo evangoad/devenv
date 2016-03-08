@@ -3,8 +3,8 @@
   homebrew: update_homebrew=yes
 
 - name: Install libraries with Homebrew
-  become: yes
-  become_method: sudo
+  # become: yes
+  # become_method: sudo
   homebrew: name={{ item }} state=latest
   with_items:
     - git
@@ -13,9 +13,6 @@
     - tmux
     - tree 
     - ag
-
-- name: Cleanup Brew packages
-  command: brew cleanup
 
 - name: Create Screenshot Directory
   file: path=~/Pictures/Screenshots state=directory mode=0755

@@ -4,8 +4,8 @@ import os
 
  
 setup(
-       name='devie-dev',
+       name='devenv',
        version='0.1',  
-       scripts=['bin/devie-dev'],
+       scripts=['bin/devenv'],
        install_requires=['unipath','setuptools','ansible']
      )

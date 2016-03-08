@@ -1,25 +1,15 @@
-- name: Symlink dotfiles
-  copy: src={{ item }}
-        dest=~/.{{ item }}
-  with_items:
-    - vimrc
-    - zshrc
-    - tmux.conf
-    - gitconfig
-    - hgrc
-
 - name: Clone Vundle
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
 - name: Install/update VIM plugins
-  become: yes
-  become_method: sudo
+  # become: yes
+  # become_method: sudo
   command: vim +PluginInstall +qall
 
 - name: Install oh-my-zsh
-  become: yes
-  become_method: sudo
+  # become: yes
+  # become_method: sudo
   raw: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 - name: Retrieve Exercism

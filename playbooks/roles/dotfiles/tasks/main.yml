@@ -1,0 +1,9 @@
+- name: Symlink dotfiles
+  copy: src={{ item }}
+        dest=~/.{{ item }}
+  with_items:
+    - vimrc
+    - zshrc
+    - tmux.conf
+    - gitconfig
+    - hgrc
