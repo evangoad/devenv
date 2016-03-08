@@ -4,8 +4,8 @@ If you are unfamiliar with forking, then [have a look at Github's "Fork a Repo" 
 
 ## Fork button
 
-Fork this repo by cilcking the "Fork" button in the upper right hand corner of
-this page in github.
+Fork this repo by clicking the "Fork" button in the upper right hand corner of
+this github page.
 
 ## Edit [install.sh](install.sh), [README.md](README.md), and [FORKING.md](FORKING.md)
 
