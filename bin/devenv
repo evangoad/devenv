@@ -2,7 +2,6 @@
 
 import os
 import subprocess
-import git 
 import sys
 import optparse
 

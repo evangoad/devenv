@@ -5,7 +5,7 @@ import os
  
 setup(
        name='devenv',
-       version='0.1',  
+       version='0.0.1',
        scripts=['bin/devenv'],
-       install_requires=['unipath','setuptools','ansible','gitpython']
+       install_requires=['unipath','setuptools','ansible']
      )
