@@ -8,8 +8,9 @@ manage my dotfiles and the programs that run them, specifically:
 `vim`, `tmux`, `zsh`, `vundle`, `oh-my-zsh`, `fzf`, `silver searcher`, and more
 
 The only requirements are that you have git and curl installed in a terminal.
-`devenv` currently supports OSX and Ubuntu. See [Requirements](REQUIREMENTS.md)
-for more info.
+`devenv` currently supports OSX and Ubuntu, and it only requires that `git` be
+installed (plus `brew` if you are installing on OSX). See
+[Requirements](REQUIREMENTS.md) for more info.
 
 # Usage
 
@@ -44,10 +45,16 @@ dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 In order to install and use your own customizable copy of `devenv`:
 
 - Follow the instructions in the [Forking documentation](FORKING.md)
-- Run the install script, pointing to your newly forked repo
+- Install by using the install script:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
+```
+  OR Install by cloning and running `pip`:
+
+```bash
+git clone https://github.com/evangoad/devenv.git ~/.devenv
+pip install ~/.devenv
 ```
 
 - ensure `devenv` is installed:
