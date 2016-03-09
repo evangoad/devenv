@@ -7,7 +7,6 @@ import sys
 import optparse
 
 def main():
-  # git.cmd.Git(os.path.expanduser("~/.devenv")).pull()
   origWD = os.getcwd()
   os.chdir(os.path.expanduser("~/.devenv"))
   subprocess.check_call(["git", "pull"])
