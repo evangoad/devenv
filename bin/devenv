@@ -15,12 +15,12 @@ def main():
   if len(arguments) == 0:
     if os.uname()[0] == "Linux":
       print "devenv detected LINUX! running command:"
-      command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
+      command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
       print str(command)
       subprocess.check_call(command)
     else:
       print "devenv detected OSX! running command:"
-      command = ["ansible-playbook", os.path.expanduser("~/.devie/playbooks/osx.yml"), "-i", os.path.expanduser("~/.devie/playbooks/inventory")]
+      command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/osx.yml"), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
       print str(command)
       subprocess.check_call(command)
   else:
