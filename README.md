@@ -7,10 +7,9 @@ manage my dotfiles and the programs that run them, specifically:
 
 `vim`, `tmux`, `zsh`, `vundle`, `oh-my-zsh`, `fzf`, `silver searcher`, and more
 
-The only requirements are that you have git and curl installed in a terminal.
-`devenv` currently supports OSX and Ubuntu, and it only requires that `git` be
-installed (plus `brew` if you are installing on OSX). See
-[Requirements](REQUIREMENTS.md) for more info.
+`devenv` currently supports OSX and Ubuntu, and it only requires that `git` and
+`python` are installed (plus `brew` if you are installing on OSX).
+See [Requirements](REQUIREMENTS.md) for more info.
 
 # Usage
 

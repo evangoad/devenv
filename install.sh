@@ -2,13 +2,6 @@
 #
 # script to install dotfile
 
-# Clone devenv from Github
-if [ -d "$HOME/.devenv" ]; then
-  echo "devenv github repo already cloned."
-else
-  git clone https://github.com/evangoad/devenv ~/.devenv
-fi
-
 # Install Python
 if [[ `uname` == 'Linux' ]]; then
   sudo apt-get update
@@ -17,6 +10,13 @@ if [[ `uname` == 'Linux' ]]; then
 else
   brew update
   brew install python
+fi
+
+# Clone devenv from Github
+if [ -d "$HOME/.devenv" ]; then
+  echo "devenv github repo already cloned."
+else
+  git clone https://github.com/evangoad/devenv ~/.devenv
 fi
 
 # Install pip helper
