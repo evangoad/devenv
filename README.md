@@ -21,20 +21,20 @@ devenv
 
 # How it Works
 
-`devenv ` is a simple python script that runs OSX and Ubuntu specific ansible
+`devenv` is a simple python script that runs OSX and Ubuntu specific ansible
 [playbooks](playbooks/). Move your existing dotfiles into the [dotfile role's
-directory](playbooks/roles/dotfiles/files) and run `devenv` to update your
-environment.
+"file" directory](playbooks/roles/dotfiles/files) and run `devenv` to update
+your environment.
 
 # What you get out of the box
 
 - Travis-ci configuration to automate your tests for both OSX and Ubuntu
 - Single command install, single command update of your dev environment and
   dotfiles
-- Easy to customize by writing ansible code.  Every thing happens in
-  [install.sh](install.sh/) and the [ansible playbooks](playbooks/).  Create new
-  [roles](playbooks/roles) and use them in the [playbook](playbooks/ubuntu.yml)
-  [files](playbooks/osx.yml).
+- Easy to customize by writing ansible code.  Every thing happens in the short
+  [install.sh](install.sh/) script and the [ansible playbooks](playbooks/).
+  Create new [roles](playbooks/roles) and use them in the
+  [playbook](playbooks/ubuntu.yml) [files](playbooks/osx.yml).
 - SOON: jekyll based github pages website to document the usage of your `devenv`
 
 # How can I use this?
@@ -47,8 +47,7 @@ Follow these steps to have your own customizable copy of `devenv`
 - Run the install script, pointing to your newly forked repo
 
 ```bash
-export YOUR_USERNAME=evangoad
-curl -fsSL https://raw.githubusercontent.com/$YOUR_USERNAME/devenv/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 ```
 
 - ensure `devenv` is installed:
