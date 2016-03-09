@@ -8,6 +8,10 @@ import optparse
 
 def main():
   # git.cmd.Git(os.path.expanduser("~/.devenv")).pull()
+  origWD = os.getcwd()
+  os.chdir(os.path.expanduser("~/.devenv"))
+  subprocess.check_call(["git", "pull"])
+  os.chdir(origWD)
 
   p = optparse.OptionParser(version='devenv 0.0.1',usage="usage: devenv [options]\n default behavior is to install applications and symlink dotfiles")
   options, arguments = p.parse_args()
