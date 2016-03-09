@@ -4,8 +4,8 @@
 
 # Install Python
 if [[ `uname` == 'Linux' ]]; then
-  sudo apt-get update
-  sudo apt-get install python
+  sudo apt-get -qq update
+  sudo apt-get install -y python
   sudo pip install --upgrade pip
 else
   brew update
