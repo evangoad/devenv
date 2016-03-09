@@ -45,15 +45,15 @@ dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 In order to install and use your own customizable copy of `devenv`:
 
 - Follow the instructions in the [Forking documentation](FORKING.md)
-- Install by using the install script:
+- For an install by https clone, use the install script:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 ```
-  OR Install by cloning and running `pip`:
+  OR Install by ssh cloning and running `pip`:
 
 ```bash
-git clone https://github.com/evangoad/devenv.git ~/.devenv
+git clone git@github.com:evangoad/devenv.git ~/.devenv
 pip install ~/.devenv
 ```
 
