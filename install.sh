@@ -23,6 +23,6 @@ fi
 if type devenv > /dev/null; then
   echo "devenv python script already installed."
 else
-  pip install git+git://github.com/evangoad/devenv
+  sudo pip install git+git://github.com/evangoad/devenv
 fi
 
