@@ -4,8 +4,7 @@ os:
   - linux
   - osx
 install:
-  # - curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
-  - ./install.sh
+  - curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 script:
   - 'devenv --version'
   - 'devenv -h'
