@@ -50,16 +50,16 @@ In order to install and use your own customizable copy of `devenv`:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 ```
-  OR Install by ssh cloning and running `pip`:
+  OR Install by ssh cloning and `pip`:
 
 ```bash
 git clone git@github.com:evangoad/devenv.git ~/.devenv
 pip install ~/.devenv
 ```
 
-- ensure `devenv` is installed:
+- Generate help output to ensure `devenv` is installed:
 
 ```bash
-devenv --version
+devenv -h
 ```
 
