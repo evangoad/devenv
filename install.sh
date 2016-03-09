@@ -6,7 +6,7 @@
 if [ -d "$HOME/.devie" ]; then
   echo "devenv github repo already cloned."
 else
-  git clone https://github.com/evangoad/devie ~/.devie
+  git clone https://github.com/evangoad/devenv ~/.devenv
 fi
 
 # Install Python
@@ -23,6 +23,6 @@ fi
 if type devenv > /dev/null; then
   echo "devenv python script already installed."
 else
-  pip install git+git://github.com/evangoad/devie
+  pip install git+git://github.com/evangoad/devenv
 fi
 
