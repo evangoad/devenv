@@ -41,7 +41,7 @@ your environment.
 
 This repository was intentionally designed to be [forked like
 dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
-Follow these steps to have your own customizable copy of `devenv`
+In order to install and use your own customizable copy of `devenv`:
 
 - Follow the instructions in the [Forking documentation](FORKING.md)
 - Run the install script, pointing to your newly forked repo
