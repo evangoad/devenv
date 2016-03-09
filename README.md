@@ -23,8 +23,8 @@ devenv
 # How it Works
 
 `devenv` is a simple python script that runs OSX and Ubuntu specific ansible
-[playbooks](playbooks/). Move your existing dotfiles into the [dotfile role's
-"file" directory](playbooks/roles/dotfiles/files) and run `devenv` to update
+[playbooks](playbooks/). Move your existing dotfiles into the ["files" directory
+in the dotfile role](playbooks/roles/dotfiles/files) and run `devenv` to update
 your environment.
 
 # What you get out of the box
