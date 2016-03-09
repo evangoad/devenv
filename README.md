@@ -1,6 +1,6 @@
 # `devenv`
 
-[![Build Status](https://travis-ci.org/evangoad/devie.svg?branch=master)](https://travis-ci.org/evangoad/devie)
+[![Build Status](https://travis-ci.org/evangoad/devenv.svg?branch=master)](https://travis-ci.org/evangoad/devenv)
 
 Pronounced "dev envy", this is a simple python script that runs ansible to help
 manage my dotfiles and the programs that run them, specifically:

@@ -7,7 +7,7 @@ import sys
 import optparse
 
 def main():
-  # git.cmd.Git(os.path.expanduser("~/.devie")).pull()
+  # git.cmd.Git(os.path.expanduser("~/.devenv")).pull()
 
   p = optparse.OptionParser(version='devenv 0.0.1',usage="usage: devenv [options]\n default behavior is to install applications and symlink dotfiles")
   options, arguments = p.parse_args()
