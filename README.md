@@ -5,7 +5,7 @@
 Pronounced "dev envy", this is a simple python script that runs ansible to help
 manage my dotfiles and the programs that run them, specifically:
 
-`vim`, `tmux`, `zsh`, `fzf`, `silver searcher`, and more
+`vim`, `tmux`, `zsh`, `vundle`, `oh-my-zsh`, `fzf`, `silver searcher`, and more
 
 The only requirements are that you have git and curl installed in a terminal.
 `devenv` currently supports OSX and Ubuntu. See [Requirements](REQUIREMENTS.md)
