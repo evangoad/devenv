@@ -7,15 +7,15 @@ import sys
 import optparse
 
 def main():
-  origWD = os.getcwd()
-  os.chdir(os.path.expanduser("~/.devenv"))
-  subprocess.check_call(["git", "pull"])
-  os.chdir(origWD)
 
   p = optparse.OptionParser(version='devenv 0.0.1',usage="usage: devenv [options]\n default behavior is to install applications and symlink dotfiles")
   options, arguments = p.parse_args()
 
   if len(arguments) == 0:
+    origWD = os.getcwd()
+    os.chdir(os.path.expanduser("~/.devenv"))
+    subprocess.check_call(["git", "pull"])
+    os.chdir(origWD)
     if os.uname()[0] == "Linux":
       print "devenv detected LINUX! running command:"
       command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
