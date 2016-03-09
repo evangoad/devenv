@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#
-# yaourt installs package list 
-
-yaourt -S --noconfirm --needed docker-compose 
-
-exit 0

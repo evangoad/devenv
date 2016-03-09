@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#
-# pacman installs package list 
-
-sudo -E pacman -Syu --noconfirm --needed zsh vim tmux the_silver_searcher docker go rust ghc cabal-install happy alex haddock pigz zlib irssi
-
-exit 0
