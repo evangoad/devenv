@@ -3,7 +3,7 @@
 # script to install dotfile
 
 # Clone devie from Github
-if [ -d "$HOME/.devie" ]; then
+if [ -d "$HOME/.devenv" ]; then
   echo "devenv github repo already cloned."
 else
   git clone https://github.com/evangoad/devenv ~/.devenv
