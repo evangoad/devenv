@@ -9,4 +9,7 @@ script:
   - 'devenv --version'
   - 'devenv -h'
   - 'devenv'
+addons:
+  code_climate:
+    repo_token: a583ad027c9a52fa3388e113de7e734ed93de5646fc5d5a8b07e23342192f871
 
