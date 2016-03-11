@@ -8,8 +8,8 @@ if [[ `uname` == 'Linux' ]]; then
   sudo apt-get install -y python
   sudo pip install --upgrade pip
 else
-  brew update --quieter
-  brew install python --quieter
+  brew update > /dev/null 
+  brew install python > /dev/null
 fi
 
 # Clone devenv from Github
