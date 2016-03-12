@@ -13,7 +13,7 @@
        dest=~/.vim/bundle/Vundle.vim
 
 - name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
-- script: username
+  script: username
   register: username_results
 
 - name: Install/update VIM plugins by running BundleInstall command outside of the editor.
