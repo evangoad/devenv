@@ -12,7 +12,7 @@
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
-- name: TRAVIS-CI WORKAROUND: we need to assume sudo for the following tasks to run correctly on travis, so lets run the custom username script and save result in the username_result register.
+- name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
 - script: username
   register: username_results
 
