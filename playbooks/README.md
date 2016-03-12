@@ -8,7 +8,7 @@ playbooks, and roles.
 Inventories in ansible are the hosts (computers) that you want to run ansible
 commands on.  In the case of `devenv`, the only computer we ever want to run
 commands on is `localhost` or `127.0.0.1`.  Therefore, the single
-[inventory](./inventrory) file in this directory shouldn't change unless you are
+[inventory](./inventory) file in this directory shouldn't change unless you are
 modifying `devenv` to run updates across multiple hosts you own.
 
 ## Playbooks
@@ -28,7 +28,7 @@ especially if you need to [share them across playbooks](./roles/common).
 
 ## Roles
 
-See more at the main [Roles Readme](./roles/README.md).
+See more at the main [Roles Readme](./roles).
 
 ## Tree
 
