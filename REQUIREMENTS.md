@@ -10,8 +10,7 @@ xcode-select --install
 installation script.
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL
-https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ensure you have `git` and `brew` installed
