@@ -1,27 +1,28 @@
-- name: Install Exercism
+- name: Install Exercism by piping to bash the result of a curl command to exercism's github repository.
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
-- name: Clone FZF
+- name: Clone FZF github repository to `$HOME/.fzf`
   git: repo=https://github.com/junegunn/fzf.git 
        dest=~/.fzf
 
-- name: Install FZF
+- name: Run FZF install script from cloned FZF repository.
   raw: ~/.fzf/install   
 
-- name: Clone Vundle
+- name: Clone Vundle github repository.
   git: repo=https://github.com/gmarik/Vundle.vim.git 
        dest=~/.vim/bundle/Vundle.vim
 
+- name: TRAVIS-CI WORKAROUND: we need to assume sudo for the following tasks to run correctly on travis, so lets run the custom username script and save result in the username_result register.
 - script: username
   register: username_results
 
-- name: Install/update VIM plugins
+- name: Install/update VIM plugins by running BundleInstall command outside of the editor.
   become: yes
   become_method: sudo
   become_user: '{{username_results.stdout_lines[0]}}'
   raw: vim +BundleInstall +qall
 
-- name: Install oh-my-zsh
+- name: Install oh-my-zsh by piping to bash the result of a curl command to oh-my-zsh's github repository.
   become: yes
   become_method: sudo
   become_user: '{{username_results.stdout_lines[0]}}'
