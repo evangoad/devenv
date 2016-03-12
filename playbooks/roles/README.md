@@ -8,10 +8,10 @@ files that define shell commands to be ran such as cloning github repositories
 and symlinking dotfiles.  There are 5 roles currently available to be included
 in playbooks: 
 
-- [common](./common), 
-- [dotfiles](./dotfiles), 
-- [osx](./osx),
-- [ubuntu](./ubuntu),
+- [common](./common)
+- [dotfiles](./dotfiles)
+- [osx](./osx)
+- [ubuntu](./ubuntu)
 - [vagrant](./vagrant)
 
 Each role contains a single task called `main.yml` that runs all of the commands
