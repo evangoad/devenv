@@ -231,5 +231,11 @@ nmap <leader>tr <Plug>SetTmuxVars
 " Clear Search Buffer
 nmap <silent> ,/ :nohlsearch<CR>
 
+" Colorcolumn from Jon
+nmap <leader>uu :let &colorcolumn=join(range(81,999),",")<CR>
+nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
+let &colorcolumn=join(range(81,999),",")
+
+" colorscheme
 colorscheme hybrid
 
