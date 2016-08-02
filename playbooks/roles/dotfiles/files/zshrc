@@ -78,7 +78,7 @@ alias booya="vagrant up && vagrant ssh"
 alias ha="habitica"
 
 # LP aliases
-alias reset_all="RAILS_ENV=test be rake parallel:reset && RAILS_ENV=test be rake db:drop db:create mf && RAILS_ENV=development be rake db:drop db:create mf"
+alias reset_all="reset_parallel && reset_test && reset_dev"
 alias reset_parallel="RAILS_ENV=test be rake parallel:reset"
 alias reset_test="RAILS_ENV=test be rake db:drop db:create mf"
 alias reset_dev="RAILS_ENV=development be rake db:drop db:create mf"
