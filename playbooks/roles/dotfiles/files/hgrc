@@ -9,3 +9,13 @@ rebase =
 color =
 shelve =
 mq =
+
+[alias]
+st = status
+br = branch
+brl = branches
+co = commit
+ll = pull
+pp = push
+sh = shelve
+shl = shelve --list
