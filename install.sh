@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 #
-# script to install dotfile
+# script to install devenv
 
 # Install Python
 if [[ `uname` == 'Linux' ]]; then
+  echo "Linux prereqs"
   sudo apt-get -qq update
   sudo apt-get install -y python
   sudo pip install --upgrade pip
 else
+  echo "OSX prereqs"
   brew update > /dev/null 
   brew install python > /dev/null
 fi
+
+pip install ansible
 
 # Clone devenv from Github
 if [ -d "$HOME/.devenv" ]; then
