@@ -17,7 +17,7 @@ def main():
     os.chdir(origWD)
     if os.uname()[0] == "Linux":
       print "devenv detected LINUX! running command:"
-      command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devenv/playbooks/inventory"), "--sudo"]
+      command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/ubuntu.yml"), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
       print str(command)
       subprocess.check_call(command)
     else:
