@@ -10,4 +10,5 @@ script:
   - 'devenv --version'
   - 'devenv -h'
   - 'devenv'
+  - 'devenv'
 
