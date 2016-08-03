@@ -1,6 +1,7 @@
 ---
 
 - name: Install libraries with Apt
+  sudo: yes
   apt: name={{ item }} state=latest update_cache=yes
   with_items:
     - git
