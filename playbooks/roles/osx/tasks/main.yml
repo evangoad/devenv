@@ -3,8 +3,6 @@
   homebrew: update_homebrew=yes
 
 - name: Install libraries with Homebrew
-  # become: yes
-  # become_method: sudo
   homebrew: name={{ item }} state=latest
   with_items:
     - git
@@ -22,5 +20,5 @@
 
 # as suggested by http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
 - name: Kill SystemUIServer
-  raw: killall SystemUIServer;
+  raw: killall SystemUIServer
 
