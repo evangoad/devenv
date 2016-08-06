@@ -8,19 +8,26 @@
 - name: Run FZF install script from cloned FZF repository.
   raw: ~/.fzf/install   
 
-- name: Clone Vundle github repository.
-  git: repo=https://github.com/gmarik/Vundle.vim.git 
-       dest=~/.vim/bundle/Vundle.vim
+- name: Install Vim Plug
+  command: curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-- name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
-  script: username
-  register: username_results
+- name: update vim plugins by running :PlugInstall command outside of the editor
+  raw: vim +PluginInstall +qall
 
-- name: Install/update VIM plugins by running BundleInstall command outside of the editor.
-  become: yes
-  become_method: sudo
-  become_user: '{{username_results.stdout_lines[0]}}'
-  raw: vim +BundleInstall +qall
+# - name: Clone Vundle github repository.
+#   git: repo=https://github.com/gmarik/Vundle.vim.git 
+#        dest=~/.vim/bundle/Vundle.vim
+#
+# - name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
+#   script: username
+#   register: username_results
+#
+# - name: Install/update VIM plugins by running BundleInstall command outside of the editor.
+#   become: yes
+#   become_method: sudo
+#   become_user: '{{username_results.stdout_lines[0]}}'
+#   raw: vim +BundleInstall +qall
 
 - name: Install oh-my-zsh by piping to bash the result of a curl command to oh-my-zsh's github repository.
   become: yes

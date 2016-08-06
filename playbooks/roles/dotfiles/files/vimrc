@@ -8,76 +8,78 @@ filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
-call vundle#rc()
-
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Utility
-Plugin 'tomtom/tcomment_vim'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-endwise'
-Plugin 'kana/vim-textobj-user'
-Plugin 'pbrisbin/vim-mkdir'
-Plugin 'Kazark/vim-SimpleSmoothScroll'
-Plugin 'rking/ag.vim'
-Bundle 'christoomey/vim-run-interactive'
-Bundle 'skalnik/vim-vroom'
-Plugin 'benmills/vimux'
+Plug 'tomtom/tcomment_vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-endwise'
+Plug 'kana/vim-textobj-user'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'ingydotnet/yaml-vim'
 
 " Colors :)
-Plugin 'flazz/vim-colorschemes'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
+Plug 'flazz/vim-colorschemes'
+Plug 'znake/znake-vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'morhetz/gruvbox'
+Plug 'whatyouhide/vim-gotham'
+Plug 'sjl/badwolf'
+Plug 'nowk/genericdc'
+Plug 'jordwalke/flatlandia'
+Plug 'effkay/argonaut.vim'
+Plug 'chriskempson/base16-vim'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Mercurial
-Plugin 'ludovicchabant/vim-lawrencium'
+Plug 'ludovicchabant/vim-lawrencium'
 
 " Ruby / Rails
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rbenv'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'jgdavey/tslime.vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rbenv'
+Plug 'vim-ruby/vim-ruby'
+Plug 'thoughtbot/vim-rspec'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'ngmy/vim-rubocop'
+Plug 'jgdavey/tslime.vim'
 
 " Javascript
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'walm/jshint.vim'
-Plugin 'jQuery'
-
-" Haskell
-Plugin 'dag/vim2hs'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'walm/jshint.vim'
+Plug 'jQuery'
 
 " Clojure
-Plugin 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-static'
+
+" Haskell
+Plug 'dag/vim2hs'
 
 " Go
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " Rust
-Plugin 'wting/rust.vim'
+Plug 'wting/rust.vim'
+Plug 'cespare/vim-toml'
 
 " Elixir
-Plugin 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 
 " AIRLINE
-Plugin 'bling/vim-airline'
-Plugin 'repeat.vim'
-Plugin 'file-line'
+Plug 'bling/vim-airline'
+Plug 'repeat.vim'
+Plug 'file-line'
+
+
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
@@ -237,5 +239,5 @@ nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
 " let &colorcolumn=join(range(81,999),",")
 
 " colorscheme
-colorscheme hybrid
+colorscheme znake
 
