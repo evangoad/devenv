@@ -12,6 +12,10 @@
   git: repo=https://github.com/junegunn/vim-plug
        dest=~/.vim-plug/
 
+- name: .vim/autoload directory is present
+  file: path=~/.vim/autolaod
+        state=directory
+
 - name: Link vim.plug to .vim/autoload directory
   file: src=~/.vim-plug/plug.vim
         dest=~/.vim/autoload/plug.vim
