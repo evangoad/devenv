@@ -21,6 +21,11 @@ Plug 'tpope/vim-endwise'
 Plug 'kana/vim-textobj-user'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'ingydotnet/yaml-vim'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'Kazark/vim-SimpleSmoothScroll'
+Plug 'christoomey/vim-run-interactive'
+Plug 'skalnik/vim-vroom'
+Plug 'benmills/vimux'
 
 " Colors :)
 Plug 'flazz/vim-colorschemes'
