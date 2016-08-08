@@ -30,7 +30,7 @@
   become: yes
   become_method: sudo
   become_user: '{{username_results.stdout_lines[0]}}'
-  command: vim +PluginInstall! +qall
+  command: vim +PlugInstall! +qall
   changed_when: false
 
 - name: Oh-My-Zsh - Install by piping to bash the result of a curl command to oh-my-zsh's github repository.
