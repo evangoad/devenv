@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# This script is necessary since the travis user doesn't have the rights to
+# install Vim plugins and Oh-My-Zsh.  Travis runs as root, and regular use will
+# assume whoami user.
+
 if [ -z "$TRAVIS_OS_NAME" ]; then 
   whoami
 else 

@@ -1,4 +1,4 @@
-- name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
+- name: TRAVIS-CI WORKAROUND. Vim-Plug and Oh-My-Zsh need to assume sudo to run correctly on travis. Run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
   script: username
   register: username_results
   changed_when: false
