@@ -21,13 +21,16 @@
     src: ~/.vim-plug/plug.vim
     dest: ~/.vim/autoload/plug.vim
 
-- name: update vim plugins by running :PlugInstall command outside of the editor
-  command: vim +PluginInstall! +qall
-  changed_when: false
-
 - name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
   script: username
   register: username_results
+  changed_when: false
+
+- name: update vim plugins by running :PlugInstall command outside of the editor
+  become: yes
+  become_method: sudo
+  become_user: '{{username_results.stdout_lines[0]}}'
+  command: vim +PluginInstall! +qall
   changed_when: false
 
 - name: Install oh-my-zsh by piping to bash the result of a curl command to oh-my-zsh's github repository.
