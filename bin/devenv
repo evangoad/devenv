@@ -4,7 +4,6 @@ import os
 import subprocess
 import sys
 import optparse
-from IPython import embed
 
 def run_playbook(playbook, syntax_check):
     print("devenv detected {0}. running command:".format(playbook))
