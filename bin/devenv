@@ -4,10 +4,12 @@ import os
 import subprocess
 import sys
 import optparse
+from IPython import embed
 
-def run_playbook(playbook):
+def run_playbook(playbook, syntax_check):
     print("devenv detected {0}. running command:".format(playbook))
     command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/{0}.yml".format(playbook)), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
+    if syntax_check: command.append("--syntax-check")
     print str(" ".join(command))
     subprocess.check_call(command)
 
@@ -17,15 +19,29 @@ def update_repo():
     subprocess.check_call(["git", "pull"])
     os.chdir(origWD)
 
+def option_parser():
+    parser = optparse.OptionParser(
+        version='devenv 0.0.3',
+        usage="usage: devenv [options]\n default behavior is to install applications and symlink dotfiles"
+    )
+    parser.add_option(
+        "-s",
+        "--syntax-check",
+        action="store_true",
+        dest="syntax_check",
+        help="Run ansible-playbook with --syntax-check option, for use during development"
+    )
+    return parser
+
 def main():
-    p = optparse.OptionParser(version='devenv 0.0.3',usage="usage: devenv [options]\n default behavior is to install applications and symlink dotfiles")
+    p = option_parser()
     options, arguments = p.parse_args()
     if len(arguments) == 0:
         update_repo()
         if os.uname()[0] == "Linux":
-            run_playbook("ubuntu")
+            run_playbook("ubuntu", options.syntax_check)
         else:
-            run_playbook("osx")
+            run_playbook("osx", options.syntax_check)
     else:
         p.print_help()
 
