@@ -13,13 +13,13 @@
        dest=~/.vim-plug/
 
 - name: .vim/autoload directory is present
-  file: path=~/.vim/autolaod
+  file: path=~/.vim/autoload
         state=directory
 
 - name: Link vim.plug to .vim/autoload directory
-  file: src=~/.vim-plug/plug.vim
-        dest=~/.vim/autoload/plug.vim
-        state=link
+  template: 
+    src: ~/.vim-plug/plug.vim
+    dest: ~/.vim/autoload/plug.vim
 
 - name: update vim plugins by running :PlugInstall command outside of the editor
   command: vim +PluginInstall +qall
