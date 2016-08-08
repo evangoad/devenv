@@ -244,5 +244,5 @@ nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
 " let &colorcolumn=join(range(81,999),",")
 
 " colorscheme
-colorscheme znake
+colorscheme molokai
 
