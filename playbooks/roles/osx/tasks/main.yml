@@ -2,7 +2,7 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes
 
-- name: Install libraries with Homebrew
+- name: Install developer libraries with Homebrew
   homebrew: name={{ item }} state=latest
   with_items:
     - git
