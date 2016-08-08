@@ -22,7 +22,7 @@
     dest: ~/.vim/autoload/plug.vim
 
 - name: update vim plugins by running :PlugInstall command outside of the editor
-  command: vim +PluginInstall +qall
+  command: vim +PluginInstall! +qall
   changed_when: false
 
 - name: TRAVIS-CI WORKAROUND. Next two tasks need to assume sudo to run correctly on travis. run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
