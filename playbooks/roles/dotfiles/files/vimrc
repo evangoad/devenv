@@ -182,6 +182,8 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 "" Plugin Settings
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
 
 " Vroom settings
 let g:vroom_detect_spec_helper = 1
