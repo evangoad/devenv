@@ -83,6 +83,9 @@ Plug 'bling/vim-airline'
 Plug 'repeat.vim'
 Plug 'file-line'
 
+" Ctags
+Plug 'ludovicchabant/vim-gutentags'
+
 
 call plug#end()
 

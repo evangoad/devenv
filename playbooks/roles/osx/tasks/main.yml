@@ -11,6 +11,7 @@
     - tmux
     - tree 
     - ag
+    - ctags
 
 - name: Create Screenshot Directory
   file: path=~/Pictures/Screenshots state=directory mode=0755
