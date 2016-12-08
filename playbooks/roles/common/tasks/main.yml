@@ -28,23 +28,9 @@
        dest=~/.vim/plugged/{{item.repo}}
   with_items: "{{ vim_packages }}"
 
-# Coppied from veggiemonk/anisble-ohmyzsh
-# - name: Backing up existing ~/.zshrc
-#   shell: if [ -f ~/.zshrc ]; then mv ~/.zshrc{,.orig}; fi
-#   when: installation|success
-#   sudo: no
-
 - name: Cloning  oh-my-zsh
   git:
     repo=https://github.com/robbyrussell/oh-my-zsh
     dest=~/.oh-my-zsh
-  when: installation|success
-  register: cloning
   sudo: no
-
-- name: Creating new ~/.zshrc
-  copy:
-    src=~/.oh-my-zsh/templates/zshrc.zsh-template
-    dest=~/.zshrc
-  when: cloning|success
 
