@@ -1,8 +1,3 @@
-- name: TRAVIS-CI WORKAROUND. Vim-Plug and Oh-My-Zsh need to assume sudo to run correctly on travis. Run the custom username script and save result in the username_result register.  This will be used as the sudo user later.
-  script: username
-  register: username_results
-  changed_when: false
-
 - name: Exercism - Install by piping to bash the result of a curl command to exercism's github repository.
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
@@ -26,16 +21,30 @@
     src: ~/.vim-plug/plug.vim
     dest: ~/.vim/autoload/plug.vim
 
-- name: Vim Plug - update vim plugins by running :PlugInstall command outside of the editor
-  become: yes
-  become_method: sudo
-  become_user: '{{username_results.stdout_lines[0]}}'
-  command: vim +PlugInstall! +qall
-  changed_when: false
+- include_vars: vim_packages.yml
 
-- name: Oh-My-Zsh - Install by piping to bash the result of a curl command to oh-my-zsh's github repository.
-  become: yes
-  become_method: sudo
-  become_user: '{{username_results.stdout_lines[0]}}'
-  raw: curl -fslL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+- name: Install Vim Libraries
+  git: repo=https://github.com/{{item.user}}/{{item.repo}}
+       dest=~/.vim/plugged/{{item.repo}}
+  with_items: "{{ vim_packages }}"
+
+# Coppied from veggiemonk/anisble-ohmyzsh
+# - name: Backing up existing ~/.zshrc
+#   shell: if [ -f ~/.zshrc ]; then mv ~/.zshrc{,.orig}; fi
+#   when: installation|success
+#   sudo: no
+
+- name: Cloning  oh-my-zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest=~/.oh-my-zsh
+  when: installation|success
+  register: cloning
+  sudo: no
+
+- name: Creating new ~/.zshrc
+  copy:
+    src=~/.oh-my-zsh/templates/zshrc.zsh-template
+    dest=~/.zshrc
+  when: cloning|success
 

@@ -62,6 +62,9 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'walm/jshint.vim'
 Plug 'jQuery'
 
+" Elm
+Plug 'elmcast/elm-vim'
+
 " Clojure
 Plug 'guns/vim-clojure-static'
 
@@ -80,8 +83,8 @@ Plug 'elixir-lang/vim-elixir'
 
 " AIRLINE
 Plug 'bling/vim-airline'
-Plug 'repeat.vim'
-Plug 'file-line'
+Plug 'tpope/repeat.vim'
+Plug 'bogado/file-line'
 
 
 call plug#end()

@@ -11,4 +11,6 @@
     - tmux
     - tree
     - silversearcher-ag
+    - keychain
+  register: installation
 
