@@ -75,5 +75,5 @@ alias reset_all="reset_parallel && reset_dev"
 alias reset_parallel="RAILS_ENV=test be rake parallel:reset"
 alias reset_dev="RAILS_ENV=development be rake db:drop db:create mf"
 
-# For LP shortcuts
-source /etc/profile
+# For LP shortcut
+source /etc/profile.d/ap-shortcut.sh 2> /dev/null
