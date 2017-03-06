@@ -4,8 +4,6 @@ ZSH_THEME="afowler"
 DISABLE_AUTO_TITLE="true"
 plugins=(git mercurial)
 source $ZSH/oh-my-zsh.sh
-~/.vim/bundle/gruvbox/gruvbox_256palette.sh
-~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
 
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
