@@ -12,7 +12,7 @@ def run_playbook(playbook, syntax_check):
     print str(" ".join(command))
     subprocess.check_call(command)
 
-def update_repo():
+def update_repository():
     origWD = os.getcwd()
     os.chdir(os.path.expanduser("~/.devenv"))
     subprocess.check_call(["git", "pull"])
@@ -30,13 +30,22 @@ def option_parser():
         dest="syntax_check",
         help="Run ansible-playbook with --syntax-check option, for use during development"
     )
+    parser.add_option(
+        "-l",
+        "--local",
+        action="store_true",
+        dest="local_only",
+        help="Omit the initial 'git pull' step and run your local version of the playbooks"
+    )
     return parser
 
 def main():
     p = option_parser()
     options, arguments = p.parse_args()
     if len(arguments) == 0:
-        update_repo()
+        if options.local_only is not True:
+            update_repository()
+
         if os.uname()[0] == "Linux":
             run_playbook("ubuntu", options.syntax_check)
         else:
