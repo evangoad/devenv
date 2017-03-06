@@ -19,7 +19,7 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'kana/vim-textobj-user'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ingydotnet/yaml-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'Kazark/vim-SimpleSmoothScroll'
