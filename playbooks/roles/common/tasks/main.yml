@@ -28,9 +28,8 @@
        dest=~/.vim/plugged/{{item.repo}}
   with_items: "{{ vim_packages }}"
 
-- name: Cloning  oh-my-zsh
+- name: Cloning antigen
   git:
-    repo=https://github.com/robbyrussell/oh-my-zsh
-    dest=~/.oh-my-zsh
-  sudo: no
+    repo=https://github.com/zsh-users/antigen
+    dest=~/.antigen
 

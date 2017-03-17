@@ -1,14 +1,10 @@
-# zsh
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="afowler"
-DISABLE_AUTO_TITLE="true"
-plugins=(git mercurial)
-source $ZSH/oh-my-zsh.sh
-
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
+#antigen
+source ~/.antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle mercurial
+antigen theme afowler
+antigen apply
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -17,9 +13,6 @@ fi
 
 # exercism
 export PATH="$HOME/.exercism:$PATH"
-
-# rubygems
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 #rbenv
 if hash rbenv 2>/dev/null; then
