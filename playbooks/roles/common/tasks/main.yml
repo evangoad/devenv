@@ -33,3 +33,7 @@
     repo=https://github.com/zsh-users/antigen
     dest=~/.antigen
 
+- name: Install TPM
+  git:
+    repo=https://github.com/tmux-plugins/tpm
+    dest=~/.tmux/plugins/tpm
