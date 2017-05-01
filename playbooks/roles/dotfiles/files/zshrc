@@ -3,6 +3,7 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle mercurial
+antigen bundle zsh-users/zsh-completions
 antigen theme afowler
 antigen apply
 
@@ -65,6 +66,9 @@ alias ha="habitica"
 alias reset_all="reset_parallel && reset_dev"
 alias reset_parallel="RAILS_ENV=test be rake parallel:reset"
 alias reset_dev="RAILS_ENV=development be rake db:drop db:create mf"
+
+autoload bashcompinit
+bashcompinit
 
 # For LP shortcut
 source /etc/profile.d/ap-shortcut.sh 2> /dev/null
