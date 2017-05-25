@@ -97,3 +97,5 @@ vim_packages:
   repo: vim-repeat
 - user: bogado
   repo: file-line
+- user: scrooloose
+  repo: nerdtree
