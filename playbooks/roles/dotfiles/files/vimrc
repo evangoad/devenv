@@ -33,6 +33,7 @@ Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'christoomey/vim-run-interactive'
 Plug 'skalnik/vim-vroom'
 Plug 'benmills/vimux'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Colors :)
 Plug 'flazz/vim-colorschemes'
@@ -96,6 +97,9 @@ Plug 'bogado/file-line'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" Typescript
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
