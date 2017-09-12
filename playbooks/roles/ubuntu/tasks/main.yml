@@ -3,7 +3,7 @@
 - name: Install libraries with Apt
   become: yes
   become_method: 'sudo'
-  apt: name={{ item }} state=latest update_cache=yes
+  apt: name={{ item }} state=latest update_cache=yes cache_valid_time=43200
   with_items:
     - git
     - vim

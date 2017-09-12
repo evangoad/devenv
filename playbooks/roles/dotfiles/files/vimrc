@@ -100,12 +100,14 @@ Plug 'scrooloose/nerdtree'
 " Typescript
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/vim-js-pretty-template'
 
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
+au BufRead,BufNewFile {.ts} set ft=typescript
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile hg-editor*.txt setlocal textwidth=80
 filetype plugin indent on
@@ -245,6 +247,10 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Typescript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 nmap <leader>h :bprev<CR>
 nmap <leader>l :bnext<CR>
