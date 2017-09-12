@@ -6,7 +6,9 @@
        dest=~/.fzf
 
 - name: FZF - Run install script from cloned repository.
-  raw: yes | ~/.fzf/install
+  shell: ~/.fzf/install --all
+  register: fzf_install
+  changed_when: "fzf_install.stdout | search('Added')"
 
 - name: Vim Plug - .vim/autoload directory is present
   file: path=~/.vim/autoload
