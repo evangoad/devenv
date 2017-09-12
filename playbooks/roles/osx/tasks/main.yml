@@ -1,6 +1,6 @@
 ---
 - name: Install developer libraries with Homebrew
-   homebrew: name = {{ item }}
+  homebrew: name = {{ item }}
             state = latest
   update_homebrew = yes
   with_items:
