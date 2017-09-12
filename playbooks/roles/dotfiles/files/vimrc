@@ -34,6 +34,7 @@ Plug 'christoomey/vim-run-interactive'
 Plug 'skalnik/vim-vroom'
 Plug 'benmills/vimux'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'junegunn/vim-easy-align'
 
 " Colors :)
 Plug 'flazz/vim-colorschemes'
@@ -161,10 +162,13 @@ map <C-n> :NERDTreeToggle<CR>
 " ctags stuff i don't understand
 map <A-[> :tab split<CR>:exec("tag ".expand(<cword>))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand(<cword>))<CR>
-" Start Interactive EasyAlign in visual mode
-vmap <ENTER> <Plug>(EasyAlign)
-" Start Interactive EasyAlign with a Vim movement
-" nmap <leader>a <Plug>(EasyAlign)
+
+" Easy Align
+"Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 let g:bufferline_echo = 0
 
