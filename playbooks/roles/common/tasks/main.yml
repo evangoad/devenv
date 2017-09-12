@@ -1,39 +1,23 @@
-- name: Exercism - Install by piping to bash the result of a curl command to exercism's github repository.
+- name: Exercism 
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
 
-- name: FZF - Clone FZF github repository to `$HOME/.fzf`
+- name: FZF - Clone github repository to `$HOME/.fzf`
   git: repo=https://github.com/junegunn/fzf.git 
        dest=~/.fzf
 
-- name: FZF - Run FZF install script from cloned repository.
-  raw: ~/.fzf/install   
-
-- name: Vim Plug - Clone github repository to `$HOME/.vim-plug`
-  git: repo=https://github.com/junegunn/vim-plug
-       dest=~/.vim-plug/
+- name: FZF - Run install script from cloned repository.
+  raw: yes | ~/.fzf/install
 
 - name: Vim Plug - .vim/autoload directory is present
   file: path=~/.vim/autoload
         state=directory
 
-- name: Vim Plug - Link vim.plug to .vim/autoload directory
-  template: 
-    src: ~/.vim-plug/plug.vim
-    dest: ~/.vim/autoload/plug.vim
-
-- include_vars: vim_packages.yml
-
-- name: Install Vim Libraries
-  git: repo=https://github.com/{{item.user}}/{{item.repo}}
-       dest=~/.vim/plugged/{{item.repo}}
-  with_items: "{{ vim_packages }}"
-
-- name: Cloning antigen
+- name: Antigen - Clone github repository to `$HOME/.antigen`
   git:
     repo=https://github.com/zsh-users/antigen
     dest=~/.antigen
 
-- name: Install TPM
+- name: TPM - Clone github repository to `$HOME/.tmux/plugins/tpm`
   git:
     repo=https://github.com/tmux-plugins/tpm
     dest=~/.tmux/plugins/tpm
