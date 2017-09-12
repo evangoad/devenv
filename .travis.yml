@@ -10,4 +10,13 @@ script:
   - 'devenv --version'
   - 'devenv -h'
   - 'devenv -s'
-  - 'devenv -l'
+  - > 
+    devenv -l |
+    grep -q 'failed=0'
+    && (echo 'No Failures' && exit 0)
+    || (echo 'Failures Detected' && exit 1)
+  - >
+    devenv -l |
+    grep -q 'changed=0.*failed=0'
+    && (echo 'Idempotence test: pass' && exit 0)
+    || (echo 'Idempotence test: fail' && exit 1)
