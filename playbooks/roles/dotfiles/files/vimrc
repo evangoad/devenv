@@ -8,7 +8,7 @@ filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set rtp+=~/.fzf
+source ~/.vim/fzf.vim
 
 " Auto-install Vim Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -27,7 +27,6 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'kana/vim-textobj-user'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ingydotnet/yaml-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'Kazark/vim-SimpleSmoothScroll'
@@ -155,8 +154,6 @@ syntax on
 
 map <ScrollWheelUp> <C-U>
 map <ScrollWheelDown> <C-D>
-
-map <c-p> :FZF<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 
