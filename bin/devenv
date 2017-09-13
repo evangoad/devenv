@@ -43,7 +43,7 @@ def main():
     p = option_parser()
     options, arguments = p.parse_args()
     if len(arguments) == 0:
-        if (options.local_only is not True) or (options.syntax_check is not True):
+        if (options.local_only is not True) and (options.syntax_check is not True):
             update_repository()
 
         if os.uname()[0] == "Linux":
