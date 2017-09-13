@@ -253,10 +253,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Typescript
-let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
-
 nmap <leader>h :bprev<CR>
 nmap <leader>l :bnext<CR>
 nmap <leader>b :b
