@@ -10,6 +10,4 @@ script:
   - 'devenv --version'
   - 'devenv -h'
   - 'devenv -s'
-  - > 
-    devenv -l |
-    grep -q 'failed=0'
+  - 'devenv -l'
