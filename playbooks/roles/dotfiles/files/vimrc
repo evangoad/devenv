@@ -8,7 +8,6 @@ filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-source ~/.vim/fzf.vim
 
 " Auto-install Vim Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -33,7 +32,6 @@ Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'christoomey/vim-run-interactive'
 Plug 'skalnik/vim-vroom'
 Plug 'benmills/vimux'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/vim-easy-align'
 
 " Colors :)
@@ -98,17 +96,11 @@ Plug 'bogado/file-line'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
-" Typescript
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/vim-js-pretty-template'
-
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
-au BufRead,BufNewFile {.ts} set ft=typescript
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile hg-editor*.txt setlocal textwidth=80
 filetype plugin indent on
@@ -271,3 +263,5 @@ nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
 " colorscheme
 colorscheme hybrid
 
+source ~/.vim/fzf.vim
+source ~/.vim/typescript.vim
