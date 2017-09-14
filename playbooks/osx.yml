@@ -4,4 +4,3 @@
     - { role: osx, tags: ['osx'] }
     - { role: common, tags: ['common'] }
     - { role: dotfiles, tags: ['dotfiles'] }
-    - { role: vagrant, tags: ['vagrant'] }

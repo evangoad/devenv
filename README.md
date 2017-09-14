@@ -2,10 +2,10 @@
 
 [![Build Status](https://travis-ci.org/evangoad/devenv.svg?branch=master)](https://travis-ci.org/evangoad/devenv)
 
-Pronounced "dev envy", this is a simple python script that runs ansible to help
+This is a simple python script that runs ansible to help
 manage my dotfiles and the programs that run them, specifically:
 
-`vim`, `tmux`, `zsh`, `vundle`, `oh-my-zsh`, `fzf`, `silver searcher`, and more
+`vim`, `tmux`, `zsh`, `vim-plug`, `antigen`, `fzf`, `ag`, `tpm`, and more
 
 `devenv` currently supports OSX and Ubuntu, and it only requires that `git` and
 `python` are installed (plus `brew` if you are installing on OSX).
