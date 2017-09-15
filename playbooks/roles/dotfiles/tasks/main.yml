@@ -15,3 +15,6 @@
   with_items:
     - fzf
     - typescript
+    - ruby.vim
+    - git.vim
+    - color.vim

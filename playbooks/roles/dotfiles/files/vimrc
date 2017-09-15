@@ -19,7 +19,6 @@ call plug#begin('~/.vim/plugged')
 
 " Utility
 Plug 'tomtom/tcomment_vim'
-Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
@@ -31,22 +30,6 @@ Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'christoomey/vim-run-interactive'
 Plug 'benmills/vimux'
 Plug 'junegunn/vim-easy-align'
-
-" Colors :)
-Plug 'flazz/vim-colorschemes'
-Plug 'znake/znake-vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'morhetz/gruvbox'
-Plug 'whatyouhide/vim-gotham'
-Plug 'sjl/badwolf'
-Plug 'nowk/genericdc'
-Plug 'jordwalke/flatlandia'
-Plug 'effkay/argonaut.vim'
-Plug 'chriskempson/base16-vim'
-
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
 " Mercurial
 Plug 'ludovicchabant/vim-lawrencium'
@@ -88,7 +71,6 @@ Plug 'scrooloose/nerdtree'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile hg-editor*.txt setlocal textwidth=80
 filetype plugin indent on
@@ -189,28 +171,12 @@ if !has('python')
 else
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
-
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
-
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gc :CtrlP app/controllers<cr>
-map <leader>gm :CtrlP app/models<cr>
-map <leader>gh :CtrlP app/helpers<cr>
-map <leader>ga :CtrlP app/assets<cr>
-map <leader>gs :CtrlP app/services<cr>
-map <leader>gt :CtrlP spec2/<cr>
-map <leader>gx :CtrlP spec/<cr>
-map <leader>gl :CtrlP lib<cr>
-map <leader>gp :CtrlP config<cr>
-map <leader>f5 :CtrlPClearCache<cr>:CtrlP<cr>
-
 let g:CtrlMaxFiles=40000
-
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Airline settings
@@ -228,17 +194,8 @@ nmap <leader>q :bp\|bd #<CR>
 " Tslime
 nmap <leader>tr <Plug>SetTmuxVars
 
-" Clear Search Buffer
-nmap <silent> ,/ :nohlsearch<CR>
-
-" Colorcolumn from Jon
-nmap <leader>uu :let &colorcolumn=join(range(81,999),",")<CR>
-nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
-" let &colorcolumn=join(range(81,999),",")
-
-" colorscheme
-colorscheme hybrid
-
 source ~/.vim/fzf.vim
 source ~/.vim/typescript.vim
 source ~/.vim/ruby.vim
+source ~/.vim/color.vim
+source ~/.vim/git.vim
