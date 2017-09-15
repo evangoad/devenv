@@ -9,12 +9,3 @@
     - hgrc
     - profile
 
-- name: Symlink vim configs
-  copy: src=vim/{{ item }}.vim
-        dest=~/.vim/{{ item }}.vim
-  with_items:
-    - fzf
-    - typescript
-    - ruby.vim
-    - git.vim
-    - color.vim
