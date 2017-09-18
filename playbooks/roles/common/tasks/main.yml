@@ -14,11 +14,6 @@
   file: path=~/.vim/autoload
         state=directory
 
-- name: Vim Plug - run install
-  shell: vim +PlugInstall +qall
-  register: vim_plug_install
-  changed_when: "vim_plug_install.stdout | search('continue')"
-
 - name: Antigen - Clone github repository to `$HOME/.antigen`
   git:
     repo=https://github.com/zsh-users/antigen
