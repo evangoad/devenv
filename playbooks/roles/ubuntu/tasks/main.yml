@@ -1,6 +1,8 @@
 ---
 
 - name: Vim8 repository
+  become: yes
+  become_method: 'sudo'
   apt_repository:
     repo: "ppa:jonathonf/vim"
     state: present
