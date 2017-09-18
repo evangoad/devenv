@@ -2,5 +2,5 @@
 - hosts: localhost
   roles:
     - { role: osx, tags: ['osx'] }
-    - { role: common, tags: ['common'] }
     - { role: dotfiles, tags: ['dotfiles'] }
+    - { role: common, tags: ['common'] }
