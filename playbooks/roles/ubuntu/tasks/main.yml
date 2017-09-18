@@ -1,5 +1,10 @@
 ---
 
+- name: Vim8 repository
+  apt_repository:
+    repo: "ppa:jonathonf/vim"
+    state: present
+
 - name: Install libraries with Apt
   become: yes
   become_method: 'sudo'
