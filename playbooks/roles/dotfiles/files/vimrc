@@ -42,7 +42,6 @@ Plug 'nowk/genericdc'
 Plug 'jordwalke/flatlandia'
 Plug 'effkay/argonaut.vim'
 Plug 'chriskempson/base16-vim'
-Plug 'w0ng/hybrid.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
