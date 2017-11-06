@@ -10,10 +10,6 @@
   register: fzf_install
   changed_when: "fzf_install.stdout | search('Added')"
 
-- name: Vim Plug - .vim/autoload directory is present
-  file: path=~/.vim/autoload
-        state=directory
-
 - name: Antigen - Clone github repository to `$HOME/.antigen`
   git:
     repo=https://github.com/zsh-users/antigen

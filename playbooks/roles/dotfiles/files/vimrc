@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Evan Goad's vimrc
-" Lots of stolen things from @mikeastock and @bobcats
+" Lots of borrowed things from @mikeastock and @bobcats
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
@@ -8,104 +8,6 @@ filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Auto-install Vim Plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs 
-          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-
-" Utility
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-surround'
-Plug 'rking/ag.vim'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-endwise'
-Plug 'kana/vim-textobj-user'
-Plug 'ingydotnet/yaml-vim'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'Kazark/vim-SimpleSmoothScroll'
-Plug 'christoomey/vim-run-interactive'
-Plug 'benmills/vimux'
-Plug 'junegunn/vim-easy-align'
-
-" Color
-Plug 'flazz/vim-colorschemes'
-Plug 'znake/znake-vim'
-Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.6' } 
-Plug 'morhetz/gruvbox'
-Plug 'whatyouhide/vim-gotham'
-Plug 'sjl/badwolf'
-Plug 'nowk/genericdc'
-Plug 'jordwalke/flatlandia'
-Plug 'effkay/argonaut.vim'
-Plug 'chriskempson/base16-vim'
-
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-" Mercurial
-Plug 'ludovicchabant/vim-lawrencium'
-
-" Ruby
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rbenv'
-Plug 'vim-ruby/vim-ruby'
-Plug 'thoughtbot/vim-rspec'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'ngmy/vim-rubocop'
-Plug 'jgdavey/tslime.vim'
-Plug 'skalnik/vim-vroom'
-
-" Javascript
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'walm/jshint.vim'
-Plug 'vim-scripts/jQuery'
-
-" Elm
-Plug 'elmcast/elm-vim'
-
-" Clojure
-Plug 'guns/vim-clojure-static'
-
-" Haskell
-Plug 'dag/vim2hs'
-
-" Go
-Plug 'fatih/vim-go'
-
-" Rust
-Plug 'wting/rust.vim'
-Plug 'cespare/vim-toml'
-
-" Elixir
-Plug 'elixir-lang/vim-elixir'
-
-" TypeScript
-Plug 'Quramy/tsuquyomi'
-" Vimproc is needed for tsuquyomi in vim versions less than 8
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/vim-js-pretty-template'
-
-" AIRLINE
-Plug 'bling/vim-airline'
-Plug 'bogado/file-line'
-
-" NERDTree
-Plug 'scrooloose/nerdtree'
-
-" FZF
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-call plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile {COMMIT_EDITMSG} set ft=gitcommit
 au BufRead,BufNewFile {.ts} set ft=typescript
 au BufRead,BufNewFile *.md setlocal textwidth=80
