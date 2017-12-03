@@ -8,13 +8,13 @@ if [[ `uname` == 'Linux' ]]; then
   sudo apt-get -qq update
   sudo apt-get install -y python
   sudo pip install --upgrade pip
+  pip install ansible
 else
   echo "OSX prereqs"
   brew update > /dev/null 
-  brew install python > /dev/null
+  brew install python3 > /dev/null
+  pip3 install ansible
 fi
-
-pip install ansible
 
 # Clone devenv from Github
 if [ -d "$HOME/.devenv" ]; then
@@ -27,6 +27,10 @@ fi
 if type devenv > /dev/null; then
   echo "devenv python script already installed."
 else
-  sudo pip install git+git://github.com/evangoad/devenv
+  if [[ `uname` == `Linux` ]]; then
+    sudo pip install git+git://github.com/evangoad/devenv
+  else
+    sudo pip3 install git+git://github.com/evangoad/devenv
+  fi
 fi
 
