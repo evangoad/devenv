@@ -7,7 +7,7 @@ os:
 install:
   - curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 script:
-  - 'devenv --version'
+  - 'devenv -v'
   - 'devenv -h'
   - 'devenv -s'
   - 'devenv -l'
