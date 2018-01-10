@@ -2,7 +2,6 @@
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
-antigen bundle mercurial
 antigen bundle zsh-users/zsh-completions
 antigen theme afowler
 antigen apply
@@ -41,8 +40,16 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Postgres.app on OSX
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
-# ssh-agent
+# keychain
 keychain $HOME/.ssh/id_rsa
+
+# jenv, chtf, node8
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
+  source "/usr/local/share/chtf/chtf.sh"
+fi
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+source ~/.other_config
 
 # alias
 alias fit="git reset --hard"
@@ -70,5 +77,3 @@ alias reset_dev="RAILS_ENV=development be rake db:drop db:create mf"
 autoload bashcompinit
 bashcompinit
 
-# For LP shortcut
-source /etc/profile.d/ap-shortcut.sh 2> /dev/null
