@@ -10,7 +10,7 @@ filetype off
 
 au BufRead,BufNewFile {COMMIT_EDITMSG} set ft=gitcommit
 au BufRead,BufNewFile {.ts} set ft=typescript
-au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.md setlocal wrap linebreak nolist
 au BufRead,BufNewFile hg-editor*.txt setlocal textwidth=80
 filetype plugin indent on
 set autoindent
