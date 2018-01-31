@@ -54,7 +54,6 @@ syntax on
 :let mapleader = " "
 
 map <c-p> :FZF<CR>
-set rtp+=~/.fzf
 
 map <ScrollWheelUp> <C-U>
 map <ScrollWheelDown> <C-D>

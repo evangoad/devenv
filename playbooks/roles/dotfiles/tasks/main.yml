@@ -69,3 +69,4 @@
     - { user: 'bogado', repo: 'file-line' }
     - { user: 'scrooloose', repo: 'nerdtree' }
     - { user: 'junegunn', repo: 'fzf'  }
+    - { user: 'junegunn', repo: 'fzf.vim' }
