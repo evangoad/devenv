@@ -20,5 +20,6 @@
     - silversearcher-ag
     - keychain
     - nodejs
+    - netcat
   register: installation
 

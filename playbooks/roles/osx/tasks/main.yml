@@ -12,6 +12,7 @@
     - ag
     - keychain
     - npm
+    - netcat
   register: installation
 
 - name: Create Screenshot Directory
