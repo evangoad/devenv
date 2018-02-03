@@ -159,5 +159,5 @@ nmap <leader>uu :let &colorcolumn=join(range(81,999),",")<CR>
 nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
 
 " colorscheme
-colorscheme hybrid
+colorscheme nord
 
