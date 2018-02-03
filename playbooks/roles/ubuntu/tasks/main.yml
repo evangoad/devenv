@@ -19,5 +19,6 @@
     - tree
     - silversearcher-ag
     - keychain
+    - nodejs
   register: installation
 
