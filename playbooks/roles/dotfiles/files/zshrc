@@ -3,7 +3,7 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-completions
-antigen theme afowler
+antigen theme awesomepanda
 antigen apply
 
 # set PATH so it includes user's private bin if it exists
