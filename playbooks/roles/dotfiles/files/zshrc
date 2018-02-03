@@ -3,7 +3,7 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-completions
-antigen theme awesomepanda
+antigen theme cloud
 antigen apply
 
 # set PATH so it includes user's private bin if it exists
@@ -58,25 +58,14 @@ source ~/.other_config
 # alias
 alias fit="git reset --hard"
 alias peace="sudo poweroff"
-alias .1="cd ../"
-alias .2="cd ../../"
-alias .3="cd ../../../"
-alias .4="cd ../../../../"
 alias be="bundle exec"
 alias moo="bundle exec rake db:migrate"
-alias anni="bundle exec annotate --exclude tests,fixtures,factories"
 alias gi="git"
 alias t="git status"
 alias b="bundle"
 alias z!="source ~/.zshrc"
 alias v="vagrant"
 alias booya="vagrant up && vagrant ssh"
-alias ha="habitica"
-
-# LP aliases
-alias reset_all="reset_parallel && reset_dev"
-alias reset_parallel="RAILS_ENV=test be rake parallel:reset"
-alias reset_dev="RAILS_ENV=development be rake db:drop db:create mf"
 
 autoload bashcompinit
 bashcompinit

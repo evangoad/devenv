@@ -10,6 +10,7 @@
   ui = auto
 [alias]
   co  = commit
+  coa = commit -a
   ch  = checkout
   chm = checkout master
   t   = status

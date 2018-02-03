@@ -57,6 +57,7 @@
     - { user: 'wting', repo: 'rust.vim' }
     - { user: 'cespare', repo: 'vim-toml' }
     - { user: 'elixir-lang', repo: 'vim-elixir' }
+    - { user: 'tmux-plugins', repo: 'vim-tmux' }
     - { user: 'Quramy', repo: 'tsuquyomi' }
     - { user: 'leafgarland', repo: 'typescript-vim' }
     - { user: 'Quramy', repo: 'vim-js-pretty-template' }
