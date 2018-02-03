@@ -43,6 +43,10 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 # keychain
 keychain $HOME/.ssh/id_rsa
 
+# z
+export _Z_DATA="$HOME/.zdata"
+. ~/.z/z.sh
+
 # jenv, chtf, node8
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 if [[ -f /usr/local/share/chtf/chtf.sh ]]; then

@@ -19,3 +19,14 @@
   git:
     repo=https://github.com/tmux-plugins/tpm
     dest=~/.tmux/plugins/tpm
+
+- name: Z - Clone github repository to `$HOME/.z`
+  git:
+    repo=https://github.com/rupa/z
+    dest=~/.z
+
+- name: Z - create .zdata
+  file:
+    path: ~/.zdata
+    state: touch
+    mode: "u=rw,g=r,o=r"
