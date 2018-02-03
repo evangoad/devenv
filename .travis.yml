@@ -10,3 +10,4 @@ script:
   - 'devenv -h'
   - 'devenv -s'
   - 'devenv -l'
+  - 'devenv --tags dotfiles'
