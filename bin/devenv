@@ -5,10 +5,13 @@ import subprocess
 import sys
 import argparse
 
-def run_playbook(playbook, syntax_check):
+def run_playbook(playbook, arguments):
     print("devenv detected {0}. running command:".format(playbook))
     command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/{0}.yml".format(playbook)), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
-    if syntax_check: command.append("--syntax-check")
+    if arguments.syntax_check: command.append("--syntax-check")
+    if arguments.tags:
+        command.append("--tags")
+        command.extend(arguments.tags)
     print (" ".join(command))
     subprocess.check_call(command)
 
@@ -35,7 +38,7 @@ def arg_parser():
         help="Omit the initial 'git pull' step and run your local version of the playbooks"
     )
     parser.add_argument(
-        '-t',
+        '--tags',
         nargs='*',
         help='Specify which tags you wish run in the playbooks'
     )
@@ -48,12 +51,10 @@ def main():
     if (arguments.local_only is not True) and (arguments.syntax_check is not True):
         update_repository()
 
-    # if (arguments.tags is not
-
     if os.uname()[0] == "Linux":
-        run_playbook("ubuntu", arguments.syntax_check)
+        run_playbook("ubuntu", arguments)
     else:
-        run_playbook("osx", arguments.syntax_check)
+        run_playbook("osx", arguments)
 
 
 if __name__ == '__main__':

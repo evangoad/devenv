@@ -1,0 +1,58 @@
+- name: Install global vim packages
+  git:
+    repo: https://github.com/{{ item.user }}/{{ item.repo }}
+    dest: ~/.vim/pack/evangoad/start/{{ item.repo }}
+    depth: 1
+    force: yes
+  with_items:
+    - { user: 'tomtom', repo: 'tcomment_vim' }
+    - { user: 'tpope', repo: 'vim-surround' }
+    - { user: 'rking', repo: 'ag.vim' }
+    - { user: 'tpope', repo: 'vim-dispatch' }
+    - { user: 'tpope', repo: 'vim-endwise' }
+    - { user: 'kana', repo: 'vim-textobj-user' }
+    - { user: 'ingydotnet', repo: 'yaml-vim' }
+    - { user: 'pbrisbin', repo: 'vim-mkdir' }
+    - { user: 'Kazark', repo: 'vim-SimpleSmoothScroll' }
+    - { user: 'christoomey', repo: 'vim-run-interactive' }
+    - { user: 'benmills', repo: 'vimux' }
+    - { user: 'junegunn', repo: 'vim-easy-align' }
+    - { user: 'znake' , repo: 'znake-vim' }
+    - { user: 'nowk' , repo: 'genericdc' }
+    - { user: 'jordwalke' , repo: 'flatlandia' }
+    - { user: 'effkay' , repo: 'argonaut.vim' }
+    - { user: 'chriskempson' , repo: 'base16-vim' }
+    - { user: 'tpope', repo: 'vim-fugitive' }
+    - { user: 'airblade', repo: 'vim-gitgutter' }
+    - { user: 'ludovicchabant', repo: 'vim-lawrencium' }
+    - { user: 'tpope', repo: 'vim-rails' }
+    - { user: 'tpope', repo: 'vim-rbenv' }
+    - { user: 'vim-ruby', repo: 'vim-ruby' }
+    - { user: 'thoughtbot', repo: 'vim-rspec' }
+    - { user: 'nelstrom', repo: 'vim-textobj-rubyblock' }
+    - { user: 'ngmy', repo: 'vim-rubocop' }
+    - { user: 'jgdavey', repo: 'tslime.vim' }
+    - { user: 'skalnik', repo: 'vim-vroom' }
+    - { user: 'othree', repo: 'html5.vim' }
+    - { user: 'pangloss', repo: 'vim-javascript' }
+    - { user: 'jelera', repo: 'vim-javascript-syntax' }
+    - { user: 'walm', repo: 'jshint.vim' }
+    - { user: 'vim-scripts', repo: 'jQuery' }
+    - { user: 'elmcast', repo: 'elm-vim' }
+    - { user: 'guns', repo: 'vim-clojure-static' }
+    - { user: 'dag', repo: 'vim2hs' }
+    - { user: 'fatih', repo: 'vim-go' }
+    - { user: 'wting', repo: 'rust.vim' }
+    - { user: 'cespare', repo: 'vim-toml' }
+    - { user: 'elixir-lang', repo: 'vim-elixir' }
+    - { user: 'tmux-plugins', repo: 'vim-tmux' }
+    - { user: 'Quramy', repo: 'tsuquyomi' }
+    - { user: 'leafgarland', repo: 'typescript-vim' }
+    - { user: 'Quramy', repo: 'vim-js-pretty-template' }
+    - { user: 'bling', repo: 'vim-airline' }
+    - { user: 'bogado', repo: 'file-line' }
+    - { user: 'scrooloose', repo: 'nerdtree' }
+    - { user: 'junegunn', repo: 'fzf'  }
+    - { user: 'junegunn', repo: 'fzf.vim' }
+    - { user: 'w0rp', repo: 'ale' }
+    - { user: 'arcticicestudio', repo: 'nord-vim' }
