@@ -8,6 +8,10 @@ install:
   - curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 script:
   - 'devenv -h'
-  - 'devenv -s'
   - 'devenv -l'
-  - 'devenv --tags dotfiles'
+  - 'devenv -sl'
+  - 'devenv -l --tags dotfiles'
+  - 'devenv -l --tags shell'
+  - 'devenv -l --tags editor'
+  - 'devenv -l --tags mux'
+  - 'devenv -l --tags dotfiles, mux'

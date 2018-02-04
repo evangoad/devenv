@@ -1,19 +1,63 @@
 ---
-- name: Install developer libraries with Homebrew
-  homebrew: name={{item}}
+
+- name: Update Homebrew
+  homebrew:
+      update_homebrew: yes
+
+- name: Install git with Homebrew
+  homebrew: name=git
     state=latest
-    update_homebrew=yes
-  with_items:
-    - git
-    - vim
-    - zsh
-    - tmux
-    - tree 
-    - ag
-    - keychain
-    - npm
-    - netcat
-  register: installation
+  tags:
+    - shell
+
+- name: Install vim with Homebrew
+  homebrew: name=vim
+    state=latest
+  tags:
+    - editor
+
+- name: Install zsh with Homebrew
+  homebrew: name=zsh
+    state=latest
+  tags:
+    - shell
+
+- name: Install tmux with Homebrew
+  homebrew: name=tmux
+    state=latest
+  tags:
+    - mux
+
+- name: Install tree with Homebrew
+  homebrew: name=tree
+    state=latest
+  tags:
+    - shell
+
+- name: Install silver searcher with Homebrew
+  homebrew: name=ag
+    state=latest
+  tags:
+    - shell
+    - editor
+
+- name: Install keychain with Homebrew
+  homebrew: name=keychain
+    state=latest
+  tags:
+    - shell
+
+- name: Install npm with Homebrew
+  homebrew: name=npm
+    state=latest
+  tags:
+    - shell
+
+- name: Install netcat with Homebrew
+  homebrew: name=netcat
+    state=latest
+  tags:
+    - shell
 
 - name: Create Screenshot Directory
   file: path=~/Pictures/Screenshots state=directory mode=0755

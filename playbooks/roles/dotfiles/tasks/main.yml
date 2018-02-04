@@ -1,10 +1,30 @@
-- name: Symlink dotfiles
-  copy: src={{ item }}
-        dest=~/.{{ item }}
-  with_items:
-    - vimrc
-    - zshrc
-    - tmux.conf
-    - gitconfig
-    - profile
+- name: Symlink vimrc
+  copy: src=vimrc
+        dest=~/.vimrc
+  tags: 
+    - editor
+
+- name: Symlink zshrc
+  copy: src=zshrc
+        dest=~/.zshrc
+  tags: 
+    - shell
+
+- name: Symlink profile
+  copy: src=profile
+        dest=~/.profile
+  tags: 
+    - shell
+
+- name: Symlink tmux.conf
+  copy: src=tmux.conf
+        dest=~/.tmux.conf
+  tags: 
+    - mux
+
+- name: Symlink gitconfig
+  copy: src=gitconfig
+        dest=~/.gitconfig
+  tags: 
+    - shell
 

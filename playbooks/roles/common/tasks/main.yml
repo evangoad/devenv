@@ -2,36 +2,54 @@
   npm:
     name: vtop 
     global: yes
+  tags: 
+    - shell
 
 - name: Exercism 
   raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
+  tags: 
+    - shell
 
 - name: FZF - Clone github repository to `$HOME/.fzf`
   git: repo=https://github.com/junegunn/fzf.git 
        dest=~/.fzf
+  tags:
+    - shell
+    - editor
 
 - name: FZF - Run install script from cloned repository.
   shell: ~/.fzf/install --all
   register: fzf_install
   changed_when: "fzf_install.stdout | search('Added')"
+  tags:
+    - shell
+    - editor
 
 - name: Antigen - Clone github repository to `$HOME/.antigen`
   git:
     repo=https://github.com/zsh-users/antigen
     dest=~/.antigen
+  tags:
+    - shell
 
 - name: TPM - Clone github repository to `$HOME/.tmux/plugins/tpm`
   git:
     repo=https://github.com/tmux-plugins/tpm
     dest=~/.tmux/plugins/tpm
+  tags:
+    - mux
 
 - name: Z - Clone github repository to `$HOME/.z`
   git:
     repo=https://github.com/rupa/z
     dest=~/.z
+  tags:
+    - shell
 
 - name: Z - create .zdata
   file:
     path: ~/.zdata
     state: touch
     mode: "u=rw,g=r,o=r"
+  tags:
+    - shell
