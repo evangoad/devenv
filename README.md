@@ -12,15 +12,15 @@ script](install.sh) and [Requirements](REQUIREMENTS.md) for more info.
 
 see what options devenv has:
 
-<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-h.gif" width=640>>
+<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-h.gif" width=640>
 
 use it to symlink your dotfiles:
 
-<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-dotfiles.gif" width=640>>
+<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-dotfiles.gif" width=640>
 
 use it to update all of your multiplexer configuration:
 
-<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-mux.gif" width=640>>
+<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-mux.gif" width=640>
 
 # How it Works
 
