@@ -40,7 +40,7 @@ def arg_parser():
     parser.add_argument(
         '--tags',
         nargs='*',
-        help='Specify which tags you wish to exclusively run'
+        help='Specify which tags you wish to exclusively run. Supported options are \'shell\', \'editor\', \'mux\', \'vim-plugins\', and \'dotfiles\''
     )
     return parser
 
