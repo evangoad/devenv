@@ -2,22 +2,25 @@
 
 [![Build Status](https://travis-ci.org/evangoad/devenv.svg?branch=master)](https://travis-ci.org/evangoad/devenv)
 
-This is a simple python script that runs ansible to help
-manage my dotfiles and the programs that run them, specifically:
-
-`vim`, `tmux`, `zsh`, `vim-plug`, `antigen`, `fzf`, `ag`, `tpm`, and more
-
-`devenv` currently supports OSX and Ubuntu, and it only requires that `git` and
-`python` are installed (plus `brew` if you are installing on OSX).
-See [Requirements](REQUIREMENTS.md) for more info.
+This is a simple python script that runs ansible playbooks in order to install
+and configure my shell, editor, and multiplexer.  `devenv` currently supports
+OSX and Ubuntu, and it only requires that `git` and `python` are installed
+(plus `brew` if you are installing on OSX).  See the [installation
+script](install.sh) and [Requirements](REQUIREMENTS.md) for more info.
 
 # Usage
 
-Symlink your dotfiles and install the programs required to run them:
+see what options devenv has:
 
-```bash
-devenv
-```
+<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-h.gif" width=640>>
+
+use it to symlink your dotfiles:
+
+<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-dotfiles.gif" width=640>>
+
+use it to update all of your multiplexer configuration:
+
+<img src="https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-mux.gif" width=640>>
 
 # How it Works
 
@@ -28,14 +31,13 @@ your environment.
 
 # What you get out of the box
 
-- Travis-ci configuration to automate your tests for both OSX and Ubuntu
-- Single command install, single command update of your dev environment and
-  dotfiles
+- Travis-ci configuration to automate your tests for both OSX and Ubuntu.
+- Single command install, single command update of your shell, editor,
+  multiplexer, and dotfiles.
 - Easy to customize by writing ansible code.  Every thing happens in the short
   [install.sh](install.sh/) script and the [ansible playbooks](playbooks/).
   Create new [roles](playbooks/roles) and use them in the
-  [playbook](playbooks/ubuntu.yml) [files](playbooks/osx.yml).
-- SOON: jekyll based github pages website to document the usage of your `devenv`
+  playbook files.
 
 # How can I use this?
 

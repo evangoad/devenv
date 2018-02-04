@@ -5,13 +5,13 @@ These are ansible
 composed of anisble
 [tasks](http://docs.ansible.com/ansible/playbooks_intro.html), which are yaml
 files that define shell commands to be ran such as cloning github repositories
-and symlinking dotfiles.  There are 4 roles currently available to be included
-in playbooks: 
+and symlinking dotfiles.  There are 5 roles currently available:
 
 - [common](./common)
 - [dotfiles](./dotfiles)
 - [osx](./osx)
 - [ubuntu](./ubuntu)
+- [vim-plugins](./vim-plugins)
 
 Each role contains a single task called `main.yml` that runs all of the commands
 for that role. Feel free add to these roles, make your own roles, or only use
