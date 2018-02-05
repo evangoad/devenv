@@ -16,6 +16,7 @@ filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
 set background=dark
+set clipboard=unnamed
 set encoding=utf-8
 set expandtab
 set foldenable
