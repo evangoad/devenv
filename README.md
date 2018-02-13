@@ -4,7 +4,7 @@ This is a simple python script that runs ansible playbooks in order to install
 and configure my shell, editor, and multiplexer.  `devenv` currently supports
 OSX and Ubuntu, and it only requires that `git` and `python` are installed
 (plus `brew` if you are installing on OSX).  See the [installation
-script](install.sh) and [Requirements](REQUIREMENTS.md) for more info.
+script](https://github.com/evangoad/devenv/blob/master/install.sh) and [Requirements](REQUIREMENTS.md) for more info.
 
 # Usage
 
@@ -33,7 +33,7 @@ your environment.
 - Single command install, single command update of your shell, editor,
   multiplexer, and dotfiles.
 - Easy to customize by writing ansible code.  Every thing happens in the short
-  [install.sh](install.sh/) script and the [ansible playbooks](playbooks/).
+  [install.sh](https://github.com/evangoad/devenv/blob/master/install.sh) script and the [ansible playbooks](playbooks/).
   Create new [roles](playbooks/roles) and use them in the
   playbook files.
 
