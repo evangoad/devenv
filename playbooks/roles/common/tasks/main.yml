@@ -39,18 +39,17 @@
   tags:
     - mux
 
-- name: TPM - make sure PATH var set before running install
-  command: export TMUX_PLUGIN_MANAGER_PATH="~/.tmux/plugins/"
-  tags:
-    - mux
-
 - name: TPM - run install_plugins script
   command: ~/.tmux/plugins/tpm/bin/install_plugins
+  environment:
+    TMUX_PLUGIN_MANAGER_PATH: '~/.tmux/plugins'
   tags:
     - mux
 
 - name: TPM - update all plugins
   command: ~/.tmux/plugins/tpm/bin/update_plugins all
+  environment:
+    TMUX_PLUGIN_MANAGER_PATH: '~/.tmux/plugins'
   tags:
     - mux
 
