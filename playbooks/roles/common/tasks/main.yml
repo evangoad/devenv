@@ -39,6 +39,16 @@
   tags:
     - mux
 
+- name: TPM - run install_plugins script
+  command: ~/.tmux/plugins/tpm/bin/install_plugins
+  tags:
+    - mux
+
+- name: TPM - update all plugins
+  command: ~/.tmux/plugins/tpm/bin/update_plugins all
+  tags:
+    - mux
+
 - name: Z - Clone github repository to `$HOME/.z`
   git:
     repo=https://github.com/rupa/z
