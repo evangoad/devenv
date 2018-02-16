@@ -40,7 +40,7 @@
     - mux
 
 - name: TPM - make sure PATH var set before running install
-  command: export TMUX_PLUGIN_MANAGER_PATH=`$HOME/.tmux/plugins/`
+  command: export TMUX_PLUGIN_MANAGER_PATH="~/.tmux/plugins/"
   tags:
     - mux
 
