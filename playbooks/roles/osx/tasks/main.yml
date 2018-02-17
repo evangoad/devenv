@@ -3,40 +3,47 @@
 - name: Update Homebrew
   homebrew:
       update_homebrew: yes
+  when: ansible_distribution == 'MacOSX'
 
 - name: Install git with Homebrew
   homebrew: name=git
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
 
 - name: Install vim with Homebrew
   homebrew: name=vim
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - editor
 
 - name: Install zsh with Homebrew
   homebrew: name=zsh
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
 
 - name: Install tmux with Homebrew
   homebrew: name=tmux
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - mux
 
 - name: Install tree with Homebrew
   homebrew: name=tree
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
 
 - name: Install silver searcher with Homebrew
   homebrew: name=ag
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
     - editor
@@ -44,28 +51,34 @@
 - name: Install keychain with Homebrew
   homebrew: name=keychain
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
 
 - name: Install npm with Homebrew
   homebrew: name=npm
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
 
 - name: Install netcat with Homebrew
   homebrew: name=netcat
     state=latest
+  when: ansible_distribution == 'MacOSX'
   tags:
     - shell
 
 - name: Create Screenshot Directory
   file: path=~/Pictures/Screenshots state=directory mode=0755
+  when: ansible_distribution == 'MacOSX'
 
 - name: Write to screencapture defaults
   raw: defaults write com.apple.screencapture location ~/Pictures/Screenshots
+  when: ansible_distribution == 'MacOSX'
 
 # as suggested by http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
 - name: Kill SystemUIServer
   raw: killall SystemUIServer
+  when: ansible_distribution == 'MacOSX'
 

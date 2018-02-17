@@ -5,9 +5,10 @@ import subprocess
 import sys
 import argparse
 
-def run_playbook(playbook, arguments):
-    print("devenv detected {0}. running command:".format(playbook))
-    command = ["ansible-playbook", os.path.expanduser("~/.devenv/playbooks/{0}.yml".format(playbook)), "-i", os.path.expanduser("~/.devenv/playbooks/inventory")]
+def run_playbook(arguments):
+    playbook_path = os.path.expanduser("~/.devenv/playbooks/development.yml")
+    inventory_path = os.path.expanduser("~/.devenv/playbooks/inventory")
+    command = ["ansible-playbook", playbook_path, "-i", inventory_path]
     if arguments.syntax_check: command.append("--syntax-check")
     if arguments.tags:
         command.append("--tags")
@@ -47,14 +48,9 @@ def arg_parser():
 def main():
     p = arg_parser()
     arguments = p.parse_args()
-
     if (arguments.local_only is not True) and (arguments.syntax_check is not True):
         update_repository()
-
-    if os.uname()[0] == "Linux":
-        run_playbook("ubuntu", arguments)
-    else:
-        run_playbook("osx", arguments)
+    run_playbook(arguments)
 
 
 if __name__ == '__main__':
