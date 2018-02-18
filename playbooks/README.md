@@ -1,4 +1,4 @@
-[Home](/) > [Playbooks](playbooks/)
+[Home](/README.md) > [Playbooks](/playbooks/)
  
 # Playbooks
 
