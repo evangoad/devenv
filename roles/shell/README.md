@@ -1,4 +1,4 @@
-[Home](../../../README.md) > [Playbooks](../../) > [Roles](../) > [Shell](./)
+[Home](../../README.md) >  [Roles](../) > [Shell](./)
 
 # Shell
 
