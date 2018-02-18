@@ -1,3 +1,5 @@
+[Home](/) > [Playbooks](playbooks/)
+ 
 # Playbooks
 
 This directory contains three different entities common to ansible: inventory,

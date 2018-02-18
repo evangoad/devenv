@@ -1,3 +1,5 @@
+[Home](/) > [Playbooks](playbooks/) > [Roles](playbooks/roles/)
+
 # Roles
 
 These are ansible
@@ -7,11 +9,10 @@ composed of anisble
 files that define shell commands to be ran such as cloning github repositories
 and symlinking dotfiles.  There are 5 roles currently available:
 
-- [common](./common)
-- [dotfiles](./dotfiles)
+- [editor](./editor)
+- [shell](./shell)
+- [mux](./mux)
 - [osx](./osx)
-- [ubuntu](./ubuntu)
-- [vim-plugins](./vim-plugins)
 
 Each role contains a single task called `main.yml` that runs all of the commands
 for that role. Feel free add to these roles, make your own roles, or only use
