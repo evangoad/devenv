@@ -1,0 +1,12 @@
+---
+
+- name: TREE - Ubuntu - Install tree with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=tree state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: TREE - MacOSX - Install tree with Homebrew
+  homebrew: name=tree
+    state=latest
+  when: ansible_distribution == 'MacOSX'

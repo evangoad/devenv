@@ -1,4 +1,27 @@
-- name: Install global vim packages
+- name: VIM - Ubuntu - Add Vim8 repository
+  become: yes
+  become_method: 'sudo'
+  apt_repository:
+    repo: "ppa:jonathonf/vim"
+    state: present
+  when: ansible_distribution == 'Ubuntu'
+
+- name: VIM - Ubuntu - Install vim with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=vim state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: VIM - MacOSX - Install vim with Homebrew
+  homebrew: name=vim
+    state=latest
+  when: ansible_distribution == 'MacOSX'
+
+- name: VIM - Symlink vimrc
+  copy: src=vimrc
+        dest=~/.vimrc
+
+- name: VIM - Install global vim packages
   git:
     repo: https://github.com/{{ item.user }}/{{ item.repo }}
     dest: ~/.vim/pack/evangoad/start/{{ item.repo }}

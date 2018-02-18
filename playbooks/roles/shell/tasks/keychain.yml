@@ -1,0 +1,12 @@
+---
+
+- name: KEYCHAIN - Ubuntu - Install keychain with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=keychain state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: KEYCHAIN - MacOSX - Install keychain with Homebrew
+  homebrew: name=keychain
+    state=latest
+  when: ansible_distribution == 'MacOSX'

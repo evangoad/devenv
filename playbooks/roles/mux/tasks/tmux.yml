@@ -1,0 +1,17 @@
+---
+
+- name: TMUX - Ubuntu - Install tmux with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=tmux state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: TMUX - MacOSX - Install tmux with Homebrew
+  homebrew: name=tmux
+    state=latest
+  when: ansible_distribution == 'MacOSX'
+
+- name: TMUX - Symlink tmux.conf
+  copy: src=tmux.conf
+        dest=~/.tmux.conf
+

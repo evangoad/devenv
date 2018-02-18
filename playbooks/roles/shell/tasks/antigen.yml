@@ -1,0 +1,7 @@
+---
+
+- name: ANTIGEN - Clone github repository to `$HOME/.antigen`
+  git:
+    repo=https://github.com/zsh-users/antigen
+    dest=~/.antigen
+

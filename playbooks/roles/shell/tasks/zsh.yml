@@ -1,0 +1,20 @@
+---
+
+- name: ZSH - Ubuntu - Install zsh with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=zsh state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: ZSH - MacOSX - Install zsh with Homebrew
+  homebrew: name=zsh
+    state=latest
+  when: ansible_distribution == 'MacOSX'
+  
+- name: ZSH - Symlink zshrc
+  copy: src=zshrc
+        dest=~/.zshrc
+
+- name: ZSH - Symlink profile
+  copy: src=profile
+        dest=~/.profile

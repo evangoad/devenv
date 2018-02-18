@@ -1,0 +1,17 @@
+---
+
+- name: GIT - Ubuntu - Install git with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=git state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: GIT - MacOSX - Install git with Homebrew
+  homebrew: name=git
+    state=latest
+  when: ansible_distribution == 'MacOSX'
+
+- name: GIT - Symlink gitconfig
+  copy: src=gitconfig
+        dest=~/.gitconfig
+

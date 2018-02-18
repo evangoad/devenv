@@ -1,0 +1,7 @@
+---
+
+- name: VTOP - Install node.js package globally.
+  npm:
+    name: vtop 
+    global: yes
+

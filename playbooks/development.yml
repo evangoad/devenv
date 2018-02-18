@@ -1,8 +1,7 @@
 ---
 - hosts: localhost
   roles:
+    - { role: shell, tags: ['shell'] }
+    - { role: editor, tags: ['editor'] }
+    - { role: mux, tags: ['mux'] }
     - { role: osx, tags: ['osx'] }
-    - { role: ubuntu, tags: ['ubuntu'] }
-    - { role: dotfiles, tags: ['dotfiles'] }
-    - { role: vim-plugins, tags: ['vim-plugins', 'editor'] }
-    - { role: common, tags: ['common'] }
