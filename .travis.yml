@@ -10,8 +10,8 @@ script:
   - 'devenv -h'
   - 'devenv -l'
   - 'devenv -sl'
-  - 'devenv -l --tags dotfile'
-  - 'devenv -l --tags shell'
-  - 'devenv -l --tags editor'
-  - 'devenv -l --tags mux'
-  - "devenv -l --tags 'dotfile, mux'"
+  - 'devenv -l -t dotfile'
+  - 'devenv -l -t shell'
+  - 'devenv -l -t editor'
+  - 'devenv -l -t mux'
+  - "devenv -l -t 'dotfile, mux'"

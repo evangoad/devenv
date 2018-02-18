@@ -7,7 +7,7 @@ These are ansible
 composed of anisble
 [tasks](http://docs.ansible.com/ansible/playbooks_intro.html), which are yaml
 files that define shell commands to be ran such as cloning github repositories
-and symlinking dotfiles.  There are 5 roles currently available:
+and symlinking dotfiles.  There are 4 roles currently available:
 
 - [editor](./editor)
 - [shell](./shell)

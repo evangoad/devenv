@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/evangoad/devenv.svg?branch=master)](https://travis-ci.org/evangoad/devenv)
 
-`devenv` is a simple python script that runs ansible playbooks in order to install
+`devenv` is a simple python script that runs ansible in order to install
 and configure my [editor](roles/editor),
 [shell](roles/shell), and [multiplexer](roles/mux).
 `devenv` currently supports OSX and Ubuntu, and it only requires that `git` and
@@ -27,9 +27,20 @@ script](https://github.com/evangoad/devenv/blob/master/install.sh) and
 
 # Usage
 
-see what options devenv has:
+```
+usage: devenv [-h] [-s] [-l] [-t [TAGS [TAGS ...]]]
 
-![devenv -h demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-h.gif)
+install applications and symlink dotfiles
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s                    Run ansible-playbook with --syntax-check option
+  -l                    Omit the initial 'git pull' step and run your local
+                        version of the roles
+  -t [TAGS [TAGS ...]]  Specify which tags you wish to exclusively run.
+                        Supported options are 'shell', 'editor', 'mux', 'osx',
+                        and 'dotfile'
+```
 
 use it to symlink your dotfiles:
 
@@ -44,7 +55,8 @@ use it to update all of your multiplexer configuration:
 `devenv` is a simple python script that runs a single
 [playbook](https://github.com/evangoad/devenv/blob/master/development.yml) on
 [localhost](https://github.com/evangoad/devenv/blob/master/inventory).  This
-playbook imports the four [roles](roles/): editor, shell, mux, and osx.  Move your
+playbook imports the four [roles](roles/): [editor](roles/editor),
+[shell](roles/shell), [mux](roles/mux), and [osx](roles/osx).  Move your
 existing dotfiles into the "files" directory for the appropriate role.
 `.vimrc` goes in the [editor's files directory](roles/editor/files).
 `tmux.conf` goes in the [mux's files directory](roles/mux/files).

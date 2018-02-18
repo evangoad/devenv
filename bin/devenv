@@ -36,12 +36,13 @@ def arg_parser():
         "-l",
         action="store_true",
         dest="local_only",
-        help="Omit the initial 'git pull' step and run your local version of the playbooks"
+        help="Omit the initial 'git pull' step and run your local version of the roles"
     )
     parser.add_argument(
-        '--tags',
+        '-t',
         nargs='*',
-        help='Specify which tags you wish to exclusively run. Supported options are \'shell\', \'editor\', \'mux\', \'vim-plugins\', and \'dotfiles\''
+        dest="tags",
+        help='Specify which tags you wish to exclusively run. Supported options are \'shell\', \'editor\', \'mux\', \'osx\', and \'dotfile\''
     )
     return parser
 
