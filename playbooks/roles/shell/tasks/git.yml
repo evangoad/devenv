@@ -14,4 +14,6 @@
 - name: GIT - Symlink gitconfig
   copy: src=gitconfig
         dest=~/.gitconfig
+  tags:
+    - dotfile
 

@@ -22,4 +22,6 @@
 - name: VIM - Symlink vimrc
   copy: src=vimrc
         dest=~/.vimrc
+  tags:
+    - dotfile
 

@@ -14,7 +14,11 @@
 - name: ZSH - Symlink zshrc
   copy: src=zshrc
         dest=~/.zshrc
+  tags:
+    - dotfile
 
 - name: ZSH - Symlink profile
   copy: src=profile
         dest=~/.profile
+  tags:
+    - dotfile
