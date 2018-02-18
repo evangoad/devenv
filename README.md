@@ -50,23 +50,6 @@ use it to update all of your multiplexer configuration:
 
 ![devenv --tags mux demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-mux.gif)
 
-# How it Works
-
-`devenv` is a simple python script that runs a single
-[playbook](https://github.com/evangoad/devenv/blob/master/development.yml) on
-[localhost](https://github.com/evangoad/devenv/blob/master/inventory).  This
-playbook imports the four [roles](roles/): [editor](roles/editor),
-[shell](roles/shell), [mux](roles/mux), and [osx](roles/osx).  Move your
-existing dotfiles into the "files" directory for the appropriate role.
-`.vimrc` goes in the [editor's files directory](roles/editor/files).
-`tmux.conf` goes in the [mux's files directory](roles/mux/files).
-`.gitconfig`, `.zshrc`, and `.profile` go in the [shell's files
-directory](roles/shell/files). Each of the four [roles](roles/) knows how to
-install and update the programs listed above, and keep up to date personal
-dotfile configurations.  All you have to do is run `devenv` if you want to
-download your last pushed configuration and update your machine.  This is very
-usefull when booting into an new virtual machine for the firs time.
-
 # What you get out of the box
 
 - Travis-ci configuration to automate your tests for both OSX and Ubuntu.
@@ -74,6 +57,25 @@ usefull when booting into an new virtual machine for the firs time.
   multiplexer, and dotfiles.
 - Simple github pages website using the caymen theme for jekyll.
 - Easy to customize and expand by writing ansible.
+
+# How it Works
+
+`devenv` is a simple python script that runs a single ansible
+[playbook](https://github.com/evangoad/devenv/blob/master/development.yml) on
+[localhost](https://github.com/evangoad/devenv/blob/master/inventory).  This
+playbook imports the four [roles](roles/): [editor](roles/editor),
+[shell](roles/shell), [mux](roles/mux), and [osx](roles/osx).  Move your
+existing dotfiles into the "files" directory for the appropriate role:
+- `.vimrc` goes in the [editor's files directory](roles/editor/files).
+- `tmux.conf` goes in the [mux's files directory](roles/mux/files).
+- `.gitconfig`, `.zshrc`, and `.profile` go in the [shell's files
+directory](roles/shell/files). 
+
+Each of the four [roles](roles/) knows how to
+install and update the programs listed above, and keep up to date personal
+dotfile configurations.  All you have to do is run `devenv` if you want to
+download your last pushed configuration and update your machine.  This is very
+usefull when booting into an new virtual machine for the firs time.
 
 # How can I use this?
 

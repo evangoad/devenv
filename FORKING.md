@@ -20,10 +20,13 @@ Look for every instance of `evangoad` in the files listed above and replace them
 
 ## Move your Dotfiles
 
-If you have an existing `.vimrc`, `.tmux.conf`, `.zshrc`, `.hgrc`, `.gitconfig`,
-then you should move them into the ["files" directory in the dotfile
-role](playbooks/roles/dotfiles/files), named without the `.` character (this is
-so ansible and vim can detect these files a bit easier).
+If you have an existing `.vimrc`, `.tmux.conf`, `.zshrc`, `.profile`, and `.gitconfig`,
+then you should move them into the appropriate directories:
+- `.vimrc` goes in the [editor's files directory](roles/editor/files).
+- `tmux.conf` goes in the [mux's files directory](roles/mux/files).
+- `.gitconfig`, `.zshrc`, and `.profile` go in the [shell's files
+directory](roles/shell/files). 
+
 
 ## Install your customized copy of `devenv`!
 
