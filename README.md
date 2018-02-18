@@ -1,16 +1,21 @@
 [![Build Status](https://travis-ci.org/evangoad/devenv.svg?branch=master)](https://travis-ci.org/evangoad/devenv)
 
-This is a simple python script that runs ansible playbooks in order to install
-and configure my editor, shell, and multiplexer.  `devenv` currently supports
-OSX and Ubuntu, and it only requires that `git` and `python` are installed
-(plus `brew` if you are installing on OSX).  See the [installation
-script](https://github.com/evangoad/devenv/blob/master/install.sh) and [Requirements](REQUIREMENTS.md) for more info.
+`devenv` is a simple python script that runs ansible playbooks in order to install
+and configure my [editor](roles/editor),
+[shell](roles/shell), and [multiplexer](roles/mux).
+`devenv` currently supports OSX and Ubuntu, and it only requires that `git` and
+`python` are installed (plus `brew` if you are installing on OSX).  See the
+[installation
+script](https://github.com/evangoad/devenv/blob/master/install.sh) and
+[Requirements](REQUIREMENTS.md) for more info.
 
 `devenv` will update and configure:
 
 - [vim](https://github.com/vim/vim) the editor
-- [zsh](https://github.com/zsh-users/zsh) the shell, with [antigen](https://github.com/zsh-users/antigen)
-- [tmux](https://github.com/tmux/tmux) the multiplexer, with [tpm](https://github.com/tmux-plugins/tpm)
+- [zsh](https://github.com/zsh-users/zsh) the shell, with
+  [antigen](https://github.com/zsh-users/antigen)
+- [tmux](https://github.com/tmux/tmux) the multiplexer, with
+  [tpm](https://github.com/tmux-plugins/tpm)
 - [ag](https://github.com/ggreer/the_silver_searcher)
 - [fzf](https://github.com/junegunn/fzf) 
 - [keychain](https://github.com/funtoo/keychain)
@@ -36,20 +41,27 @@ use it to update all of your multiplexer configuration:
 
 # How it Works
 
-`devenv` is a simple python script that runs OSX and Ubuntu specific ansible
-[playbooks](playbooks/). Move your existing dotfiles into the ["files" directory
-in the dotfile role](playbooks/roles/dotfiles/files) and run `devenv` to update
-your environment.
+`devenv` is a simple python script that runs a single
+[playbook](https://github.com/evangoad/devenv/blob/master/development.yml) on
+[localhost](https://github.com/evangoad/devenv/blob/master/inventory).  This
+playbook imports the four [roles](roles/): editor, shell, mux, and osx.  Move your
+existing dotfiles into the "files" directory for the appropriate role.
+`.vimrc` goes in the [editor's files directory](roles/editor/files).
+`tmux.conf` goes in the [mux's files directory](roles/mux/files).
+`.gitconfig`, `.zshrc`, and `.profile` go in the [shell's files
+directory](roles/shell/files). Each of the four [roles](roles/) knows how to
+install and update the programs listed above, and keep up to date personal
+dotfile configurations.  All you have to do is run `devenv` if you want to
+download your last pushed configuration and update your machine.  This is very
+usefull when booting into an new virtual machine for the firs time.
 
 # What you get out of the box
 
 - Travis-ci configuration to automate your tests for both OSX and Ubuntu.
-- Single command install, single command update of your shell, editor,
+- Single command install & update of your shell, editor,
   multiplexer, and dotfiles.
-- Easy to customize by writing ansible code.  Every thing happens in the short
-  [install.sh](https://github.com/evangoad/devenv/blob/master/install.sh) script and the [ansible playbooks](playbooks/).
-  Create new [roles](playbooks/roles) and use them in the
-  playbook files.
+- Simple github pages website using the caymen theme for jekyll.
+- Easy to customize and expand by writing ansible.
 
 # How can I use this?
 

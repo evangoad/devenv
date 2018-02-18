@@ -6,8 +6,8 @@ import sys
 import argparse
 
 def run_playbook(arguments):
-    playbook_path = os.path.expanduser("~/.devenv/playbooks/development.yml")
-    inventory_path = os.path.expanduser("~/.devenv/playbooks/inventory")
+    playbook_path = os.path.expanduser("~/.devenv/development.yml")
+    inventory_path = os.path.expanduser("~/.devenv/inventory")
     command = ["ansible-playbook", playbook_path, "-i", inventory_path]
     if arguments.syntax_check: command.append("--syntax-check")
     if arguments.tags:
