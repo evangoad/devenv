@@ -1,3 +1,4 @@
 - import_tasks: vim.yml
+- import_tasks: vim-plugins.yml
 - import_tasks: ag.yml
   
