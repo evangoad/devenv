@@ -1,11 +1,12 @@
+[HOME](../) > [FORKING](./FORKING.md)
+
 # Forking Instructions
 
 If you are unfamiliar with forking, then [have a look at Github's "Fork a Repo" documentation first](https://help.github.com/articles/fork-a-repo/).
 
-## Fork button
+## Fork it
 
-Fork this repo by clicking the "Fork" button in the upper right hand corner of
-this github page.
+Fork this repo by clicking this [link](https://github.com/evangoad/devenv/fork).
 
 ## Edit files with github user info
 
