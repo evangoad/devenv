@@ -1,5 +1,0 @@
----
-
-- name: EXERCISM 
-  raw: curl -fsSL https://raw.githubusercontent.com/exercism/cli-www/master/public/install | bash 
-

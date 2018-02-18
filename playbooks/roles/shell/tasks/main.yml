@@ -6,7 +6,6 @@
 - import_tasks: node.yml
 - import_tasks: netcat.yml
 - import_tasks: vtop.yml
-- import_tasks: exercism.yml
 - import_tasks: fzf.yml
 - import_tasks: z.yml
 

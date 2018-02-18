@@ -1,10 +1,24 @@
 [![Build Status](https://travis-ci.org/evangoad/devenv.svg?branch=master)](https://travis-ci.org/evangoad/devenv)
 
 This is a simple python script that runs ansible playbooks in order to install
-and configure my shell, editor, and multiplexer.  `devenv` currently supports
+and configure my editor, shell, and multiplexer.  `devenv` currently supports
 OSX and Ubuntu, and it only requires that `git` and `python` are installed
 (plus `brew` if you are installing on OSX).  See the [installation
 script](https://github.com/evangoad/devenv/blob/master/install.sh) and [Requirements](REQUIREMENTS.md) for more info.
+
+`devenv` will update and configure:
+
+- [vim](https://github.com/vim/vim) the editor
+- [zsh](https://github.com/zsh-users/zsh) the shell, with [antigen](https://github.com/zsh-users/antigen)
+- [tmux](https://github.com/tmux/tmux) the multiplexer, with [tpm](https://github.com/tmux-plugins/tpm)
+- [ag](https://github.com/ggreer/the_silver_searcher)
+- [fzf](https://github.com/junegunn/fzf) 
+- [keychain](https://github.com/funtoo/keychain)
+- [netcat](http://netcat.sourceforge.net/)
+- [node](https://github.com/nodejs/node)
+- [tree](https://linux.die.net/man/1/tree)
+- [vtop](https://github.com/MrRio/vtop)
+- [z](https://github.com/rupa/z)
 
 # Usage
 
