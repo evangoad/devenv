@@ -11,6 +11,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+export PATH="/usr/local/sbin:$PATH"
+
 # exercism
 export PATH="$HOME/.exercism:$PATH"
 

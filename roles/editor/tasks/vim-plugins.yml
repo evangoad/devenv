@@ -59,4 +59,5 @@
     - { user: 'w0rp', repo: 'ale' }
     - { user: 'arcticicestudio', repo: 'nord-vim' }
     - { user: 'christoomey', repo: 'vim-tmux-navigator' }
+    - { user: 'ntpeters', repo: 'vim-better-whitespace' }
 
