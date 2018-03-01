@@ -4,6 +4,7 @@
 - import_tasks: tree.yml
 - import_tasks: keychain.yml
 - import_tasks: node.yml
+- import_tasks: diff-so-fancy.yml
 - import_tasks: netcat.yml
 - import_tasks: vtop.yml
 - import_tasks: fzf.yml

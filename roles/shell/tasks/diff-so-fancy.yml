@@ -1,0 +1,12 @@
+---
+
+- name: DIFF SO FANCY - Ubuntu - Install diff so fancy with npm
+  npm:
+    name: diff-so-fancy
+    global: yes
+  when: ansible_distribution == 'Ubuntu'
+
+- name: DIFF SO FANCY - MacOSX - Install diff-so-fancy with Homebrew
+  homebrew: name=diff-so-fancy
+    state=latest
+  when: ansible_distribution == 'MacOSX'
