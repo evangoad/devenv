@@ -6,5 +6,5 @@
     dest=~/.antigen
 
 - name: ANTIGEN - Run update
-  command: antigen update
+  shell: "zsh -l -c -i 'antigen update'"
 

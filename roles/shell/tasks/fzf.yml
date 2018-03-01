@@ -1,7 +1,7 @@
 ---
 
 - name: FZF - Clone github repository to `$HOME/.fzf`
-  git: repo=https://github.com/junegunn/fzf.git 
+  git: repo=https://github.com/junegunn/fzf.git
        dest=~/.fzf
 
 - name: FZF - Run install script from cloned repository.
