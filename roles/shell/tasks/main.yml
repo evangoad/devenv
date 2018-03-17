@@ -9,5 +9,4 @@
 - import_tasks: vtop.yml
 - import_tasks: fzf.yml
 - import_tasks: z.yml
-- import_tasks: rbenv.yml
 
