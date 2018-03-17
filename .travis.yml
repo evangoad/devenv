@@ -6,6 +6,8 @@ os:
   - osx
 install:
   - curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
+before_script:
+  - rm -rf ~/.rbenv
 script:
   - 'devenv -h'
   - 'devenv -l'
