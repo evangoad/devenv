@@ -1,0 +1,15 @@
+---
+
+- name: RBENV - Install silver searcher with Apt
+  git: repo=https://github.com/rbenv/rbenv
+       dest=~/.rbenv
+
+- name: RBENV - Make plugin directory
+  file:
+    path: ~/.rbenv/plugins
+    state: directory
+    mode: 0775
+
+- name: RBENV - install ruby build
+  git: repo=https://github.com/rbenv/ruby-build.git
+       dest=~/.rbenv/plugins/ruby-build
