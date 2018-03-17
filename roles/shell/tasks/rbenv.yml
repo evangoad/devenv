@@ -1,8 +1,9 @@
 ---
 
-- name: RBENV - Install silver searcher with Apt
+- name: RBENV - Install rbenv with git
   git: repo=https://github.com/rbenv/rbenv
        dest=~/.rbenv
+       update=no
 
 - name: RBENV - Make plugin directory
   file:
