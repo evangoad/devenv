@@ -44,11 +44,11 @@ optional arguments:
 
 use it to symlink your dotfiles:
 
-![devenv --tags dotfiles demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-dotfiles.gif)
+![devenv --tags dotfiles demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-dotfile-example.gif)
 
 use it to update all of your multiplexer configuration:
 
-![devenv --tags mux demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv--tags-mux.gif)
+![devenv --tags mux demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-mux-example.gif)
 
 # What you get out of the box
 
