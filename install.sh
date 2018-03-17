@@ -11,9 +11,9 @@ if [[ `uname` == 'Linux' ]]; then
   pip install ansible
 else
   echo "OSX prereqs"
-  brew update > /dev/null 
-  brew install python3 > /dev/null
-  pip3 install ansible
+  brew update > /dev/null
+  brew upgrade python
+  pip install ansible
 fi
 
 # Clone devenv from Github
