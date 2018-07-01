@@ -12,7 +12,6 @@ if [[ `uname` == 'Linux' ]]; then
 else
   echo "OSX prereqs"
   brew update > /dev/null
-  brew install python
   pip install ansible
 fi
 
@@ -27,10 +26,6 @@ fi
 if type devenv > /dev/null; then
   echo "devenv python script already installed."
 else
-  if [[ `uname` == 'Linux' ]]; then
-    sudo pip install git+git://github.com/evangoad/devenv
-  else
-    sudo pip3 install git+git://github.com/evangoad/devenv
-  fi
+  sudo pip install git+git://github.com/evangoad/devenv
 fi
 
