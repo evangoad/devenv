@@ -2,3 +2,4 @@
 - import_tasks: vim-plugins.yml
 - import_tasks: ag.yml
 - import_tasks: vscode.yml
+  when: ansible_distribution == 'MacOSX'
