@@ -12,7 +12,7 @@ if [[ `uname` == 'Linux' ]]; then
 else
   echo "OSX prereqs"
   brew update > /dev/null
-  brew upgrade python
+  brew install python
   pip install ansible
 fi
 

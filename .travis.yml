@@ -1,14 +1,11 @@
 ---
 sudo: required
-language: python
-python:
-  - "3.5"
 dist: trusty
 os:
   - linux
   - osx
 install:
-  - curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
+  - bash install.sh
 script:
   - 'devenv -h'
   - 'devenv -l'
