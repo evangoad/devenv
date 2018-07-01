@@ -50,6 +50,14 @@ keychain $HOME/.ssh/id_rsa
 export _Z_DATA="$HOME/.zdata"
 . ~/.z/z.sh
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
 # alias
 alias fit="git reset --hard"
 alias peace="sudo poweroff"
@@ -64,4 +72,5 @@ alias booya="vagrant up && vagrant ssh"
 
 autoload bashcompinit
 bashcompinit
+
 

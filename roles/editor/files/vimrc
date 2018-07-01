@@ -140,6 +140,57 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
+" vim-rails
+let g:rails_gem_projections = {
+      \ 'pundit': {
+      \   'app/policies/*_policy.rb': {
+      \     'command': 'policy',
+      \     'affinity': 'model',
+      \     'alternate': 'app/models/{}.rb'
+      \   }
+      \ },
+      \ 'draper': {
+      \   'app/decorators/*_decorator.rb': {
+      \     'command': 'decorator',
+      \     'affinity': 'model',
+      \     'alternate': 'app/models/{}.rb'
+      \   }
+      \ },
+      \ 'factory_girl': {
+      \   'spec/factories/*_factory.rb': {
+      \     'command': 'factory',
+      \     'affinity': 'model',
+      \     'alternate': 'app/models/{}.rb'
+      \   }
+      \ },
+      \ 'statesman': {
+      \   'app/state_machines/*.rb': {
+      \     'command': 'machine'
+      \   }
+      \ },
+      \ 'graphql': {
+      \   'app/graphql/resolvers/*.rb': {
+      \     'command': 'resolver'
+      \   },
+      \   'app/graphql/input_types/*_type.rb': {
+      \     'command': 'input'
+      \   },
+      \   'app/graphql/types/*_type.rb': {
+      \     'command': 'type'
+      \   },
+      \   'app/graphql/union_types/*_type.rb': {
+      \     'command': 'union'
+      \   }
+      \ }}
+
+let g:rails_projections = {
+      \ 'app/services/*.rb': {
+      \   'command': 'service'
+      \ },
+      \ 'javascript/apps/*': {
+      \   'command': 'js'
+      \ }}
+
 " Airline settings
 
 let g:airline#extensions#tabline#enabled = 1
