@@ -1,6 +1,12 @@
 ---
 - import_tasks: chrome.yml
+  when: ansible_distribution == 'MacOSX'
+
 - import_tasks: iterm.yml
+  when: ansible_distribution == 'MacOSX'
+
+- import_tasks: licecap.yml
+  when: ansible_distribution == 'MacOSX'
 
 - name: Create Screenshot Directory
   file: path=~/Pictures/Screenshots state=directory mode=0755

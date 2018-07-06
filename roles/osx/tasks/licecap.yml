@@ -1,0 +1,7 @@
+---
+
+- homebrew_cask:
+    name: licecap
+    state: present
+    install_options: 'appdir=/Applications'
+
