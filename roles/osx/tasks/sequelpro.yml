@@ -1,7 +1,6 @@
 ---
 
 - homebrew_cask:
-    name: visual-studio-code
+    name: sequel-pro
     state: present
-    upgrade: yes
     install_options: 'appdir=/Applications'
