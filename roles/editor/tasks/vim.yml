@@ -30,6 +30,11 @@
   tags:
     - dotfile
 
+- name: VIM - create nvim config dir
+  file: path=~/.config/nvim
+        state=directory
+        mode=0755
+
 - name: VIM - Symlink nvim/init.vim
   copy: src=vimrc
         dest=~/.config/nvim/init.vim
