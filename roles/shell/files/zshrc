@@ -22,23 +22,8 @@ if hash rbenv 2>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
-#pyenv
-if hash pyenv 2>/dev/null; then
-  # eval "$(pyenv init -)"
-fi
-
-# go
-export GOPATH="$HOME/go"
-export PATH="$HOME/go/bin:$PATH"
-
 # tmuxinator
 export EDITOR="vim"
-
-# heroku
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# cabal
-export PATH="$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -72,8 +57,6 @@ alias gi="git"
 alias t="git status"
 alias b="bundle"
 alias z!="source ~/.zshrc"
-alias v="vagrant"
-alias booya="vagrant up && vagrant ssh"
 
 autoload bashcompinit
 bashcompinit
