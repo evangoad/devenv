@@ -29,6 +29,7 @@
     src: ~/.devenv/roles/editor/files/vimrc
     dest: ~/.vimrc
     state: link
+    force: true
   tags:
     - dotfile
 
@@ -38,6 +39,9 @@
         mode=0755
 
 - name: VIM - Symlink nvim/init.vim
-  copy: src=vimrc
-        dest=~/.config/nvim/init.vim
+  file:
+    src: ~/.devenv/roles/editor/files/vimrc
+    dest: ~/.config/nvim/init.vim
+    state: link
+    force: true
 

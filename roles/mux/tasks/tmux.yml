@@ -16,6 +16,7 @@
     src: ~/.devenv/roles/mux/files/tmux.conf
     dest: ~/.tmux.conf
     state: link
+    force: true
   tags:
     - dotfile
 

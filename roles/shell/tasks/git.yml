@@ -16,6 +16,7 @@
     src: ~/.devenv/roles/shell/files/gitconfig
     dest: ~/.gitconfig
     state: link
+    force: true
   tags:
     - dotfile
 
