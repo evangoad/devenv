@@ -3,5 +3,4 @@
 - homebrew_cask:
     name: visual-studio-code
     state: present
-    upgrade: yes
     install_options: 'appdir=/Applications'
