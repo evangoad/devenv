@@ -1,9 +1,7 @@
 ---
 
-- name: RG - Ubuntu - Install ripgrep with Apt
-  become: yes
-  become_method: 'sudo'
-  apt: name=ripgrep state=latest update_cache=yes cache_valid_time=43200
+- name: RG - Ubuntu - Install
+  command: "curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb && sudo dpkg -i ripgrep_0.10.0_amd64.deb"
   when: ansible_distribution == 'Ubuntu'
 
 - name: RG - MacOSX - Install ripgrep with Homebrew
