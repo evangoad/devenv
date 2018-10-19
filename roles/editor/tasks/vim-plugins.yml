@@ -70,4 +70,5 @@
 - name: VIM - Symlink packages for nvim
   file:
     src: "~/.vim/pack/evangoad/start"
-    dest: "~/.local/share/nvim/site/pack/evangoad/"
+    dest: "~/.local/share/nvim/site/pack/evangoad/start"
+    state: link
