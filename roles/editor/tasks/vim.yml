@@ -25,8 +25,10 @@
   when: ansible_distribution == 'MacOSX'
 
 - name: VIM - Symlink vimrc
-  copy: src=vimrc
-        dest=~/.vimrc
+  file:
+    src: ~/.devenv/roles/editor/files/vimrc
+    dest: ~/.vimrc
+    state: link
   tags:
     - dotfile
 

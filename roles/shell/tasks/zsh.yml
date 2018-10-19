@@ -10,15 +10,19 @@
   homebrew: name=zsh
     state=latest
   when: ansible_distribution == 'MacOSX'
-  
+
 - name: ZSH - Symlink zshrc
-  copy: src=zshrc
-        dest=~/.zshrc
+  file:
+    src: ~/.devenv/roles/shell/files/zshrc
+    dest: ~/.zshrc
+    state: link
   tags:
     - dotfile
 
 - name: ZSH - Symlink profile
-  copy: src=profile
-        dest=~/.profile
+  file:
+    src: ~/.devenv/roles/shell/files/profile
+    dest: ~/.profile
+    state: link
   tags:
     - dotfile

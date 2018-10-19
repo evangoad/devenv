@@ -8,7 +8,6 @@
   command: "sudo dpkg -i ripgrep_0.10.0_amd64.deb"
   when: ansible_distribution == 'Ubuntu'
 
-
 - name: RG - MacOSX - Install ripgrep with Homebrew
   homebrew: name=ripgrep
     state=latest

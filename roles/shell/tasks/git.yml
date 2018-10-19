@@ -12,8 +12,10 @@
   when: ansible_distribution == 'MacOSX'
 
 - name: GIT - Symlink gitconfig
-  copy: src=gitconfig
-        dest=~/.gitconfig
+  file:
+    src: ~/.devenv/roles/shell/files/gitconfig
+    dest: ~/.gitconfig
+    state: link
   tags:
     - dotfile
 

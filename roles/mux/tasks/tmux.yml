@@ -12,8 +12,10 @@
   when: ansible_distribution == 'MacOSX'
 
 - name: TMUX - Symlink tmux.conf
-  copy: src=tmux.conf
-        dest=~/.tmux.conf
+  file:
+    src: ~/.devenv/roles/mux/files/tmux.conf
+    dest: ~/.tmux.conf
+    state: link
   tags:
     - dotfile
 
