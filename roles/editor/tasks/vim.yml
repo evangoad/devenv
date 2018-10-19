@@ -19,9 +19,18 @@
     state=latest
   when: ansible_distribution == 'MacOSX'
 
+- name: VIM - MacOSX - Install nvim with Homebrew
+  homebrew: name=nvim
+    state=latest
+  when: ansible_distribution == 'MacOSX'
+
 - name: VIM - Symlink vimrc
   copy: src=vimrc
         dest=~/.vimrc
   tags:
     - dotfile
+
+- name: VIM - Symlink nvim/init.vim
+  copy: src=vimrc
+        dest=~/.config/nvim/init.vim
 
