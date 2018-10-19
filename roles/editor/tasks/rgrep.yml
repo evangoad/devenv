@@ -1,0 +1,12 @@
+---
+
+- name: RG - Ubuntu - Install ripgrep with Apt
+  become: yes
+  become_method: 'sudo'
+  apt: name=ripgrep state=latest update_cache=yes cache_valid_time=43200
+  when: ansible_distribution == 'Ubuntu'
+
+- name: RG - MacOSX - Install ripgrep with Homebrew
+  homebrew: name=ripgrep
+    state=latest
+  when: ansible_distribution == 'MacOSX'
