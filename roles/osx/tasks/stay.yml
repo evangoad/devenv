@@ -1,0 +1,6 @@
+---
+
+- homebrew_cask:
+    name: stay
+    state: present
+    install_options: 'appdir=/Applications'
