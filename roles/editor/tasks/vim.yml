@@ -47,6 +47,8 @@
   tags:
     - dotfile
 
-- name: NVIM - pip tools for nvim
+- name: NVIM - OSX - pip tools for nvim
   shell: pip install setuptools && pip  install --upgrade neovim && pip2 install --upgrade neovim && pip3 install --upgrade neovim
+  when: ansible_distribution == 'MacOSX'
+
 
