@@ -7,5 +7,5 @@
 - name: FZF - Run install script from cloned repository.
   shell: ~/.fzf/install --all
   register: fzf_install
-  changed_when: "fzf_install.stdout | search('Added')"
+  changed_when: "fzf_install.stdout is search('Added')"
 
