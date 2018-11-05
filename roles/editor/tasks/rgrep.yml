@@ -1,11 +1,14 @@
 ---
 
 - name: RG - Ubuntu - download installer
-  command: "curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb"
+  get_url:
+    url: https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+    dest: ./ripgrep_0.10.0_amd64.deb
   when: ansible_distribution == 'Ubuntu'
 
 - name: RG - Ubuntu - run install
-  command: "sudo dpkg -i ripgrep_0.10.0_amd64.deb"
+  command: "dpkg -i ripgrep_0.10.0_amd64.deb"
+  become: yes
   when: ansible_distribution == 'Ubuntu'
 
 - name: RG - MacOSX - Install ripgrep with Homebrew
