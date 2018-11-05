@@ -9,6 +9,7 @@
   with_items:
     - { user: 'tomtom', repo: 'tcomment_vim' }
     - { user: 'tpope', repo: 'vim-surround' }
+    - { user: 'tpope', repo: 'vim-obsession' }
     - { user: 'rking', repo: 'ag.vim' }
     - { user: 'tpope', repo: 'vim-dispatch' }
     - { user: 'tpope', repo: 'vim-endwise' }

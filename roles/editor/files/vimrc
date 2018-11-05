@@ -200,6 +200,10 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 nmap <leader>h :bprev<CR>
 nmap <leader>l :bnext<CR>
 nmap <leader>b :b
+nmap <leader>R :source ~/.vimrc<CR>
+
+" Obsess
+nmap <leader>o :Obsess<CR>
 
 " Fast buffer closing
 nmap <leader>q :bp\|bd #<CR>

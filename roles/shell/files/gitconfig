@@ -41,7 +41,7 @@
   dfc = diff --cached
   sus = submodule update --recursive
 [core]
-  editor = vim
+  editor = nvim
 	trustctime = false
 	excludesfile = ~/.gitignore
   pager = "diff-so-fancy | less --tabs=4 -RFX"
