@@ -14,9 +14,6 @@
 - name: RG - Ubuntu - run install
   command: "dpkg -i ripgrep_0.10.0_amd64.deb"
   become: yes
-  register: ripgrep_install
   when: ansible_distribution == 'Ubuntu'
-
-- debug: msg="{{ ripgrep_install.stdout }}"
-  when: ansible_distribution == 'Ubuntu'
+  changed_when: TRUE
 
