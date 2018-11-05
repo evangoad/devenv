@@ -24,9 +24,11 @@
 - name: Write to screencapture defaults
   raw: defaults write com.apple.screencapture location ~/Pictures/Screenshots
   when: ansible_distribution == 'MacOSX'
+  changed_when: FALSE
 
 # as suggested by http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
 - name: Kill SystemUIServer
   raw: killall SystemUIServer
   when: ansible_distribution == 'MacOSX'
+  changed_when: FALSE
 

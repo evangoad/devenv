@@ -10,4 +10,5 @@
     path: ~/.zdata
     state: touch
     mode: "u=rw,g=r,o=r"
+  changed_when: FALSE
 

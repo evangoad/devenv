@@ -9,9 +9,12 @@
   command: ~/.tmux/plugins/tpm/bin/install_plugins
   environment:
     TMUX_PLUGIN_MANAGER_PATH: '~/.tmux/plugins'
+  register: install_plugins
+  changed_when: "'Installing' in install_plugins.stdout"
 
 - name: TPM - Update all plugins
   command: ~/.tmux/plugins/tpm/bin/update_plugins all
   environment:
     TMUX_PLUGIN_MANAGER_PATH: '~/.tmux/plugins'
+  changed_when: FALSE
 

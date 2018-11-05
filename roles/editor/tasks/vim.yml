@@ -49,6 +49,9 @@
 
 - name: NVIM - OSX - pip tools for nvim
   shell: pip install setuptools && pip  install --upgrade neovim && pip2 install --upgrade neovim && pip3 install --upgrade neovim
+  register: pip_output
   when: ansible_distribution == 'MacOSX'
+  changed_when: FALSE
 
+- debug: msg="{{ pip_output.stdout }}"
 
