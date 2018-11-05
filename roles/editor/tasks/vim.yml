@@ -54,4 +54,5 @@
   changed_when: FALSE
 
 - debug: msg="{{ pip_output.stdout }}"
+  when: ansible_distribution == 'MacOSX'
 

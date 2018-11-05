@@ -8,7 +8,7 @@
 - name: ANTIGEN - Run update
   shell: "zsh -l -c -i 'antigen update'"
   register: antigen_update
-  changed_when: FALSE
+  changed_when: "'Installing' in antigen_update.stdout"
 
 - debug: msg="{{ antigen_update.stdout }}"
 
