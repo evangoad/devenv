@@ -62,6 +62,7 @@
     - { user: 'christoomey', repo: 'vim-tmux-navigator' }
     - { user: 'ntpeters', repo: 'vim-better-whitespace' }
     - { user: 'jremmen', repo: 'vim-ripgrep' }
+    - { user: 'mxw', repo: 'vim-jsx' }
 
 - name: VIM - create nvim package dir
   file: path=~/.local/share/nvim/site/pack/evangoad
