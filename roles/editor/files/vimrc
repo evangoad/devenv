@@ -215,6 +215,9 @@ nmap <leader>tr <Plug>SetTmuxVars
 nmap <leader>uu :let &colorcolumn=join(range(81,999),",")<CR>
 nmap <leader>uo :let &colorcolumn=join(range(999,999),",")<CR>
 
+" Copy current file to clipboard, OSX only
+nmap <leader>fn :let @+=expand('%:p')<CR>
+
 " colorscheme
 colorscheme nord
 
