@@ -17,6 +17,9 @@
 - import_tasks: stay.yml
   when: ansible_distribution == 'MacOSX'
 
+- import_tasks: spectacle.yml
+  when: ansible_distribution == 'MacOSX'
+
 - name: Create Screenshot Directory
   file: path=~/Pictures/Screenshots state=directory mode=0755
   when: ansible_distribution == 'MacOSX'

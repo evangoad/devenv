@@ -48,8 +48,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 export PRE_COMMIT_USE_REEK=true
 
@@ -63,7 +63,8 @@ alias t="git status"
 alias b="bundle"
 alias z!="source ~/.zshrc"
 
+. $HOME/.workstuff
+
 autoload bashcompinit
 bashcompinit
-
 
