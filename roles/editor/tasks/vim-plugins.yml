@@ -63,6 +63,9 @@
     - { user: 'ntpeters', repo: 'vim-better-whitespace' }
     - { user: 'jremmen', repo: 'vim-ripgrep' }
     - { user: 'mxw', repo: 'vim-jsx' }
+    - { user: 'hashivim', repo: 'vim-terraform' }
+    - { user: 'vim-syntastic', repo: 'syntastic' }
+    - { user: 'juliosueiras', repo: 'vim-terraform-completion' }
 
 - name: VIM - create nvim package dir
   file: path=~/.local/share/nvim/site/pack/evangoad
