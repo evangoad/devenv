@@ -6,14 +6,14 @@
 if [[ `uname` == 'Linux' ]]; then
   echo "Linux prereqs"
   sudo apt-get -qq update
-  sudo apt-get install -y python
-  sudo pip install --upgrade pip
-  pip install ansible
+  sudo apt-get install -y python3
+  sudo pip3 install --upgrade pip
+  pip3 install ansible
 else
   echo "OSX prereqs"
   brew update > /dev/null
-  brew install python@2
-  python -m pip install ansible
+  brew install python
+  python -m pip3 install ansible
 fi
 
 # Clone devenv from Github
