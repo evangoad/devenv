@@ -89,11 +89,11 @@ In order to install and use your own customizable copy of `devenv`:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
 ```
-  OR Install by ssh cloning and `pip`:
+  OR Install by ssh cloning and `pip3`:
 
 ```bash
 git clone git@github.com:evangoad/devenv.git ~/.devenv
-pip install ~/.devenv
+pip3 install ~/.devenv
 ```
 
 - Generate help output to ensure `devenv` is installed:

@@ -3,6 +3,7 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-completions
+antigen bundle superbrothers/zsh-kubectl-prompt
 antigen theme cloud
 antigen apply
 
@@ -35,6 +36,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 if hash rbenv 2>/dev/null; then
   eval "$(rbenv init -)"
 fi
+
+#jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # stop spring
 export DISABLE_SPRING="true"
@@ -78,6 +83,9 @@ alias b="bundle"
 alias z!="source ~/.zshrc"
 
 . $HOME/.workstuff
+
+autoload -U colors; colors
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 autoload bashcompinit
 bashcompinit
