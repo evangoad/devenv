@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python application
+name: Devenv Build
 
 on:
   push:
@@ -10,33 +10,21 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  build-mac:
     runs-on: macos-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    - name: Install dependencies
-      run: bash install.sh
-    - name: Test help script
-      run: |
-        devenv -h
-    - name: Test the local option 
-      run: |
-        devenv -l
-    - name: Test the syntax-test and local option 
-      run: |
-        devenv -sl
-    - name: Test the main tags
-      run: |
-        devenv -l -t dotfile
-        devenv -l -t shell
-        devenv -l -t editor
-        devenv -l -t mux
-    - name: Teest multiple tags in one run
-      run: |
-        devenv -l -t 'dotfile, mux'
+    - uses: actions/devenv-test-composite-steps@v1
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - uses: actions/devenv-test-composite-steps@v1
