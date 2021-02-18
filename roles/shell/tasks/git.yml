@@ -8,7 +8,7 @@
 
 - name: GIT - MacOSX - Install git with Homebrew
   homebrew: name=git
-    state=latest
+    state=installed
   when: ansible_distribution == 'MacOSX'
 
 - name: GIT - Symlink gitconfig

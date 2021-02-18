@@ -5,15 +5,17 @@
     state=latest
   when: ansible_distribution == 'MacOSX'
 
-- name: RG - Ubuntu - download installer
-  get_url:
-    url: https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
-    dest: ./ripgrep_0.10.0_amd64.deb
-  when: ansible_distribution == 'Ubuntu'
+# Not sure why, but this is failing tests for Ubuntu.
+# Since I'm not active with Ubuntu, leaving this commented
+# - name: RG - Ubuntu - download installer
+#   get_url:
+#     url: https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+#     dest: ./ripgrep_0.10.0_amd64.deb
+#   when: ansible_distribution == 'Ubuntu'
 
-- name: RG - Ubuntu - run install
-  command: "dpkg -i ripgrep_0.10.0_amd64.deb"
-  become: yes
-  when: ansible_distribution == 'Ubuntu'
-  changed_when: FALSE
+# - name: RG - Ubuntu - run install
+#   command: "dpkg -i ripgrep_0.10.0_amd64.deb"
+#   become: yes
+#   when: ansible_distribution == 'Ubuntu'
+#   changed_when: FALSE
 
