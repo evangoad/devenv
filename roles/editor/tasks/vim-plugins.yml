@@ -34,7 +34,6 @@
     - { user: 'thoughtbot', repo: 'vim-rspec' }
     - { user: 'nelstrom', repo: 'vim-textobj-rubyblock' }
     - { user: 'ngmy', repo: 'vim-rubocop' }
-    - { user: 'jgdavey', repo: 'tslime.vim' }
     - { user: 'skalnik', repo: 'vim-vroom' }
     - { user: 'othree', repo: 'html5.vim' }
     - { user: 'pangloss', repo: 'vim-javascript' }

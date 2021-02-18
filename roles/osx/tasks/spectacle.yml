@@ -1,6 +1,6 @@
----
-
-- homebrew_cask:
-    name: spectacle
-    state: present
-    install_options: 'appdir=/Applications'
+# ---
+#
+# - homebrew_cask:
+#     name: spectacle
+#     state: present
+#     install_options: 'appdir=/Applications'
