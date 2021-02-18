@@ -1,0 +1,27 @@
+name: 'Devenv Test Steps'
+description: 'These steps are to be ran in both the osx and ubuntu jobs'
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      run: ./install.sh
+      shell: bash
+    - name: Test help script
+      run: devenv -h
+      shell: bash
+    - name: Test the local option
+      run: devenv -l
+      shell: bash
+    - name: Test the syntax-test and local option
+      run: devenv -sl
+      shell: bash
+    - name: Test the main tags
+      run: |
+        devenv -l -t dotfile
+        devenv -l -t shell
+        devenv -l -t editor
+        devenv -l -t mux
+      shell: bash
+    - name: Test multiple tags in one run
+      run: devenv -l -t 'dotfile, mux'
+      shell: bash
