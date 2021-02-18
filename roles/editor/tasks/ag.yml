@@ -8,6 +8,6 @@
 
 - name: AG - MacOSX - Install silver searcher with Homebrew
   homebrew: name=ag
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
 

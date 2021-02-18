@@ -8,5 +8,5 @@
 
 - name: TREE - MacOSX - Install tree with Homebrew
   homebrew: name=tree
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'

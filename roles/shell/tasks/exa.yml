@@ -3,5 +3,5 @@
 - name: EXA - OSX - Install
   homebrew:
     name: exa
-    state: latest
+    state: present
   when: ansible_distribution == 'MacOSX'

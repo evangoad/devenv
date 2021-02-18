@@ -16,12 +16,12 @@
 
 - name: VIM - MacOSX - Install vim with Homebrew
   homebrew: name=vim
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
 
 - name: VIM - MacOSX - Install nvim with Homebrew
   homebrew: name=nvim
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
 
 - name: VIM - Symlink vimrc

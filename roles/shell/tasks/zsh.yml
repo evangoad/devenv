@@ -8,7 +8,7 @@
 
 - name: ZSH - MacOSX - Install zsh with Homebrew
   homebrew: name=zsh
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
 
 - name: ZSH - Symlink zshrc

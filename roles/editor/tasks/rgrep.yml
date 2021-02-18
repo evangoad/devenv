@@ -2,7 +2,7 @@
 
 - name: RG - MacOSX - Install ripgrep with Homebrew
   homebrew: name=ripgrep
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
 
 # Not sure why, but this is failing tests for Ubuntu.

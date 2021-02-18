@@ -8,5 +8,5 @@
 
 - name: NODE - MacOSX - Install npm with Homebrew
   homebrew: name=npm
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'

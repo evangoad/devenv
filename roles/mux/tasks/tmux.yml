@@ -8,7 +8,7 @@
 
 - name: TMUX - MacOSX - Install tmux with Homebrew
   homebrew: name=tmux
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
 
 - name: TMUX - Symlink tmux.conf

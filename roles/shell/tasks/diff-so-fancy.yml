@@ -8,5 +8,5 @@
 
 - name: DIFF SO FANCY - MacOSX - Install diff-so-fancy with Homebrew
   homebrew: name=diff-so-fancy
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'

@@ -8,5 +8,5 @@
 
 - name: KEYCHAIN - MacOSX - Install keychain with Homebrew
   homebrew: name=keychain
-    state=latest
+    state=present
   when: ansible_distribution == 'MacOSX'
