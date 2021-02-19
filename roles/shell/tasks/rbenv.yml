@@ -1,0 +1,7 @@
+---
+
+- name: RBENV - OSX - Install
+  homebrew:
+    name: rbenv
+    state: present
+  when: ansible_distribution == 'MacOSX'

@@ -33,13 +33,7 @@ export PATH="$HOME/.exercism:$PATH"
 
 #rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-if hash rbenv 2>/dev/null; then
-  eval "$(rbenv init -)"
-fi
-
-#jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+eval "$(rbenv init -)"
 
 # stop spring
 export DISABLE_SPRING="true"
