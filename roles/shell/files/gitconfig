@@ -24,7 +24,7 @@
   co  = commit
   coa = commit -a
   ch  = checkout
-  chm = checkout master
+  chm = checkout main
   t   = status
   tt  = status
   ttt = status
@@ -35,8 +35,8 @@
   ca  = commit --amend
   can = commit --amend --no-edit
   pp  = push origin HEAD
-  ll  = pull --rebase origin master
-  dfom = diff origin/master
+  ll  = pull --rebase origin main
+  dfom = diff origin/main
   fo  = fetch origin
   dfc = diff --cached
   sus = submodule update --recursive

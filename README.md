@@ -6,7 +6,7 @@ and configure my [editor](roles/editor),
 `devenv` currently supports OSX and Ubuntu, and it only requires that `git` and
 `python` are installed (plus `brew` if you are installing on OSX).  See the
 [installation
-script](https://github.com/evangoad/devenv/blob/master/install.sh) and
+script](https://github.com/evangoad/devenv/blob/main/install.sh) and
 [Requirements](REQUIREMENTS.md) for more info.
 
 `devenv` will update and configure:
@@ -44,11 +44,11 @@ optional arguments:
 
 use it to symlink your dotfiles:
 
-![devenv --tags dotfiles demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-dotfile-example.gif)
+![devenv --tags dotfiles demo](https://raw.githubusercontent.com/evangoad/devenv/main/img/devenv-dotfile-example.gif)
 
 use it to update all of your multiplexer configuration:
 
-![devenv --tags mux demo](https://raw.githubusercontent.com/evangoad/devenv/master/img/devenv-mux-example.gif)
+![devenv --tags mux demo](https://raw.githubusercontent.com/evangoad/devenv/main/img/devenv-mux-example.gif)
 
 # What you get out of the box
 
@@ -61,8 +61,8 @@ use it to update all of your multiplexer configuration:
 # How it Works
 
 `devenv` is a simple python script that runs a single ansible
-[playbook](https://github.com/evangoad/devenv/blob/master/development.yml) on
-[localhost](https://github.com/evangoad/devenv/blob/master/inventory).  This
+[playbook](https://github.com/evangoad/devenv/blob/main/development.yml) on
+[localhost](https://github.com/evangoad/devenv/blob/main/inventory).  This
 playbook imports the four [roles](roles/): [editor](roles/editor),
 [shell](roles/shell), [mux](roles/mux), and [osx](roles/osx).  Move your
 existing dotfiles into the "files" directory for the appropriate role:
@@ -87,7 +87,7 @@ In order to install and use your own customizable copy of `devenv`:
 - For an install by https clone, use the install script:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/evangoad/devenv/main/install.sh | bash
 ```
   OR Install by ssh cloning and `pip3`:
 
