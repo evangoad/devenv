@@ -1,0 +1,8 @@
+name: 'Install dependencies'
+description: 'These steps are to be ran in both the osx and ubuntu jobs'
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      run: ./install.sh
+      shell: bash

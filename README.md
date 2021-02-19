@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/evangoad/devenv/workflows/Devenv%20Test%20Build/badge.svg)](https://github.com/evangoad/devenv/actions)
+[![Build Status](https://github.com/evangoad/devenv/workflows/Test%20Builds/badge.svg)](https://github.com/evangoad/devenv/actions)
 
 `devenv` is a simple python script that runs ansible in order to install
 and configure my [editor](roles/editor),
@@ -52,7 +52,7 @@ use it to update all of your multiplexer configuration:
 
 # What you get out of the box
 
-- Travis-ci configuration to automate your tests for both OSX and Ubuntu.
+- Github Actions to automate your tests for both OSX and Ubuntu.
 - Single command install & update of your shell, editor,
   multiplexer, and dotfiles.
 - Simple github pages website using the caymen theme for jekyll.
