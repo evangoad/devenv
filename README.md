@@ -1,4 +1,4 @@
-Github Actions Build: [![Build Status](https://github.com/evangoad/devenv/workflows/Devenv%20Test%20Build/badge.svg)](https://github.com/evangoad/devenv/actions)
+[![Build Status](https://github.com/evangoad/devenv/workflows/Devenv%20Test%20Build/badge.svg)](https://github.com/evangoad/devenv/actions)
 
 `devenv` is a simple python script that runs ansible in order to install
 and configure my [editor](roles/editor),
