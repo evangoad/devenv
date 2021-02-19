@@ -18,7 +18,7 @@ fi
 if [ -d "$HOME/.devenv" ]; then
   echo "devenv github repo already cloned."
 else
-  git clone https://github.com/evangoad/devenv ~/.devenv
+  git clone --depth 1 https://github.com/evangoad/devenv ~/.devenv
 fi
 
 # Install pip helper

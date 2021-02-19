@@ -10,11 +10,18 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
+  ubuntu-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - uses: ./.github/actions/install-dependencies
+    - uses: ./.github/actions/run-tests
+  mac-build:
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9

@@ -2,7 +2,7 @@
 from setuptools import setup
 import os
 
- 
+
 setup(
        name='devenv',
        version='0.0.3',
