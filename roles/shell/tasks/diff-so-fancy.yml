@@ -1,6 +1,8 @@
 ---
 
 - name: DIFF SO FANCY - Ubuntu - Install diff so fancy with npm
+  become: yes
+  become_method: 'sudo'
   npm:
     name: diff-so-fancy
     global: yes

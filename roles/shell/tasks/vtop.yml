@@ -1,7 +1,16 @@
 ---
 
-- name: VTOP - Install node.js package globally.
+- name: VTOP - Ubuntu - Install node.js package globally.
+  become: yes
+  become_method: 'sudo'
   npm:
     name: vtop
     global: yes
+  when: ansible_distribution == 'Ubuntu'
+
+- name: VTOP - MacOSX - Install node.js package globally.
+  npm:
+    name: vtop
+    global: yes
+  when: ansible_distribution == 'MacOSX'
 
