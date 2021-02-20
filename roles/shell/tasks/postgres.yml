@@ -1,0 +1,9 @@
+---
+
+- name: POSTGRES - OSX - Install
+  homebrew:
+    name: postgresql@12
+    state: present
+  when: ansible_distribution == 'MacOSX'
+  tags:
+    - postgres

@@ -1,0 +1,9 @@
+---
+
+- name: GOLANG - OSX - Install
+  homebrew:
+    name: golang
+    state: present
+  when: ansible_distribution == 'MacOSX'
+  tags:
+    - golang
