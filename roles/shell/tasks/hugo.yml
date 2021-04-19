@@ -1,0 +1,7 @@
+---
+
+- name: Hugo - OSX - Install
+  homebrew:
+    name: hugo
+    state: present
+  when: ansible_distribution == 'MacOSX'
