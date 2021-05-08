@@ -1,6 +1,11 @@
 - import_tasks: vim.yml
+  tags: [ vim, nvim ]
 - import_tasks: vim-plugins.yml
+  tags: [ vim, nvim ]
 - import_tasks: ag.yml
+  tags: [ ag ]
 - import_tasks: rgrep.yml
+  tags: [ rg ]
 - import_tasks: vscode.yml
+  tags: [ vscode ]
   when: ansible_distribution == 'MacOSX'
