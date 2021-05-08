@@ -1,5 +1,34 @@
 ---
 
+- name: VIM - OSX - Tap strand keg
+  community.general.homebrew_tap:
+    name: arzg/homebrew-vim-strand
+  when: ansible_distribution == 'MacOSX'
+
+- name: VIM - OXS - Install strand
+  homebrew: name=strand
+    state=present
+  when: ansible_distribution == 'MacOSX'
+
+- name: VIM - OSX - create strand config dir
+  file: path=~/.config/strand
+        state=directory
+        mode=0755
+  when: ansible_distribution == 'MacOSX'
+
+- name: VIM - OSX - Symlink strand config
+  file:
+    src: ~/.devenv/roles/editor/files/strand-config.yaml
+    dest: ~/.config/strand/config.yaml
+    state: link
+    force: true
+  when: ansible_distribution == 'MacOSX'
+
+- name: VIM - OSX - Run strand
+  shell: strand
+  register: strand_output
+  when: ansible_distribution == 'MacOSX'
+
 - name: VIM - PLUGINS - Install global vim packages
   git:
     repo: https://github.com/{{ item.user }}/{{ item.repo }}
@@ -20,7 +49,6 @@
     - { user: 'christoomey', repo: 'vim-run-interactive' }
     - { user: 'benmills', repo: 'vimux' }
     - { user: 'junegunn', repo: 'vim-easy-align' }
-    - { user: 'znake' , repo: 'znake-vim' }
     - { user: 'nowk' , repo: 'genericdc' }
     - { user: 'jordwalke' , repo: 'flatlandia' }
     - { user: 'effkay' , repo: 'argonaut.vim' }
@@ -35,11 +63,9 @@
     - { user: 'nelstrom', repo: 'vim-textobj-rubyblock' }
     - { user: 'ngmy', repo: 'vim-rubocop' }
     - { user: 'skalnik', repo: 'vim-vroom' }
-    - { user: 'othree', repo: 'html5.vim' }
     - { user: 'pangloss', repo: 'vim-javascript' }
     - { user: 'jelera', repo: 'vim-javascript-syntax' }
     - { user: 'walm', repo: 'jshint.vim' }
-    - { user: 'vim-scripts', repo: 'jQuery' }
     - { user: 'elmcast', repo: 'elm-vim' }
     - { user: 'guns', repo: 'vim-clojure-static' }
     - { user: 'dag', repo: 'vim2hs' }
@@ -65,6 +91,7 @@
     - { user: 'hashivim', repo: 'vim-terraform' }
     - { user: 'vim-syntastic', repo: 'syntastic' }
     - { user: 'juliosueiras', repo: 'vim-terraform-completion' }
+  when: ansible_distribution == 'Ubuntu'
 
 - name: VIM - create nvim package dir
   file: path=~/.local/share/nvim/site/pack/evangoad
@@ -76,3 +103,11 @@
     src: "~/.vim/pack/evangoad/start"
     dest: "~/.local/share/nvim/site/pack/evangoad/start"
     state: link
+  when: ansible_distribution == 'Ubuntu'
+
+- name: VIM - Symlink packages for nvim
+  file:
+    src: "~/.vim/pack/strand/start"
+    dest: "~/.local/share/nvim/site/pack/evangoad/start"
+    state: link
+  when: ansible_distribution == 'MacOSX'
