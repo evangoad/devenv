@@ -1,0 +1,10 @@
+---
+
+- name: ANSIBLE - Symlink ansible.cfg to $HOME
+  file:
+    src: ~/.devenv/roles/shell/files/.ansible.cfg
+    dest: ~/.ansible.cfg
+    state: link
+    force: true
+  tags:
+    - dotfile
