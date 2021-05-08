@@ -4,6 +4,8 @@
   git:
     repo=https://github.com/zsh-users/antigen
     dest=~/.antigen
+  tags:
+    - antigen
 
 - name: ANTIGEN - Run update
   shell: "zsh -l -c -i 'antigen update'"

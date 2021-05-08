@@ -1,18 +1,35 @@
 - import_tasks: git.yml
+  tags: [ git ]
 - import_tasks: zsh.yml
+  tags: [ zsh ]
 - import_tasks: antigen.yml
+  tags: [ antigen ]
 - import_tasks: ansible.yml
+  tags: [ ansible ]
 - import_tasks: tree.yml
+  tags: [ tree ]
 - import_tasks: keychain.yml
+  tags: [ keychain ]
 - import_tasks: node.yml
+  tags: [ node ]
 - import_tasks: diff-so-fancy.yml
+  tags: [ diff-so-fancy ]
 - import_tasks: netcat.yml
+  tags: [ netcat ]
 - import_tasks: vtop.yml
+  tags: [ vtop ]
 - import_tasks: fzf.yml
+  tags: [ fzf ]
 - import_tasks: z.yml
+  tags: [ z ]
 - import_tasks: exa.yml
+  tags: [ exa ]
 - import_tasks: rbenv.yml
+  tags: [ rbenv ]
 - import_tasks: golang.yml
+  tags: [ golang ]
 - import_tasks: postgres.yml
+  tags: [ postgres ]
 - import_tasks: hugo.yml
+  tags: [ hugo ]
 
