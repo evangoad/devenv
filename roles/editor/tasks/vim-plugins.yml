@@ -49,7 +49,6 @@
     - { user: 'christoomey', repo: 'vim-run-interactive' }
     - { user: 'benmills', repo: 'vimux' }
     - { user: 'junegunn', repo: 'vim-easy-align' }
-    - { user: 'znake' , repo: 'znake-vim' }
     - { user: 'nowk' , repo: 'genericdc' }
     - { user: 'jordwalke' , repo: 'flatlandia' }
     - { user: 'effkay' , repo: 'argonaut.vim' }
@@ -64,11 +63,9 @@
     - { user: 'nelstrom', repo: 'vim-textobj-rubyblock' }
     - { user: 'ngmy', repo: 'vim-rubocop' }
     - { user: 'skalnik', repo: 'vim-vroom' }
-    - { user: 'othree', repo: 'html5.vim' }
     - { user: 'pangloss', repo: 'vim-javascript' }
     - { user: 'jelera', repo: 'vim-javascript-syntax' }
     - { user: 'walm', repo: 'jshint.vim' }
-    - { user: 'vim-scripts', repo: 'jQuery' }
     - { user: 'elmcast', repo: 'elm-vim' }
     - { user: 'guns', repo: 'vim-clojure-static' }
     - { user: 'dag', repo: 'vim2hs' }

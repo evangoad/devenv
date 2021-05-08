@@ -14,34 +14,31 @@ plugins:
   - Git: christoomey/vim-run-interactive
   - Git: benmills/vimux
   - Git: junegunn/vim-easy-align
-  - Git: znake,/znake-vim
-  - Git: nowk,/genericdc
-  - Git: jordwalke,/flatlandia
-  - Git: effkay,/argonaut.vim
-  - Git: chriskempson,/base16-vim
+  - Git: nowk/genericdc
+  - Git: jordwalke/flatlandia
+  - Git: effkay/argonaut.vim
+  - Git: chriskempson/base16-vim
   - Git: tpope/vim-fugitive
   - Git: airblade/vim-gitgutter
   - Git: ludovicchabant/vim-lawrencium
   - Git: tpope/vim-rails
   - Git: tpope/vim-rbenv
-  - Git: vimub/vim-ruby
+  - Git: vim-ruby/vim-ruby
   - Git: thoughtbot/vim-rspec
   - Git: nelstrom/vim-textobj-rubyblock
   - Git: ngmy/vim-rubocop
   - Git: skalnik/vim-vroom
-  - Git: othree/html5.vim
   - Git: pangloss/vim-javascript
   - Git: jelera/vim-javascript-syntax
   - Git: walm/jshint.vim
-  - Git: vimcript/jQuery
   - Git: elmcast/elm-vim
   - Git: guns/vim-clojure-static
   - Git: dag/vim2hs
   - Git: fatih/vim-go
   - Git: wting/rust.vim
   - Git: cespare/vim-toml
-  - Git: elixiran/vim-elixir
-  - Git: tmuxlugin/vim-tmux
+  - Git: elixir-lang/vim-elixir
+  - Git: tmux-plugins/vim-tmux
   - Git: Quramy/tsuquyomi
   - Git: leafgarland/typescript-vim
   - Git: Quramy/vim-js-pretty-template
@@ -57,6 +54,6 @@ plugins:
   - Git: jremmen/vim-ripgrep
   - Git: mxw/vim-jsx
   - Git: hashivim/vim-terraform
-  - Git: vimyntasti/syntastic
+  - Git: vim-syntastic/syntastic
   - Git: juliosueiras/vim-terraform-completion
 
