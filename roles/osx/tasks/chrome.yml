@@ -1,7 +1,0 @@
----
-
-# - homebrew_cask:
-#     name: google-chrome
-#     state: present
-#     install_options: 'appdir=/Applications'
-
