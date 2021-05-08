@@ -1,14 +1,5 @@
 ---
-- import_tasks: chrome.yml
-  when: ansible_distribution == 'MacOSX'
-
-- import_tasks: iterm.yml
-  when: ansible_distribution == 'MacOSX'
-
 - import_tasks: licecap.yml
-  when: ansible_distribution == 'MacOSX'
-
-- import_tasks: sequelpro.yml
   when: ansible_distribution == 'MacOSX'
 
 - import_tasks: cheatsheet.yml

@@ -1,6 +1,0 @@
----
-
-- homebrew_cask:
-    name: sequel-pro
-    state: present
-    install_options: 'appdir=/Applications'
