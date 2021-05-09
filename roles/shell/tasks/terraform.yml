@@ -1,0 +1,8 @@
+---
+
+- name: TERRAFORM - OSX - Install tfenv
+  homebrew:
+    name: tfenv
+    state: present
+  when: ansible_distribution == 'MacOSX'
+
