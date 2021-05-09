@@ -1,0 +1,8 @@
+---
+
+- name: Glacnes - Install glances with homebrew
+  homebrew:
+    name: glances
+    state: present
+  when: ansible_distribution == 'MacOSX'
+

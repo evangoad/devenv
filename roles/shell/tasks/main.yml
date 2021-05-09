@@ -16,8 +16,6 @@
   tags: [ diff-so-fancy ]
 - import_tasks: netcat.yml
   tags: [ netcat ]
-- import_tasks: vtop.yml
-  tags: [ vtop ]
 - import_tasks: fzf.yml
   tags: [ fzf ]
 - import_tasks: z.yml
@@ -32,4 +30,8 @@
   tags: [ postgres ]
 - import_tasks: hugo.yml
   tags: [ hugo ]
+- import_tasks: terraform.yml
+  tags: [ terraform ]
+- import_tasks: glances.yml
+  tags: [ glances ]
 
