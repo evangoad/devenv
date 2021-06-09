@@ -78,8 +78,26 @@ alias z!="source ~/.zshrc"
 
 . $HOME/.workstuff
 
+BASE_IAM=$(aws sts get-caller-identity --output text --query 'Arn')
+
+prompt_iam() {
+  local iam='';
+  if [[ -v GO_MFA_ASSUME_ROLE ]]; then
+    iam="%{$fg[green]%}$(echo $GO_MFA_ASSUME_ROLE | grep -o 'role.*')"
+  else
+    iam="%{$fg[blue]%}$(echo $BASE_IAM | grep -o 'user.*')"
+  fi
+  echo -e "${1}${iam}";
+}
+
+prompt_kubectl() {
+  local kube='';
+  kube=$(echo $ZSH_KUBECTL_PROMPT | grep -o 'cluster.*')
+  echo -e $kube;
+}
+
 autoload -U colors; colors
-RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+RPROMPT='$(prompt_iam)%{$fg[blue]%}|$(prompt_kubectl)%{$reset_color%}'
 
 autoload bashcompinit
 bashcompinit
