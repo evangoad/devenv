@@ -79,8 +79,8 @@ BASE_IAM=$(aws sts get-caller-identity --output text --query 'Arn')
 
 prompt_iam() {
   local iam='';
-  if [[ -v GO_MFA_ASSUME_ROLE ]]; then
-    iam="%{$fg[green]%}$(echo $GO_MFA_ASSUME_ROLE | grep -o 'role.*')"
+  if [[ ! -z "${AWS_VAULT}" ]]; then
+    iam="%{$fg[green]%}$(echo $AWS_VAULT)"
   else
     iam="%{$fg[blue]%}$(echo $BASE_IAM | grep -o 'user.*')"
   fi
