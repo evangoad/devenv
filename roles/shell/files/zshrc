@@ -75,14 +75,10 @@ alias z!="source ~/.zshrc"
 
 . $HOME/.workstuff
 
-BASE_IAM=$(aws sts get-caller-identity --output text --query 'Arn')
-
 prompt_iam() {
   local iam='';
   if [[ ! -z "${AWS_VAULT}" ]]; then
-    iam="%{$fg[green]%}$(echo $AWS_VAULT)"
-  else
-    iam="%{$fg[blue]%}$(echo $BASE_IAM | grep -o 'user.*')"
+    iam="%{$fg[red]%}$(echo $AWS_VAULT)|"
   fi
   echo -e "${1}${iam}";
 }
@@ -94,7 +90,7 @@ prompt_kubectl() {
 }
 
 autoload -U colors; colors
-RPROMPT='$(prompt_iam)%{$fg[blue]%}|$(prompt_kubectl)%{$reset_color%}'
+RPROMPT='$(prompt_iam)%{$fg[blue]%}$(prompt_kubectl)%{$reset_color%}'
 
 autoload bashcompinit
 bashcompinit
